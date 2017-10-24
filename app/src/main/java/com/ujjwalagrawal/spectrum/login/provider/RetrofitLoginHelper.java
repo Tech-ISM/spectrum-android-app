@@ -1,9 +1,10 @@
 package com.ujjwalagrawal.spectrum.login.provider;
 
-import com.bquiz.raipur.ecellapp2k17.helper.Urls;
-import com.bquiz.raipur.ecellapp2k17.login.LoginCallback;
-import com.bquiz.raipur.ecellapp2k17.login.api.RequestLogin;
-import com.bquiz.raipur.ecellapp2k17.login.model.LoginDataResponse;
+
+import com.ujjwalagrawal.spectrum.helper.Urls;
+import com.ujjwalagrawal.spectrum.login.LoginCallback;
+import com.ujjwalagrawal.spectrum.login.api.RequestLogin;
+import com.ujjwalagrawal.spectrum.login.data.LoginDataResponse;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +17,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by samveg on 30/7/17.
+ * Created by ujjwal on 24/10/17.
  */
 
 public class RetrofitLoginHelper implements LoginHelper {

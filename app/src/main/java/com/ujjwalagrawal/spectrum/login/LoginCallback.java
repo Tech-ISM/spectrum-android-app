@@ -4,7 +4,7 @@ package com.ujjwalagrawal.spectrum.login;
 import com.ujjwalagrawal.spectrum.login.data.LoginDataResponse;
 
 /**
- * Created by samveg on 30/7/17.
+ * Created by ujjwal on 24/10/17.
  */
 
 public interface LoginCallback {
