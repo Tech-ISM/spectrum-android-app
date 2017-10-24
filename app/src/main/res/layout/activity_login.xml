@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/md_white_1000"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent">
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/login_background"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="60dp"
+            android:layout_weight="2"
+            android:id="@+id/spectrum_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="35sp"
+                android:layout_marginLeft="30sp"
+                android:layout_weight="0.5"
+                android:layout_marginTop="8sp"
+                android:id="@+id/name_img"/>
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginRight="60sp"
+                android:layout_marginTop="8sp"
+                android:layout_weight="0.5"
+                android:hint="@string/hint_login_name"
+                android:gravity="center"
+/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:weightSum="1">
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="35sp"
+                android:layout_marginLeft="30sp"
+                android:layout_weight="0.5"
+                android:layout_marginTop="8sp"
+                android:id="@+id/mobile_img"/>
+            <EditText
+                android:id="@+id/input_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginRight="60sp"
+                android:layout_marginTop="8sp"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:maxLength="10"
+                android:hint="@string/hint_login_mobile"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:weightSum="1">
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="35sp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="8sp"/>
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_weight="0.5"
+                android:layout_marginRight="60sp"
+                android:hint="@string/hint_login_email"
+                android:layout_marginTop="8sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otp_verifyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:visibility="gone"
+            android:weightSum="1">
+            <ImageView
+                android:id="@+id/otp_img"
+                android:layout_height="35sp"
+                android:layout_marginLeft="30sp"
+                android:layout_weight="0.5" />
+            <EditText
+                android:id="@+id/input_otp"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginRight="60sp"
+                android:layout_weight="0.5"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/hint_login_otp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logIn"
+            android:layout_width="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:background="@drawable/button_rounded_corner2"
+            android:text="Log In"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:onClick="proceed"
+            android:layout_weight="1"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_mobile"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:background="@drawable/button_rounded_corner2"
+            android:text="Verify Otp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:onClick="proceed_verify"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Resend Otp?"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:onClick="resend"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/otp_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:textSize="18dp"
+            android:text="@string/otp_msg"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true" />
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
