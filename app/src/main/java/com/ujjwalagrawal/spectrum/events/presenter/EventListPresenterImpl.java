@@ -25,7 +25,7 @@ public class EventListPresenterImpl implements EventListPresenter{
 	public void requestEventList(int day) {
 		eventListView.ShowProgressBar(true);
 
-		countDownTimer = new CountDownTimer(4000, 1000) {
+		countDownTimer = new CountDownTimer(8000, 1000) {
 			public void onTick(long millisUntilFinished) {
 			}
 

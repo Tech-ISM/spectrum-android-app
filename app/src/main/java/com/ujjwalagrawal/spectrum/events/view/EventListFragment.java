@@ -124,10 +124,11 @@ public class EventListFragment extends Fragment implements EventListView{
 
 	@Override
 	public void ShowProgressBar(boolean show) {
-		if(show)
+		if(show) {
 			progressBar.setVisibility(View.VISIBLE);
-		else
+		}else {
 			progressBar.setVisibility(View.INVISIBLE);
+		}
 	}
 
 	public interface OnFragmentInteractionListener {
