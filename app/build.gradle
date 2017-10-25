@@ -43,7 +43,7 @@ dependencies {
         transitive = true;
     }
     //    compile 'com.firebase:firebase-client-android:2.5.0'
-    
+
 
     compile 'com.mikepenz:itemanimators:1.0.0@aar'
     compile 'com.wang.avi:library:2.1.3'

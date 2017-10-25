@@ -15,4 +15,5 @@ import retrofit2.http.GET;
 public interface RequestSponsorData {
     @FormUrlEncoded
     @GET(Urls.REQUEST_VERIFY)
-    Call<SponsorshipResponse> getJson(@Field("access_token")String access_token);
+    Call<SponsorshipResponse> getJson(@Field("access_token") String access_token);
+}
