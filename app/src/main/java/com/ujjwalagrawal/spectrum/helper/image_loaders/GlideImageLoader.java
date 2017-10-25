@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
@@ -33,7 +34,7 @@ public class GlideImageLoader implements ImageLoader {
     }
 
     @Override
-    public void loadImage(String url, final ImageView imageView, final AVLoadingIndicatorView progressBar) {
+    public void loadImage(String url, final ImageView imageView, final ProgressBar progressBar) {
 
 //        url = url.replace("\"", "");
 

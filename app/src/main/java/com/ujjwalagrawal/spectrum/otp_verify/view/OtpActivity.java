@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ujjwalagrawal.spectrum.home.Home;
+import com.ujjwalagrawal.spectrum.home.HomeActivity;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.Keys;
 import com.ujjwalagrawal.spectrum.helper.NetworkUtils;
@@ -150,7 +150,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
 
     @Override
     public void OtpStatus(OtpResponse otpResponse) {
-        Intent i = new Intent(this, Home.class);
+        Intent i = new Intent(this, HomeActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
         sharedPrefs.setLogin(true);

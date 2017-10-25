@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tabs>
     <tab
-        id="@+id/tab_favorites"
+        id="@+id/tab_profile"
         icon="@drawable/ic_person"
-        barColorWhenSelected="#BD4037"
-        title="Favorites" />
+        barColorWhenSelected="@color/md_deep_purple_500"
+        title="Profile" />
     <tab
-        id="@+id/tab_nearby"
+        id="@+id/tab_events"
         icon="@drawable/ic_person"
-        barColorWhenSelected="#5D4037"
-        title="Nearby" />
+        barColorWhenSelected="@color/md_blue_600"
+        title="Events" />
     <tab
-        id="@+id/tab_friends"
-        barColorWhenSelected="#FD4037"
+        id="@+id/tab_home"
+        barColorWhenSelected="@color/md_cyan_600"
         icon="@drawable/ic_person"
-        title="Friends" />
+        title="Home" />
+    <tab
+        id="@+id/tab_aboutus"
+        barColorWhenSelected="@color/md_yellow_600"
+        icon="@drawable/ic_person"
+        title="About Us" />
+    <tab
+        id="@+id/tab_sponsors"
+        barColorWhenSelected="@color/md_orange_600"
+        icon="@drawable/ic_person"
+        title="Sponsors" />
+
 </tabs>
