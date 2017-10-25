@@ -21,9 +21,11 @@ Follow the below steps if you want to merge with master branch
 12. git push origin yourname_dev.
 
 Now your branch is fully updated.Update master now
+
 13. git checkout master 
 14. git merge yourname_dev (Merge master code to your local branch)
 
 No conflicts should be there now as we had already fixed conflicts in another branch.
+
 15. git push origin master (Update origin master in Github)
 16.  Relax if everything is done properly.
