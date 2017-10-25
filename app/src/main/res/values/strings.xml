@@ -7,7 +7,7 @@
     <string name="hint_login_mobile">Mobile Number</string>
     <string name="hint_login_email">Email</string>
     <string name="hint_login_otp">Enter OTP</string>
-    <string name="otp_msg">Please enter 6 digit OTP sent to your mobile number</string>
+    <string name="otp_msg">An OTP has been sent to your mobile!</string>
     <string name="rules_msg">Kindly read these rules for question 1</string>
     <string name="online_quiz_dialog">Go to online quiz</string>
 

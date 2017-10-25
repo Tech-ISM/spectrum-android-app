@@ -1,7 +1,7 @@
 package com.ujjwalagrawal.spectrum.login;
 
 
-import com.ujjwalagrawal.spectrum.login.data.LoginDataResponse;
+import com.ujjwalagrawal.spectrum.login.data.LoginResponse;
 
 /**
  * Created by ujjwal on 24/10/17.
@@ -9,6 +9,6 @@ import com.ujjwalagrawal.spectrum.login.data.LoginDataResponse;
 
 public interface LoginCallback {
 
-    void onLoginSuccess(LoginDataResponse loginResponse);
+    void onLoginSuccess(LoginResponse loginResponse);
     void onLoginFailure(String error);
 }

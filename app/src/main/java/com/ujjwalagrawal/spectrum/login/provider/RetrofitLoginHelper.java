@@ -4,7 +4,7 @@ package com.ujjwalagrawal.spectrum.login.provider;
 import com.ujjwalagrawal.spectrum.helper.Urls;
 import com.ujjwalagrawal.spectrum.login.LoginCallback;
 import com.ujjwalagrawal.spectrum.login.api.RequestLogin;
-import com.ujjwalagrawal.spectrum.login.data.LoginDataResponse;
+import com.ujjwalagrawal.spectrum.login.data.LoginResponse;
 
 import java.util.concurrent.TimeUnit;
 
@@ -34,15 +34,15 @@ public class RetrofitLoginHelper implements LoginHelper {
 
         Retrofit retrofit= new Retrofit.Builder().baseUrl(Urls.BASE_URL).client(client).addConverterFactory(GsonConverterFactory.create()).build();
         RequestLogin requestLogin = retrofit.create(RequestLogin.class);
-        Call<LoginDataResponse> call= requestLogin.getJSON(name,mobile,email);
-        call.enqueue(new Callback<LoginDataResponse>() {
+        Call<LoginResponse> call= requestLogin.getJSON(name,mobile,email);
+        call.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<LoginDataResponse> call, Response<LoginDataResponse> response) {
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 loginCallback.onLoginSuccess(response.body());
             }
 
             @Override
-            public void onFailure(Call<LoginDataResponse> call, Throwable t) {
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
                 loginCallback.onLoginFailure(t.getMessage());
             }
         });

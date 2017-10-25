@@ -12,12 +12,10 @@ public class SponsorshipResponse {
     private boolean success;
     private List<SponsorsDetails> sponsors_list;
 
-
-    public SponsorshipResponse(String message, boolean success, List<SponsorsDetails> sponsors_list)
-    {
-        this.message=message;
-        this.success=success;
-        this.sponsors_list=sponsors_list;
+    public SponsorshipResponse(String message, boolean success, List<SponsorsDetails> sponsors_list) {
+        this.message = message;
+        this.success = success;
+        this.sponsors_list = sponsors_list;
     }
 
     public String getMessage() {
@@ -28,7 +26,9 @@ public class SponsorshipResponse {
         return success;
     }
 
-    public List<SponsorsDetails> getSponsors_list() {return sponsors_list;}
+    public List<SponsorsDetails> getSponsors_list() {
+        return sponsors_list;
+    }
 }
 
 
