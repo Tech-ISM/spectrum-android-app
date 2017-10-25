@@ -4,11 +4,11 @@ package com.ujjwalagrawal.spectrum.login.data;
  * Created by ujjwal on 24/10/17.
  */
 
-public class LoginDataResponse {
+public class LoginResponse {
 
     private boolean success;
     private String message, token;
-    public LoginDataResponse(boolean success, String message, String token)
+    public LoginResponse(boolean success, String message, String token)
     {
         this.message=message;
         this.success=success;

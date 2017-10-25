@@ -21,7 +21,7 @@ import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.Keys;
 import com.ujjwalagrawal.spectrum.helper.NetworkUtils;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
-import com.ujjwalagrawal.spectrum.login.data.LoginDataResponse;
+import com.ujjwalagrawal.spectrum.login.data.LoginResponse;
 import com.ujjwalagrawal.spectrum.login.presenter.LoginPresenter;
 import com.ujjwalagrawal.spectrum.login.presenter.LoginPresenterImpl;
 import com.ujjwalagrawal.spectrum.login.provider.RetrofitLoginHelper;
@@ -115,7 +115,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
 
     @Override
-    public void showLoginStatus(LoginDataResponse loginDataResponse) {
+    public void showLoginStatus(LoginResponse loginDataResponse) {
             msgOtp.setVisibility(View.VISIBLE);
 
 

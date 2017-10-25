@@ -9,16 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".Home"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name=".splash_screen.view.SplashScreen"
+                  android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".login.view.LoginActivity"
+                  android:windowSoftInputMode=""
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".otp_verify.view.OtpActivity"
+                  android:screenOrientation="portrait"/>
+        <activity
+            android:name=".home.Home"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ffe1f92a26df2a3deaf85a2c51e2d49d00bc61db" />

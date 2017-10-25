@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="10"
+        android:layout_margin="8dp"
         android:id="@+id/linearLayout"
         android:orientation="vertical">
 
@@ -108,6 +109,20 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_margin="8dp"
+            android:id="@+id/otp_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:textSize="18dp"
+            android:text="@string/otp_msg"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true" />
+
+
         <LinearLayout
             android:id="@+id/otp_verifyLayout"
             android:layout_width="match_parent"
@@ -116,6 +131,7 @@
             android:visibility="gone"
             android:weightSum="1">
             <ImageView
+                android:layout_width="100sp"
                 android:id="@+id/otp_img"
                 android:layout_height="35sp"
                 android:layout_marginLeft="30sp"
@@ -180,18 +196,6 @@
             android:background="@android:color/transparent"
             android:onClick="resend"
             android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/otp_msg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/md_black_1000"
-            android:textSize="18dp"
-            android:text="@string/otp_msg"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            android:layout_centerHorizontal="true" />
 
 
     </LinearLayout>
