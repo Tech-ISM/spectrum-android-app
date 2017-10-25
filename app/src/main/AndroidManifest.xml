@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ujjwalagrawal.spectrum" >
+    package="com.ujjwalagrawal.spectrum">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -32,7 +34,7 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ffe1f92a26df2a3deaf85a2c51e2d49d00bc61db" />
+
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
