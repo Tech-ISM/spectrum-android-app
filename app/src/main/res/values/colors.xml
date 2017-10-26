@@ -86,7 +86,7 @@
     <!--blue-->
     <color name="md_blue_50">#E3F2FD</color>
     <color name="md_blue_100">#BBDEFB</color>
-    <color name="md_blue_200">#90CAF9</color>
+    <color name="md_blue_200">#90caf9</color>
     <color name="md_blue_300">#64B5F6</color>
     <color name="md_blue_400">#42A5F5</color>
     <color name="md_blue_500">#2196F3</color>
@@ -214,7 +214,7 @@
     <!--amber-->
     <color name="md_amber_50">#FFF8E1</color>
     <color name="md_amber_100">#FFECB3</color>
-    <color name="md_amber_200">#FFE082</color>
+    <color name="md_amber_200">#ffe082</color>
     <color name="md_amber_300">#FFD54F</color>
     <color name="md_amber_400">#FFCA28</color>
     <color name="md_amber_500">#FFC107</color>
