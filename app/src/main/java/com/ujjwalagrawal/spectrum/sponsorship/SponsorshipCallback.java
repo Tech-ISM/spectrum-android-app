@@ -10,6 +10,5 @@ public interface SponsorshipCallback {
     void onSponsorshipSuccess(SponsorshipResponse sponsorshipResponse);
     void onSponsorshipFailure(String error);
 
-
 }
 

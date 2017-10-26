@@ -10,12 +10,12 @@ import java.util.List;
 public class SponsorshipResponse {
     private String message;
     private boolean success;
-    private List<SponsorsCategoryList> sponsorscategory_list;
+    private List<SponsorsDetails> sponsorsDetailsList;
 
-    public SponsorshipResponse(String message, boolean success, List<SponsorsCategoryList> sponsorscategory_list) {
+    public SponsorshipResponse(String message, boolean success, List<SponsorsDetails> sponsorsDetailsList) {
         this.message = message;
         this.success = success;
-        this.sponsorscategory_list = sponsorscategory_list;
+        this.sponsorsDetailsList = sponsorsDetailsList;
     }
 
     public String getMessage() {
@@ -26,9 +26,7 @@ public class SponsorshipResponse {
         return success;
     }
 
-    public List<SponsorsCategoryList> getSponsorscategory_list() {
-        return sponsorscategory_list;
+    public List<SponsorsDetails> getSponsorsDetailsList() {
+        return sponsorsDetailsList;
     }
 }
-
-
