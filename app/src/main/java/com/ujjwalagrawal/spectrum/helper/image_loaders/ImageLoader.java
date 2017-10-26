@@ -1,6 +1,7 @@
 package com.ujjwalagrawal.spectrum.helper.image_loaders;
 
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -10,7 +11,7 @@ import com.wang.avi.AVLoadingIndicatorView;
 
 public interface ImageLoader {
 
-    void loadImage(String url, ImageView imageView, AVLoadingIndicatorView progressBar);
+    void loadImage(String url, ImageView imageView, ProgressBar progressBar);
     void load_circular_image(String url, ImageView imageView, AVLoadingIndicatorView progressBar);
 
 }

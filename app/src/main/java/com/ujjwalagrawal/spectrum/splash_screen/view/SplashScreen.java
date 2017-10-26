@@ -16,7 +16,7 @@ import com.ujjwalagrawal.spectrum.BuildConfig;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.MyApplication;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
-import com.ujjwalagrawal.spectrum.home.Home;
+import com.ujjwalagrawal.spectrum.home.HomeActivity;
 import com.ujjwalagrawal.spectrum.login.view.LoginActivity;
 import com.ujjwalagrawal.spectrum.splash_screen.model.RetrofitSplashScreenProvider;
 import com.ujjwalagrawal.spectrum.splash_screen.model.data.SplashScreenData;
@@ -84,7 +84,7 @@ public class SplashScreen extends Activity implements  SplashScreenView{
             sharedPrefs.setFCM(MyApplication.fcm_token);
 
             if (sharedPrefs.isLoggedIn()) {
-                Intent in = new Intent(SplashScreen.this, Home.class);
+                Intent in = new Intent(SplashScreen.this, HomeActivity.class);
                 startActivity(in);
                 finish();
             } else {
