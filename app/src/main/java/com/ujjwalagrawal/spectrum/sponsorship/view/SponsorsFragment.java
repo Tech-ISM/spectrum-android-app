@@ -46,7 +46,7 @@ public class SponsorsFragment extends Fragment implements SponsorsView {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_sponsors, container, false);
-        progressBar=(ProgressBar)view.findViewById(R.id.progressBar_sponsors);
+        progressBar=(ProgressBar)view.findViewById(R.id.sponsors_progressbar);
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_layout_sponsors);
         sponsor_recyclerView = (RecyclerView) view.findViewById(R.id.sponsors_recycler_view);
         sponsor_recyclerView.setHasFixedSize(true);
@@ -77,8 +77,6 @@ public class SponsorsFragment extends Fragment implements SponsorsView {
     public void setData(List<SponsorsDetails> sponsorsDetailsList) {
         sponsorsAdapter.setData(sponsorsDetailsList);
         sponsorsAdapter.notifyDataSetChanged();
-
-
     }
 
     @Override
