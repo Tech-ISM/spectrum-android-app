@@ -21,14 +21,14 @@ public class SponsorsPresenterImpl implements SponsorsPresenter {
 
     @Override
     public void requestSponsorList() {
-        sponsorsView.showProgressBar(True);
+        sponsorsView.showProgressBar(true);
 
         countDownTimer = new CountDownTimer(8000, 1000) {
             public void onTick(long millisUntilFinished) {
             }
 
             public void onFinish() {
-                eventListView.showMessage( "Slow internet connection..");
+                sponsorsView.showMessage( "Slow internet connection..");
             }
         }.start();
     }

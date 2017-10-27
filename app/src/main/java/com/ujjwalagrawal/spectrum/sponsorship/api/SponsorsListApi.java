@@ -15,4 +15,4 @@ import retrofit2.http.GET;
 public interface SponsorsListApi {
     @GET(Urls.REQUEST_SPONS)
     Call<SponsorshipResponse> getSponsors();
-}   
+}
