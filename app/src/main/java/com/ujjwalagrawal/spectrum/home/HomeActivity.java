@@ -52,7 +52,8 @@ public class HomeActivity extends AppCompatActivity {
 					setFragment(eventTitleListFragment);
 				}
 				else if (tabId == R.id.tab_home){
-
+					HomeFragment homeFragment = new HomeFragment();
+					setFragment(homeFragment);
 
 				}
 				else if (tabId == R.id.tab_sponsors){

@@ -32,7 +32,7 @@ public class EventListFragment extends Fragment implements EventListView{
 	private static final String DAY = "day";
 
 	private int mday;
-
+	private Context context;
 	RecyclerView event_recyclerView;
 	private LinearLayoutManager linearLayoutManager;
 
@@ -72,7 +72,7 @@ public class EventListFragment extends Fragment implements EventListView{
 		swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_layout_events);
 		event_recyclerView = (RecyclerView) view.findViewById(R.id.event_recycler_view);
 		event_recyclerView.setHasFixedSize(true);
-
+		context = getContext();
 		linearLayoutManager = new LinearLayoutManager(getContext());
 		eventsAdapter = new EventsAdapter(getContext());
 
@@ -119,7 +119,7 @@ public class EventListFragment extends Fragment implements EventListView{
 
 	@Override
 	public void showMessage(String message) {
-		Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
+		Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
 	}
 
 	@Override

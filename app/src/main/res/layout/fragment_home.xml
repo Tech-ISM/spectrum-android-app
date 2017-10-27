@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/activity_home"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Spectrum"
+            app:titleTextColor="@color/md_white_1000"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/viewPager"
+        android:layout_above="@id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/button_qr"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/md_deep_orange_600"
+            android:textColor="@color/md_white_1000"
+            android:text="Scan QR Code"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/button_chat"
+            android:layout_margin="8dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/md_deep_orange_600"
+            android:textColor="@color/md_white_1000"
+            android:text="Live Chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/button_quiz"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/md_purple_500"
+            android:textColor="@color/md_white_1000"
+            android:text="Online Quiz"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/button_rating"
+            android:layout_margin="8dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@color/md_blue_400"
+            android:textColor="@color/md_white_1000"
+            android:text="Rate Us on Play Store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
