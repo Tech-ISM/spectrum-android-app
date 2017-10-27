@@ -12,4 +12,5 @@ public interface SponsorsView {
     void setData(List<SponsorsDetails> eventDataList);
     void showMessage(String message);
     void showProgressBar(boolean show);
+//    void openImageUrl(String url);
 }

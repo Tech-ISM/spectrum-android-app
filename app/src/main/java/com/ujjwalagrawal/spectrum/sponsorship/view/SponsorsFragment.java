@@ -96,4 +96,9 @@ public class SponsorsFragment extends Fragment implements SponsorsView {
         }
 
     }
+
+//    @Override
+//    public void openImageUrl(String url) {
+//
+//    }
 }

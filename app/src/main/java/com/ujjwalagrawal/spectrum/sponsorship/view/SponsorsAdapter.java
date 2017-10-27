@@ -1,6 +1,8 @@
 package com.ujjwalagrawal.spectrum.sponsorship.view;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,6 +32,11 @@ public class SponsorsAdapter extends RecyclerView.Adapter<SponsorsAdapter.MyView
     Context context;
     private LayoutInflater layoutInflater;
     private ImageLoader imageLoader;
+    private Listener listener;
+
+    interface Listener{
+        void onClick(int position);
+    }
 
     public SponsorsAdapter(Context context1) {
         context = context1;
@@ -56,9 +63,12 @@ public class SponsorsAdapter extends RecyclerView.Adapter<SponsorsAdapter.MyView
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+                context.startActivity(browserIntent);
 
-                FragmentActivity activity = (FragmentActivity)(context);
-                FragmentManager fm = activity.getSupportFragmentManager();
+
+//                FragmentActivity activity = (FragmentActivity)(context);
+//                FragmentManager fm = activity.getSupportFragmentManager();
 //                EventDetailsFragment eventDetailsFragment = new EventDetailsFragment();
             }
         });
