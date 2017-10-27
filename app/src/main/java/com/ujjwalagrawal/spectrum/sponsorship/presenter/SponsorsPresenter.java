@@ -5,4 +5,5 @@ package com.ujjwalagrawal.spectrum.sponsorship.presenter;
  */
 
 public interface SponsorsPresenter {
+    void requestSponsorList();
 }

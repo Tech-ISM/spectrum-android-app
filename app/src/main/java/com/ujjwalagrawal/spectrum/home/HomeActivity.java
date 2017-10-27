@@ -14,6 +14,7 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.events.view.EventTitleListFragment;
+import com.ujjwalagrawal.spectrum.sponsorship.view.SponsorsFragment;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -55,6 +56,8 @@ public class HomeActivity extends AppCompatActivity {
 
 				}
 				else if (tabId == R.id.tab_sponsors){
+					SponsorsFragment sponsorsFragment = new SponsorsFragment();
+					setFragment(sponsorsFragment);
 
 
 				}

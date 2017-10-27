@@ -12,8 +12,7 @@ import retrofit2.http.GET;
  * Created by shubham on 25-10-2017.
  */
 
-public interface RequestSponsorData {
-    @FormUrlEncoded
-    @GET(Urls.REQUEST_VERIFY)
-    Call<SponsorshipResponse> getJson(@Field("access_token") String access_token);
-}
+public interface SponsorsListApi {
+    @GET(Urls.REQUEST_SPONS)
+    Call<SponsorshipResponse> getSponsors();
+}   
