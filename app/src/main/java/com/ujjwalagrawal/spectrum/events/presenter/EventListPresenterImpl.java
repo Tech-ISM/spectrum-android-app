@@ -25,14 +25,14 @@ public class EventListPresenterImpl implements EventListPresenter{
 	public void requestEventList(int day) {
 		eventListView.ShowProgressBar(true);
 
-		countDownTimer = new CountDownTimer(8000, 1000) {
-			public void onTick(long millisUntilFinished) {
-			}
-
-			public void onFinish() {
-				eventListView.showMessage( "Slow internet connection..");
-			}
-		}.start();
+//		countDownTimer = new CountDownTimer(8000, 1000) {
+//			public void onTick(long millisUntilFinished) {
+//			}
+//
+//			public void onFinish() {
+//				eventListView.showMessage( "Slow internet connection..");
+//			}
+//		}.start();
 
 		eventListProvider.requestEventList(day,new EventListCallback() {
 			@Override
