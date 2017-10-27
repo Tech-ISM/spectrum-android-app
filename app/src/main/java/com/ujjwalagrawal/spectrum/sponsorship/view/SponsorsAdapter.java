@@ -63,7 +63,7 @@ public class SponsorsAdapter extends RecyclerView.Adapter<SponsorsAdapter.MyView
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(eventsData.getOnimageclick_url()));
                 context.startActivity(browserIntent);
 
 
