@@ -11,4 +11,3 @@ public interface SponsorshipCallback {
     void onSponsorshipFailure(String error);
 
 }
-
