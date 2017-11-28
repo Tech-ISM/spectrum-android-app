@@ -15,6 +15,7 @@ import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.events.view.EventTitleListFragment;
 import com.ujjwalagrawal.spectrum.sponsorship.view.SponsorsFragment;
+import com.ujjwalagrawal.spectrum.team.view.TeamFragment;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -64,7 +65,8 @@ public class HomeActivity extends AppCompatActivity {
 				}
 				else if (tabId == R.id.tab_aboutus){
 
-
+					TeamFragment teamFragment = new TeamFragment();
+					setFragment(teamFragment);
 				}
 
 			}
