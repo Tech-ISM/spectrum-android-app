@@ -14,6 +14,7 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.events.view.EventTitleListFragment;
+import com.ujjwalagrawal.spectrum.profile.view.ProfileFragment;
 import com.ujjwalagrawal.spectrum.sponsorship.view.SponsorsFragment;
 import com.ujjwalagrawal.spectrum.team.view.TeamFragment;
 
@@ -47,6 +48,8 @@ public class HomeActivity extends AppCompatActivity {
 
 					// The tab with id R.id.tab_favorites was selected,
 					// change your content accordingly.
+					ProfileFragment profile =new ProfileFragment();
+					setFragment(profile);
 				}
 				else if (tabId == R.id.tab_events){
 					EventTitleListFragment eventTitleListFragment = new EventTitleListFragment();

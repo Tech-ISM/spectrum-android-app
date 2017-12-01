@@ -12,7 +12,7 @@ import com.ujjwalagrawal.spectrum.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class  HomeFragment extends Fragment {
 
 
 	public HomeFragment() {
@@ -29,5 +29,6 @@ public class HomeFragment extends Fragment {
 
 		return view;
 	}
+
 
 }

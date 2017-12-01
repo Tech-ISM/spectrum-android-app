@@ -13,5 +13,9 @@
     <string name="notificationbase_url">https://xyz</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_data">You</string>
+    <string name="single_events">Single participant</string>
+    <string name="multiple_events">Multiple Participant</string>
+
 
 </resources>
