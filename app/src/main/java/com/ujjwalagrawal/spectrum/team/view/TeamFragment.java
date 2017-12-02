@@ -13,6 +13,7 @@ import com.ujjwalagrawal.spectrum.team.adapters.MainAdapter;
 import com.ujjwalagrawal.spectrum.team.adapters.SingleHorizontal;
 import com.ujjwalagrawal.spectrum.team.adapters.SingleHorizontalo;
 import com.ujjwalagrawal.spectrum.team.adapters.SingleVertical;
+import com.ujjwalagrawal.spectrum.team.adapters.SingleVerticalo;
 
 import java.util.ArrayList;
 
@@ -51,24 +52,31 @@ private MainAdapter adapter;
     private ArrayList<Object> getObject() {
         objects.add(getVerticalData().get(0));
         objects.add(getHorizontaloData().get(0));
-        objects.add(getVerticalData().get(0));
+        objects.add(getVerticaloData().get(0));
         objects.add(getHorizontalData().get(0));
         return objects;
     }
 
     public static ArrayList<SingleVertical> getVerticalData() {
         ArrayList<SingleVertical> singleVerticals = new ArrayList<>();
-        singleVerticals.add(new SingleVertical("Team Members", ""));  //
+        singleVerticals.add(new SingleVertical("Spectrum Team", ""));  //
         return singleVerticals;
     }
+
+    public static ArrayList<SingleVerticalo> getVerticaloData() {
+        ArrayList<SingleVerticalo> singleVerticalso = new ArrayList<>();
+        singleVerticalso.add(new SingleVerticalo("Developement Team ", ""));  //
+        return singleVerticalso;
+    }
+
     public static ArrayList<SingleHorizontalo> getHorizontaloData() {
         ArrayList<SingleHorizontalo> singleHorizontalso = new ArrayList<>();
-        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a1, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a2,"Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a3, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a4, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a5, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontalso.add(new SingleHorizontalo(R.mipmap.charlie, "Abc Defghi", "as435354@gmail.com", "9889100261"));
+        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a1, "Suresh Raina", "Organizer", ""));
+        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a2,"Abc Defghi", "Designer", ""));
+        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a3, "Abc Defghi", "App Developer", ""));
+        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a4, "Abc Defghi", "Content Writer", ""));
+        singleHorizontalso.add(new SingleHorizontalo(R.drawable.a5, "Abc Defghi", "Organizer", ""));
+        singleHorizontalso.add(new SingleHorizontalo(R.mipmap.charlie, "Abc Defghi", "Organizer", ""));
 
         return singleHorizontalso;
     }
@@ -76,12 +84,12 @@ private MainAdapter adapter;
 
     public static ArrayList<SingleHorizontal> getHorizontalData() {
         ArrayList<SingleHorizontal> singleHorizontals = new ArrayList<>();
-        singleHorizontals.add(new SingleHorizontal(R.mipmap.mrbean, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontals.add(new SingleHorizontal(R.mipmap.jim,"Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontals.add(new SingleHorizontal(R.drawable.a3, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontals.add(new SingleHorizontal(R.drawable.a4, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontals.add(new SingleHorizontal(R.drawable.a5, "Abc Defghi", "as435354@gmail.com", ""));
-        singleHorizontals.add(new SingleHorizontal(R.mipmap.charlie, "Abc Defghi", "as435354@gmail.com", "9889100261"));
+        singleHorizontals.add(new SingleHorizontal(R.mipmap.mrbean, "Mr. Bean", "App Developer", "https://www.github.com"));
+        singleHorizontals.add(new SingleHorizontal(R.mipmap.jim,"Abc Defghi", "App Developer", ""));
+        singleHorizontals.add(new SingleHorizontal(R.drawable.a3, "Abc Defghi", "App Developer", ""));
+        singleHorizontals.add(new SingleHorizontal(R.drawable.a4, "Abc Defghi", "App Developer", ""));
+        singleHorizontals.add(new SingleHorizontal(R.drawable.a5, "Abc Defghi", "App Developer", ""));
+        singleHorizontals.add(new SingleHorizontal(R.mipmap.charlie, "Abc Defghi", "App Developer", ""));
 
         return singleHorizontals;
     }

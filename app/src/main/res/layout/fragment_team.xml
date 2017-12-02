@@ -7,7 +7,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.RecyclerView
-        android:background="@drawable/a6"
+        android:background="@drawable/a10"
         android:id="@+id/recycler_View"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

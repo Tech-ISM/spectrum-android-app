@@ -16,10 +16,13 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
 
     ArrayList<SingleHorizontal> data = new ArrayList<>();
 
+
     public HorizontalAdapter(ArrayList<SingleHorizontal> data) {
+
         this.data = data;
 
     }
+
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,12 +31,15 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
+      //holder.setIsRecyclable(data.get(position),(HomeActivity) context);
 
         holder.description.setText(data.get(position).getDesc());
         holder.title.setText(data.get(position).getTitle());
         holder.pubDate.setText(data.get(position).getPubDate());
         holder.image.setImageResource(data.get(position).getImages());
+
+
     }
 
     @Override

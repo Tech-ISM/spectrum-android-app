@@ -49,6 +49,10 @@ public class HorizontaloAdapter  extends RecyclerView.Adapter<HorizontaloAdapter
             description = (TextView) itemView.findViewById(R.id.description);
             pubDate = (TextView) itemView.findViewById(R.id.published_date);
             image = (ImageView) itemView.findViewById(R.id.image_view);
+            ImageView git=(ImageView)itemView.findViewById(R.id.git);
+            ImageView fb=(ImageView)itemView.findViewById(R.id.fb);
+
+
         }
     }
 }

@@ -1,17 +1,18 @@
 package com.ujjwalagrawal.spectrum.team.adapters;
 
+/**
+ * Created by AmanGupta on 30-11-2017.
+ */
 
-
-public class SingleVertical {
-
+public class SingleVerticalo {
     private String header, subHeader;
 
 
-    public SingleVertical( ) {
+    public SingleVerticalo( ) {
 
     }
 
-    public SingleVertical(String header, String subHeader) {
+    public SingleVerticalo(String header, String subHeader) {
         this.header = header;
         this.subHeader = subHeader;
 
@@ -32,7 +33,6 @@ public class SingleVertical {
     public void setSubHeader(String subHeader) {
         this.subHeader = subHeader;
     }
-
 
 
 }

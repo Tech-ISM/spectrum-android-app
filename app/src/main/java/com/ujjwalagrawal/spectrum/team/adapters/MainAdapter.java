@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import static com.ujjwalagrawal.spectrum.team.view.TeamFragment.getHorizontalData;
 import static com.ujjwalagrawal.spectrum.team.view.TeamFragment.getHorizontaloData;
 import static com.ujjwalagrawal.spectrum.team.view.TeamFragment.getVerticalData;
+import static com.ujjwalagrawal.spectrum.team.view.TeamFragment.getVerticaloData;
 
 
 public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -23,6 +24,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int VERTICAL = 1;
     private final int HORIZONTAL = 2;
     private final int HORIZONTALo = 3;
+    private final int VERTICALo = 4;
 
     public MainAdapter(Context context, ArrayList<Object> items) {
         this.context = context;
@@ -48,6 +50,10 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 view = inflater.inflate(R.layout.horizontalo, parent, false);
                 holder = new HorizontaloViewHolder(view);
                 break;
+            case VERTICALo:
+                view = inflater.inflate(R.layout.vertical, parent, false);
+                holder = new VerticaloViewHolder(view);
+                break;
             default:
                 view = inflater.inflate(R.layout.horizontal, parent, false);
                 holder = new HorizontalViewHolder(view);
@@ -66,6 +72,8 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             horizontalView((HorizontalViewHolder) holder);
         else if (holder.getItemViewType() == HORIZONTALo)
             horizontaloView((HorizontaloViewHolder) holder);
+        else if (holder.getItemViewType() == VERTICALo)
+            verticaloView((VerticaloViewHolder) holder);
     }
 
     private void verticalView(VerticalViewHolder holder) {
@@ -86,7 +94,12 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         holder.recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         holder.recyclerView.setAdapter(adapter);
     }
+    private void verticaloView(VerticaloViewHolder holder) {
 
+        VerticaloAdapter adapter1 = new VerticaloAdapter(getVerticaloData());
+        holder.recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        holder.recyclerView.setAdapter(adapter1);
+    }
 
     @Override
     public int getItemCount() {
@@ -101,6 +114,8 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             return HORIZONTAL;
         if (items.get(position) instanceof SingleHorizontalo)
             return HORIZONTALo;
+        if (items.get(position) instanceof SingleVerticalo)
+            return VERTICALo;
         return -1;
     }
 
@@ -129,6 +144,15 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         RecyclerView recyclerView;
 
         VerticalViewHolder(View itemView) {
+            super(itemView);
+            recyclerView = (RecyclerView) itemView.findViewById(R.id.inner_recyclerView);
+        }
+    }
+
+    public class VerticaloViewHolder extends RecyclerView.ViewHolder {
+        RecyclerView recyclerView;
+
+        VerticaloViewHolder(View itemView) {
             super(itemView);
             recyclerView = (RecyclerView) itemView.findViewById(R.id.inner_recyclerView);
         }
