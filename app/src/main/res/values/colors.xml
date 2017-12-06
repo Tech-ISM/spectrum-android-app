@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ff0045</color>
-    <color name="colorPrimaryDark">#d40039</color>
-    <color name="colorAccent">#42A5F5</color>
+    <color name="colorPrimary">#3E50B4</color>
+    <color name="colorPrimaryDark">#002883</color>
+    <color name="colorAccent">#FF3F80</color>
+    <color name="team_card">#ccf7dfc0</color>
+    <color name="circle_frame">#548ce5</color>
 
     <color name="md_red_50">#FFEBEE</color>
     <color name="md_red_100">#FFCDD2</color>
@@ -178,6 +180,7 @@
     <color name="md_light_green_A200">#B2FF59</color>
     <color name="md_light_green_A400">#76FF03</color>
     <color name="md_light_green_A700">#64DD17</color>
+    <color name="custom_light_green">#89c442</color>
 
     <!-- lime-->
     <color name="md_lime_50">#F9FBE7</color>
@@ -284,6 +287,8 @@
     <color name="md_grey_900">#212121</color>
     <color name="md_black_1000">#000000</color>
     <color name="md_white_1000">#ffffff</color>
+    <color name="custom_shade">#373737</color>
+    <color name="custom_background">#262626</color>
 
     <!--blue grey-->
     <color name="md_blue_grey_50">#ECEFF1</color>

@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitSponsorsListProvider implements SponsorsListProvider {
-    SponsorsListApi sponsorsListApi;
+        SponsorsListApi sponsorsListApi;
 
     public RetrofitSponsorsListProvider() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();

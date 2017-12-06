@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tabs>
+
     <tab
         id="@+id/tab_profile"
-        icon="@drawable/ic_person"
-        barColorWhenSelected="@color/md_deep_purple_500"
-        title="Profile" />
+        icon="@drawable/ic_account_circle_white_24dp"
+        barColorWhenSelected="@color/md_deep_orange_500"
+        title="Profile"
+        />
     <tab
         id="@+id/tab_events"
-        icon="@drawable/ic_person"
-        barColorWhenSelected="@color/md_blue_600"
-        title="Events" />
+        icon="@drawable/ic_event_white_24dp"
+        barColorWhenSelected="@color/md_blue_400"
+        title="Events"
+        />
     <tab
         id="@+id/tab_home"
-        barColorWhenSelected="@color/md_cyan_600"
-        icon="@drawable/ic_person"
-        title="Home" />
+        barColorWhenSelected="@color/custom_light_green"
+        icon="@drawable/ic_home_white_24dp"
+        title="Home"
+        />
     <tab
         id="@+id/tab_aboutus"
-        barColorWhenSelected="@color/md_yellow_600"
-        icon="@drawable/ic_person"
-        title="About Us" />
+        barColorWhenSelected="@color/md_amber_A400"
+        icon="@drawable/ic_info_outline_white_24dp"
+        title="About Us"
+        />
     <tab
         id="@+id/tab_sponsors"
-        barColorWhenSelected="@color/md_orange_600"
-        icon="@drawable/ic_person"
-        title="Sponsors" />
-
+        barColorWhenSelected="@color/md_cyan_300"
+        icon="@drawable/ic_people_white_24dp"
+        title="Sponsors"
+        />
+\
 </tabs>

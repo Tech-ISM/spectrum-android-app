@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_background">
+
+    <VideoView
+        android:id="@+id/video"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        />
+
     <FrameLayout
         android:id="@+id/contentContainer"
         android:layout_width="match_parent"
@@ -14,6 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        app:bb_tabXmlResource="@xml/bottombar_tabs" />
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:bb_inActiveTabColor="@color/custom_shade"
+        app:bb_activeTabColor="@color/md_white_1000"/>
 
 </RelativeLayout>
