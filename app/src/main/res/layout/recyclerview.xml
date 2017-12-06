@@ -13,7 +13,10 @@
             android:id="@+id/RecylerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:isScrollContainer="true" />
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:isScrollContainer="true"
+            android:scrollbarFadeDuration="0"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>
