@@ -1,0 +1,272 @@
+[33mcommit f8fab747a5b56bb1a123e6f49285cc45217cb4dc[m[33m ([m[1;36mHEAD -> [m[1;32mshubham_dev[m[33m)[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Dec 8 00:42:14 2017 +0530
+
+    resolved conflicts
+
+[33mcommit bf0f025f05e59c26100d78a3690f637aeb37fbca[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Dec 7 00:32:23 2017 +0530
+
+    ng
+    tttttt "trying to add button in toolbar"
+    
+    This reverts commit d93c8f5ce7c151d29ffe3b22e3110affeea6e9a4.
+
+[33mcommit f447b439422dbf89696339c2cd27b35d13b74578[m
+Merge: d93c8f5 185b9ad
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Dec 7 00:22:20 2017 +0530
+
+    small change in profile module
+
+[33mcommit 185b9adc9c4c319021cf4e6f0769d0e61f019cc9[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: b3c3a0f 3a6a46f
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Dec 7 00:20:49 2017 +0530
+
+    Merge branch 'master' of https://github.com/Tech-ISM/spectrum-android-app
+
+[33mcommit 3a6a46f72f763baa7f6f4a1ac0f3692b8f7cec2a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: avstark <vaiduyakhil@gmail.com>
+Date:   Wed Dec 6 16:59:21 2017 +0530
+
+    motion background added and several visual changes
+
+[33mcommit cee1bef9840b33970e9077b46df1fd600cbe6607[m
+Merge: 71fd929 b4492bf
+Author: avstark <vaiduyakhil@gmail.com>
+Date:   Mon Dec 4 15:22:54 2017 +0530
+
+    Merge https://github.com/Tech-ISM/spectrum-android-app
+
+[33mcommit d93c8f5ce7c151d29ffe3b22e3110affeea6e9a4[m[33m ([m[1;31morigin/shubham_dev[m[33m)[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Dec 1 19:45:17 2017 +0530
+
+    trying to add button in toolbar
+
+[33mcommit b5f8332e9892e99734a32c1cd1668e864873f366[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Dec 1 17:06:01 2017 +0530
+
+    first fragment of profile made
+
+[33mcommit 9bcfeba8e5caf902a80fcf883bde2fd26b40c381[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Nov 30 18:35:17 2017 +0530
+
+    initial profile made
+
+[33mcommit fbcad65b29c6073b8755dd72d53f475a18e50e27[m
+Merge: bdd3bc9 b4492bf
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Nov 30 11:37:33 2017 +0530
+
+    Merge branch 'master' of https://github.com/Tech-ISM/spectrum-android-app into shubham_dev
+
+[33mcommit b4492bf22ee25123027f821fed47b3d10340cf00[m
+Author: shaliniv16 <ivory699@gmail.com>
+Date:   Wed Nov 29 15:05:55 2017 +0530
+
+    merged the changes
+
+[33mcommit 9eac3c5229a6df55a07e060fdaa6b29c8c46c40e[m
+Author: shaliniv16 <ivory699@gmail.com>
+Date:   Wed Nov 29 14:41:58 2017 +0530
+
+    add in notification folder
+
+[33mcommit b3c3a0f37ce399646a99769e37235a200fd693f6[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Wed Nov 29 02:26:20 2017 +0530
+
+     Please enter the commit message for your changes. Lines starting
+
+[33mcommit bdd3bc9058dacc4904bafd4c4674808dea1001cf[m[33m ([m[1;31morigin/amang_dev[m[33m)[m
+Author: ag597482 <ag597482@gmail.com>
+Date:   Tue Nov 28 21:30:47 2017 +0530
+
+    initial team made
+
+[33mcommit 71fd929ed7f17affda1ad4f5673f2a903963bd00[m
+Author: avstark <vaiduyakhil@gmail.com>
+Date:   Sat Oct 28 20:45:00 2017 +0530
+
+    teams module pushed'
+
+[33mcommit 1ab22eed12cb135f647c2175cf1d496230fcad15[m[33m ([m[1;31morigin/akhil_dev[m[33m)[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Sat Oct 28 03:31:03 2017 +0530
+
+    Progressbar Bug fixed in Sponsor Fragment
+
+[33mcommit 5327a0440421be41f69cc85eb9025c2bbeebe3b7[m
+Merge: 9c75dfb 017a01a
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Sat Oct 28 03:02:09 2017 +0530
+
+    Merge branch 'master' into shubham_dev
+
+[33mcommit 017a01a8c7e490fe1ce125b41a4963b965fcfd4f[m[33m ([m[1;31morigin/ujjwal_dev[m[33m)[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Sat Oct 28 02:55:32 2017 +0530
+
+    Home Fragment added
+
+[33mcommit 9c75dfbbeea3b6835ff328bfa40d8fc8f90d4e03[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Oct 27 21:38:32 2017 +0530
+
+    image url added
+
+[33mcommit c4f7a9e18f303560a2a2299901156d03eac56414[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Oct 27 21:09:51 2017 +0530
+
+    Recycler View made clickable
+
+[33mcommit d0ffc23d056a1bfa02a438e820e740dbabee2bd1[m[33m ([m[1;32morigin[m[33m)[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Oct 27 20:20:18 2017 +0530
+
+    sponsors module finished
+
+[33mcommit 5af3a40eee3cf01adbcab77506b30d0b4b50f7f8[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Oct 27 20:11:20 2017 +0530
+
+    sponsorship module complete
+
+[33mcommit b12f4d61eddcfb81acb54c037492a121d1bd8be1[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Fri Oct 27 02:20:43 2017 +0530
+
+    changed structure of sponsorship module due to change in its implementation
+
+[33mcommit ef2f4c91459f4f90d34b56b7240a648a9ad4300c[m
+Merge: 95a7bf3 0dd8b44
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Oct 26 17:51:42 2017 +0530
+
+    Merge branch 'master' into shubham_dev
+
+[33mcommit 95a7bf3831d453691389d1f94ec9e9f6e4c5eaa4[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Thu Oct 26 17:47:27 2017 +0530
+
+    first recycler partially completed
+
+[33mcommit 0dd8b444c0d38a937bd0935d631ea25099407cc9[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Thu Oct 26 04:36:25 2017 +0530
+
+    Bugs fixed in Eventlist Module
+
+[33mcommit 0c76cc8fe381ee355913bc821b23851dcc95bf00[m
+Merge: d451347 dbea2a7
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Thu Oct 26 03:33:35 2017 +0530
+
+    Merge branch 'master' of github.com:Tech-ISM/spectrum-android-app
+
+[33mcommit d45134735cee8ea78381f2f2770b0c21dc7b2f0a[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Thu Oct 26 03:31:24 2017 +0530
+
+    Added EventList Module
+
+[33mcommit 65f03d9c476d96cc61e02c0f7e40f9c37c7bba0f[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Wed Oct 25 18:10:40 2017 +0530
+
+    added a new model class
+
+[33mcommit dbea2a76cab2df9894da22376127639f3f47039e[m
+Merge: 0166ce1 26c0327
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Wed Oct 25 17:22:31 2017 +0530
+
+    Conflicts fixed
+
+[33mcommit 0166ce18a839e1cf952f33974ed729e1c803667c[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Wed Oct 25 16:57:20 2017 +0530
+
+    fragment added
+
+[33mcommit 26c032780e7d5f300e05c3fa9b1b348860a5c671[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Wed Oct 25 16:32:45 2017 +0530
+
+    Readme Updated
+
+[33mcommit 6533435f436f29b0c70f6f1634fc3be6c745f294[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Wed Oct 25 16:31:46 2017 +0530
+
+    Readme Updated
+
+[33mcommit 33aca960ec5b87d879f4000af47286acd4b01c74[m
+Merge: f0830fa 910d33a
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Wed Oct 25 16:25:32 2017 +0530
+
+    Merge branch 'master' of github.com:Tech-ISM/spectrum-android-app
+
+[33mcommit f0830fab1fbcf0ae9b4005e401ffa90bd00ae83b[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Wed Oct 25 16:21:53 2017 +0530
+
+    Splash Screen Added
+
+[33mcommit 0b480431d0bf4c28cecaac1d18449f9163f0a446[m
+Author: Shubham Raj <shubhamismrocker@gmail.com>
+Date:   Wed Oct 25 15:38:26 2017 +0530
+
+    sponsorship module initial structure added
+
+[33mcommit 910d33a6b1801d0389421b4c401dd1be7b569838[m
+Merge: 3e38453 d46c6f3
+Author: Ujjwal Agrawal <ujjwal.iitism@gmail.com>
+Date:   Wed Oct 25 15:32:03 2017 +0530
+
+    Merge pull request #1 from ag597482/master
+    
+    Update README.md
+
+[33mcommit d46c6f3c98a133b54501eae03a112987c964dbff[m
+Author: ag597482 <ag597482@gmail.com>
+Date:   Wed Oct 25 15:21:19 2017 +0530
+
+    Update README.md
+
+[33mcommit 3e384530c684e29fd1ebe703f0cd7a350cc08359[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Tue Oct 24 19:12:57 2017 +0530
+
+    OTP Module added
+
+[33mcommit fd09d5411719b94e4cb8cb9e28e18f4edf263404[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Tue Oct 24 18:52:07 2017 +0530
+
+    Login Module added
+
+[33mcommit 7499171c4bf98eac48aaf6c97a308f35af31b395[m[33m ([m[1;31morigin/toddler[m[33m)[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Sat Oct 14 20:49:05 2017 +0530
+
+    General Libraries and Helper Module added
+
+[33mcommit 5f6ce89a77dbc881584c829c865d18a4f6f08929[m
+Author: ujjwalagrawal17 <ujjwal.iitism@gmail.com>
+Date:   Sat Oct 14 19:47:29 2017 +0530
+
+    Initial Android Code Added
+
+[33mcommit 45f99d50ac3c425177870063ab1ff580070be246[m
+Author: Ujjwal Agrawal <ujjwal.iitism@gmail.com>
+Date:   Tue Oct 10 00:51:32 2017 +0530
+
+    Initial commit
