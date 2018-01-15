@@ -6,7 +6,7 @@ package com.ujjwalagrawal.spectrum.helper;
 //All the Urls will be here in this class..!!
 public class Urls {
 
-    public static final String BASE_URL = "http://139.59.80.233:3000/";
+    public static final String BASE_URL = "http://gimbooks.com:8880/";
     public static final String REQUEST_EVENTS = "get_events_list/";
     public static final String REQUEST_ABOUTUS = "get_team_members_list/";
     public static final String REQUEST_SPONS = "get_sponsors_list/";
