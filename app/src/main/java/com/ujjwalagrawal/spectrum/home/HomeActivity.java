@@ -1,7 +1,5 @@
 package com.ujjwalagrawal.spectrum.home;
 
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,23 +9,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.widget.VideoView;
 
 import com.crashlytics.android.Crashlytics;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.events.view.EventTitleListFragment;
-import com.ujjwalagrawal.spectrum.profile.view.ProfileFragment;
 import com.ujjwalagrawal.spectrum.sponsorship.view.SponsorsFragment;
 
 import com.ujjwalagrawal.spectrum.team.view.TeamFragment;
 
-import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
-
 import io.fabric.sdk.android.Fabric;
-
-import static com.ujjwalagrawal.spectrum.R.menu.profile;
 
 public class HomeActivity extends AppCompatActivity {
 
