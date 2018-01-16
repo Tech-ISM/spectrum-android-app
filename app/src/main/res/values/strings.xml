@@ -2,7 +2,6 @@
     <string name="app_name">Spectrum</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-
     <string name="hint_login_name">Full Name</string>
     <string name="hint_login_mobile">Mobile Number</string>
     <string name="hint_login_email">Email</string>
@@ -15,5 +14,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="designers">Designers</string>
     <string name="developers">Developers</string>
-
+    <string name="about_spectrum">(JUST TEST TEXT)Society of Electronics Engineers (SEE) organizes an annual fest by the name of Spectrum (formerly known by the name E-Sparx). "A Spectrum (plural spectra or spectrums) is a condition that is not limited to a specific set of values but can vary, without steps, across a continuum. "On a similar note, SEE believes that the students of 21st century are not bound by any limitations to their intellectual capabilities and creativity. What SEE intends to do, is to redefine the potential limits of students in Jharkhand by providing a platform through Spectrum. It is a 2 day fest wherein students from different colleges and departments undergo an intense experience of testing their knowledge, creativity and challenging their aptitude and reasoning abilities. The event also gives the students an opportunity to interact with the people in the field of electronics to understand the bigger picture between the academic courses and industrial requirements.</string>
+    <string name="about_SEE">(JUST TEST TEXT)The events are designed to provide an opportunity to explore teamwork, perseverance, ingenuity, observation skills and technical acumen.
+Mission
+>To produce quality Electronics engineers with excellent technical skills ,leadership, creativity and innovation.
+> Enable students to develop skills to solve complex technical problems of current times.
+> Also the society aims at promoting research in the emerging discipline for the benefit of state and the NATION ultimately.
+>Personality Development, Communication Skills, Group Discussion and Presentation skills
+which is most important for an engineering student</string>
 </resources>
