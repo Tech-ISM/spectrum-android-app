@@ -23,16 +23,21 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
 
     private List<team_members> data;
     private Context context;
+    private boolean dev;
 
-
-    public TeamsAdapter(List<team_members> data, Context context) {
+    public TeamsAdapter(List<team_members> data, Context context,Boolean dev) {
         this.context = context;
         this.data = data;
+        this.dev=dev;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.teams_item, parent, false);
+        View view;
+        if(dev)
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.developers, parent, false);
+        else
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.organizers, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -55,41 +60,44 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
     }
     public void checks(MyViewHolder holder, final team_members current)
     {
-        if(URLUtil.isValidUrl(current.getLinkedIn_url()))
-        {
-            holder.LinkedIn_url.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-                    browserIntent.setData(Uri.parse(current.getLinkedIn_url()));
-                    context.startActivity(browserIntent);
-                }
-            });
-        } else holder.LinkedIn_url.setVisibility(View.GONE);
-
-        if(URLUtil.isValidUrl(current.getFacebook_url()))
-        {
-            holder.facebook_url.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-                    browserIntent.setData(Uri.parse(current.getFacebook_url()));
-                    context.startActivity(browserIntent);
-                }
-            });
-        } else holder.facebook_url.setVisibility(View.GONE);
-
-        if(URLUtil.isValidUrl(current.getGithub_url()))
-        {
+//        if(URLUtil.isValidUrl(current.getLinkedIn_url()))
+//        {
+//            holder.LinkedIn_url.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+//                    browserIntent.setData(Uri.parse(current.getLinkedIn_url()));
+//                    context.startActivity(browserIntent);
+//                }
+//            });
+//        } else holder.LinkedIn_url.setVisibility(View.GONE);
+    if (dev)
+    {
+        if (URLUtil.isValidUrl(current.getConcerned_url())) {
             holder.github_url.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-                    browserIntent.setData(Uri.parse(current.getGithub_url()));
+                    browserIntent.setData(Uri.parse(current.getConcerned_url()));
                     context.startActivity(browserIntent);
                 }
             });
         } else holder.github_url.setVisibility(View.GONE);
+    }
+    else
+    {
+        if (URLUtil.isValidUrl(current.getConcerned_url())) {
+            holder.facebook_url.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+                    browserIntent.setData(Uri.parse(current.getConcerned_url()));
+                    context.startActivity(browserIntent);
+                }
+            });
+        } else holder.facebook_url.setVisibility(View.GONE);
+    }
+
     }
 
     @Override
@@ -103,7 +111,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
         public TextView designation;
         public ImageView facebook_url;
         public ImageView github_url;
-        public ImageView LinkedIn_url;
+//        public ImageView LinkedIn_url;
         public ImageView mobile_no;
 
         public MyViewHolder(View itemView) {
@@ -111,10 +119,13 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
             image = (ImageView) itemView.findViewById(R.id.image);
             member_name = (TextView) itemView.findViewById(R.id.name);
             designation = (TextView) itemView.findViewById(R.id.designation);
-            facebook_url = (ImageView) itemView.findViewById(R.id.facebook);
-            github_url = (ImageView) itemView.findViewById(R.id.github);
-            LinkedIn_url = (ImageView) itemView.findViewById(R.id.linkedIn);
             mobile_no = (ImageView) itemView.findViewById(R.id.moblile_no);
+            if (dev)
+                github_url = (ImageView) itemView.findViewById(R.id.github);
+            else
+                facebook_url = (ImageView) itemView.findViewById(R.id.facebook);
+// LinkedIn_url = (ImageView) itemView.findViewById(R.id.linkedIn);
+
         }
     }
 
