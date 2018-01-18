@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class  HomeFragment extends Fragment {
 
 	@BindView(R.id.about)
 	TextView about;
@@ -74,5 +74,6 @@ public class HomeFragment extends Fragment {
 		}
 
 	}
+
 
 }

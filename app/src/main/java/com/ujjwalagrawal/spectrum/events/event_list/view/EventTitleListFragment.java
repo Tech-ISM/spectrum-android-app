@@ -31,7 +31,7 @@ public class EventTitleListFragment extends Fragment {
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
 
-	private ViewPagerAdapter viewPagerAdapter;
+	public ViewPagerAdapter viewPagerAdapter;
 
 	private OnFragmentInteractionListener mListener;
 

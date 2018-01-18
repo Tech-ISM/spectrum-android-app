@@ -20,7 +20,9 @@ import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.events.event_list.view.EventTitleListFragment;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
-import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
+import com.ujjwalagrawal.spectrum.profile.view.ProfileFragment;
+
+import com.ujjwalagrawal.spectrum.team.view.TeamFragment;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -67,6 +69,8 @@ public class HomeActivity extends AppCompatActivity {
 
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
+                    ProfileFragment profile = new ProfileFragment();
+                    setFragment(profile);
                 } else if (tabId == R.id.tab_events) {
                     EventTitleListFragment eventTitleListFragment = new EventTitleListFragment();
                     setFragment(eventTitleListFragment);
@@ -83,9 +87,9 @@ public class HomeActivity extends AppCompatActivity {
                     sharedPrefs.setUsername("");
 
                 } else if (tabId == R.id.tab_aboutus) {
-                    TeamsFragment teamsFragment = new TeamsFragment();
-                    setFragment(teamsFragment);
 
+                    TeamFragment teamFragment = new TeamFragment();
+                    setFragment(teamFragment);
                 }
 
             }

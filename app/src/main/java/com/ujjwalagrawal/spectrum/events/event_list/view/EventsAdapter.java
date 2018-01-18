@@ -83,6 +83,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.event_relativeLayout);
             event_name = (TextView) itemView.findViewById(R.id.eventName);
             progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar_events);
+
         }
     }
 }

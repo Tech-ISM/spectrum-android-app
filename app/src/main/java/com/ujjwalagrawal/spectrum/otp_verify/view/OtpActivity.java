@@ -154,6 +154,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
         sharedPrefs.setLogin(true);
+        sharedPrefs.setAccessToken(otpResponse.getAccess_token());
         finish();
     }
 
