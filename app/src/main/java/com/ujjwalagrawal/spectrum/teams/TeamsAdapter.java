@@ -33,11 +33,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view;
-        if(dev)
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.developers, parent, false);
-        else
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.organizers, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.member_card, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -60,21 +56,8 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
     }
     public void checks(MyViewHolder holder, final team_members current)
     {
-//        if(URLUtil.isValidUrl(current.getLinkedIn_url()))
-//        {
-//            holder.LinkedIn_url.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-//                    browserIntent.setData(Uri.parse(current.getLinkedIn_url()));
-//                    context.startActivity(browserIntent);
-//                }
-//            });
-//        } else holder.LinkedIn_url.setVisibility(View.GONE);
-    if (dev)
-    {
         if (URLUtil.isValidUrl(current.getConcerned_url())) {
-            holder.github_url.setOnClickListener(new View.OnClickListener() {
+            holder.reference_url.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW);
@@ -82,21 +65,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
                     context.startActivity(browserIntent);
                 }
             });
-        } else holder.github_url.setVisibility(View.GONE);
-    }
-    else
-    {
-        if (URLUtil.isValidUrl(current.getConcerned_url())) {
-            holder.facebook_url.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-                    browserIntent.setData(Uri.parse(current.getConcerned_url()));
-                    context.startActivity(browserIntent);
-                }
-            });
-        } else holder.facebook_url.setVisibility(View.GONE);
-    }
+        } else holder.reference_url.setVisibility(View.GONE);
 
     }
 
@@ -109,8 +78,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
         public ImageView image;
         public TextView member_name;
         public TextView designation;
-        public ImageView facebook_url;
-        public ImageView github_url;
+        public  ImageView reference_url;
 //        public ImageView LinkedIn_url;
         public ImageView mobile_no;
 
@@ -120,10 +88,11 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
             member_name = (TextView) itemView.findViewById(R.id.name);
             designation = (TextView) itemView.findViewById(R.id.designation);
             mobile_no = (ImageView) itemView.findViewById(R.id.moblile_no);
+            reference_url=(ImageView)itemView.findViewById(R.id.reference);
             if (dev)
-                github_url = (ImageView) itemView.findViewById(R.id.github);
+                reference_url.setImageResource(R.drawable.github);
             else
-                facebook_url = (ImageView) itemView.findViewById(R.id.facebook);
+                reference_url.setImageResource(R.drawable.facebook_app_logo);
 // LinkedIn_url = (ImageView) itemView.findViewById(R.id.linkedIn);
 
         }

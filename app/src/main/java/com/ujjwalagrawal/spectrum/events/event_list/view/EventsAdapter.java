@@ -1,6 +1,7 @@
 package com.ujjwalagrawal.spectrum.events.event_list.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,9 +14,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ujjwalagrawal.spectrum.R;
+import com.ujjwalagrawal.spectrum.events.event_details.data.EventDetails;
+import com.ujjwalagrawal.spectrum.events.event_details.view.EventDetailActivity;
 import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
+import com.ujjwalagrawal.spectrum.home.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,12 +63,16 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
             @Override
             public void onClick(View v) {
 
-                FragmentActivity activity = (FragmentActivity)(context);
-                FragmentManager fm = activity.getSupportFragmentManager();
+//                FragmentActivity activity = (FragmentActivity)(context);
+//                FragmentManager fm = activity.getSupportFragmentManager();
 //                EventDetailsFragment eventDetailsFragment = new EventDetailsFragment();
+                Intent intent = new Intent(context, EventDetailActivity.class);
+                intent.putExtra("event_id",eventsData.getEvent_id());
+                ((HomeActivity)context).startActivity(intent);
             }
         });
     }
+
 
     @Override
     public int getItemCount() {

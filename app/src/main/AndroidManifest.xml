@@ -10,28 +10,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".splash_screen.view.SplashScreen"
-                  android:screenOrientation="portrait"
-            >
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".splash_screen.view.SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.view.LoginActivity"
-                  android:windowSoftInputMode=""
-                  android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".otp_verify.view.OtpActivity"
-                  android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".login.view.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode=""
+            />
+        <activity
+            android:name=".otp_verify.view.OtpActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".home.HomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".events.event_details.view.EventDetailActivity"
+            android:screenOrientation="portrait"/>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ffe1f92a26df2a3deaf85a2c51e2d49d00bc61db" />

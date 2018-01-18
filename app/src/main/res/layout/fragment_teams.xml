@@ -22,6 +22,7 @@
                 app:titleTextColor="@color/md_white_1000" />
         </android.support.design.widget.AppBarLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,11 +30,33 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3sp"
+                android:text="@string/head_members"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/head_members_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
                 android:text="@string/developers"
                 android:textColor="#ffffff"
                 android:textSize="24sp" />
@@ -51,6 +74,7 @@
                     android:scrollbars="horizontal">
 
                 </android.support.v7.widget.RecyclerView>
+
             </LinearLayout>
 
             <TextView
@@ -76,6 +100,7 @@
                 </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
+
 
         </LinearLayout>
     </RelativeLayout>
