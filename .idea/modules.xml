@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\Android_projects\spectrum_app\spectrum-android-app\app\app.iml" filepath="F:\Android_projects\spectrum_app\spectrum-android-app\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/spectrum-android-app.iml" filepath="$PROJECT_DIR$/spectrum-android-app.iml" />
+      <module fileurl="file://F:\Android_projects\spectrum_app\spectrum-android-app\spectrum-android-app.iml" filepath="F:\Android_projects\spectrum_app\spectrum-android-app\spectrum-android-app.iml" />
     </modules>
   </component>
 </project>
