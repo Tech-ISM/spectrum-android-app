@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3E50B4</color>
-    <color name="colorPrimaryDark">#002883</color>
+    <color name="colorPrimaryDark">#08215a</color>
     <color name="colorAccent">#FF3F80</color>
     <color name="team_card">#ccf7dfc0</color>
     <color name="circle_frame">#548ce5</color>
@@ -287,7 +287,7 @@
     <color name="md_grey_900">#212121</color>
     <color name="md_black_1000">#000000</color>
     <color name="md_white_1000">#ffffff</color>
-    <color name="custom_shade">#373737</color>
+    <color name="custom_shade">#3a55cd</color>
     <color name="custom_background">#262626</color>
 
     <!--blue grey-->

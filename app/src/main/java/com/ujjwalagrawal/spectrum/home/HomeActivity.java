@@ -1,6 +1,7 @@
 package com.ujjwalagrawal.spectrum.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.IdRes;
@@ -23,6 +24,7 @@ import com.ujjwalagrawal.spectrum.home.view.HomeFragment;
 
 import com.ujjwalagrawal.spectrum.events.event_list.view.EventTitleListFragment;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
+import com.ujjwalagrawal.spectrum.login.view.LoginActivity;
 import com.ujjwalagrawal.spectrum.profile.view.ProfileFragment;
 import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
 
@@ -46,6 +48,7 @@ public class HomeActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     Context context;
+    HomeActivity homeActivity;
     SharedPrefs sharedPrefs;
     private VideoView video1;
 
@@ -55,6 +58,7 @@ public class HomeActivity extends AppCompatActivity {
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_home);
         context = this;
+        homeActivity = this;
         video1 = (VideoView) findViewById(R.id.video);//ADDED AVIDEO BACKGROUND IN THE BASE ACTIVITY
         Uri uri = Uri.parse("android.resource://" + "com.ujjwalagrawal.spectrum" + "/" + R.raw.test);
         video1.setVideoURI(uri);
@@ -90,6 +94,8 @@ public class HomeActivity extends AppCompatActivity {
                     sharedPrefs.setAccessToken("");
                     sharedPrefs.setMobile("");
                     sharedPrefs.setUsername("");
+                    Intent intent = new Intent(homeActivity, LoginActivity.class);
+                    startActivity(intent);
 
                 } else if (tabId == R.id.tab_aboutus) {
 

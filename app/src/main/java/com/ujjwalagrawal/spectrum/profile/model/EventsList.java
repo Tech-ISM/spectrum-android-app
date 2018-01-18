@@ -8,9 +8,9 @@ public class EventsList {
     private int type ;
     private int id;
     private String name;
-    private boolean participated;
+    private int participated;
 
-    public EventsList(int type, int id, String name, boolean participated) {
+    public EventsList(int type, int id, String name, int participated) {
         this.type = type;
         this.id = id;
         this.name = name;
@@ -29,7 +29,7 @@ public class EventsList {
         return name;
     }
 
-    public boolean isParticipated() {
+    public int getParticipated() {
         return participated;
     }
 }
