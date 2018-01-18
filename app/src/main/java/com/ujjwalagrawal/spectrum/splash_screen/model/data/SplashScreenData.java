@@ -1,8 +1,5 @@
 package com.ujjwalagrawal.spectrum.splash_screen.model.data;
 
-/**
- * Created by ujjwal on 25/10/17.
- */
 
 public class SplashScreenData {
 

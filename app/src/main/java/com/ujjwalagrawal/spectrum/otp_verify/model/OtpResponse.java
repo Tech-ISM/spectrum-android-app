@@ -8,10 +8,12 @@ public class OtpResponse {
 
     private String message;
     private boolean success;
-    public OtpResponse(String message, boolean success)
-    {
-        this.message=message;
-        this.success=success;
+    private String access_token;
+
+    public OtpResponse(String message, boolean success, String access_token) {
+        this.message = message;
+        this.success = success;
+        this.access_token = access_token;
     }
 
     public String getMessage() {
@@ -20,5 +22,9 @@ public class OtpResponse {
 
     public boolean isSuccess() {
         return success;
+    }
+
+    public String getAccess_token() {
+        return access_token;
     }
 }
