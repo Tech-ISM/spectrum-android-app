@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import com.ujjwalagrawal.spectrum.R;
@@ -32,13 +32,9 @@ import java.util.List;
 public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyViewHolder> {
 
     private List<EventsList> data  = new ArrayList<>();
-    private int single=0;
     Context context;
     private LayoutInflater layoutInflater;
     private ImageLoader imageLoader;
-    private int multiple=0;
-    private int total = data.size();
-    private int count=total;
 //    private int i;
 //    for( i = 0;i < total ; i++){
 //        EventsList element =data.get(i);
@@ -82,6 +78,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
         final EventsList eventsList = data.get(position);
+
         holder.event_name.setText(eventsList.getName());
 
         if(eventsList.getParticipated()==1){
@@ -92,7 +89,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
 
 
-//        Toast.makeText(context,data.size(),Toast.LENGTH_SHORT);
+//        Toast.makeText(context,data.size()+"",Toast.LENGTH_SHORT).show();
 //
 //        TextView textView  = cardView.findViewById(R.id.event_name);
 //        textView.setText("hello");
@@ -106,7 +103,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return count;
+        return data.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

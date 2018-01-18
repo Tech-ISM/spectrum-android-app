@@ -101,8 +101,6 @@ public class HomeActivity extends AppCompatActivity {
 
                     TeamsFragment teamFragment = new TeamsFragment();
                     setFragment(teamFragment);
-//                    TeamFragment teamFragment = new TeamFragment();
-//                    setFragment(teamFragment);
                 }
 
             }
