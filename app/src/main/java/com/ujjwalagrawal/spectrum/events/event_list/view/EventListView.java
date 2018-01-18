@@ -1,7 +1,7 @@
-package com.ujjwalagrawal.spectrum.events.view;
+package com.ujjwalagrawal.spectrum.events.event_list.view;
 
 
-import com.ujjwalagrawal.spectrum.events.data.EventData;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
 
 import java.util.List;
 

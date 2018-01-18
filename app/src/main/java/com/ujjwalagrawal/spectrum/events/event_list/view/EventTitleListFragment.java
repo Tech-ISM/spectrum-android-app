@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.events.view;
+package com.ujjwalagrawal.spectrum.events.event_list.view;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,10 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.ujjwalagrawal.spectrum.R;
-import com.ujjwalagrawal.spectrum.events.data.EventData;
 
 import java.util.ArrayList;
 import java.util.List;

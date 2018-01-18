@@ -1,31 +1,26 @@
-package com.ujjwalagrawal.spectrum.events.view;
+package com.ujjwalagrawal.spectrum.events.event_list.view;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mikepenz.itemanimators.SlideDownAlphaAnimator;
 import com.ujjwalagrawal.spectrum.R;
-import com.ujjwalagrawal.spectrum.events.data.EventData;
-import com.ujjwalagrawal.spectrum.events.presenter.EventListPresenter;
-import com.ujjwalagrawal.spectrum.events.presenter.EventListPresenterImpl;
-import com.ujjwalagrawal.spectrum.events.provider.RetrofitEventListProvider;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
+import com.ujjwalagrawal.spectrum.events.event_list.presenter.EventListPresenter;
+import com.ujjwalagrawal.spectrum.events.event_list.presenter.EventListPresenterImpl;
+import com.ujjwalagrawal.spectrum.events.event_list.provider.RetrofitEventListProvider;
 
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 
 public class EventListFragment extends Fragment implements EventListView{

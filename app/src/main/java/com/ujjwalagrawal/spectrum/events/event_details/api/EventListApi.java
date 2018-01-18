@@ -1,8 +1,8 @@
-package com.ujjwalagrawal.spectrum.events.api;
+package com.ujjwalagrawal.spectrum.events.event_details.api;
 
 
 
-import com.ujjwalagrawal.spectrum.events.data.EventList;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventList;
 import com.ujjwalagrawal.spectrum.helper.Urls;
 
 import retrofit2.Call;

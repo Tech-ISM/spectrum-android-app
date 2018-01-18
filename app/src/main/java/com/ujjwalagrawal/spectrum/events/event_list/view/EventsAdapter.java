@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.events.view;
+package com.ujjwalagrawal.spectrum.events.event_list.view;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
@@ -13,10 +13,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ujjwalagrawal.spectrum.R;
-import com.ujjwalagrawal.spectrum.events.data.EventData;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
-import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;

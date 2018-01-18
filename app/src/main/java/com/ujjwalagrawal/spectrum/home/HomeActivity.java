@@ -1,5 +1,6 @@
 package com.ujjwalagrawal.spectrum.home;
 
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.IdRes;
@@ -17,8 +18,8 @@ import com.crashlytics.android.Crashlytics;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
-import com.ujjwalagrawal.spectrum.events.view.EventTitleListFragment;
-import com.ujjwalagrawal.spectrum.sponsorship.view.SponsorsFragment;
+import com.ujjwalagrawal.spectrum.events.event_list.view.EventTitleListFragment;
+import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
 
 import io.fabric.sdk.android.Fabric;
@@ -37,7 +38,8 @@ public class HomeActivity extends AppCompatActivity {
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-
+    Context context;
+    SharedPrefs sharedPrefs;
     private VideoView video1;
 
     @Override
@@ -45,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_home);
-
+        context = this;
         video1 = (VideoView) findViewById(R.id.video);//ADDED AVIDEO BACKGROUND IN THE BASE ACTIVITY
         Uri uri = Uri.parse("android.resource://" + "com.ujjwalagrawal.spectrum" + "/" + R.raw.test);
         video1.setVideoURI(uri);
@@ -73,9 +75,12 @@ public class HomeActivity extends AppCompatActivity {
                     setFragment(homeFragment);
 
                 } else if (tabId == R.id.tab_sponsors) {
-                    SponsorsFragment sponsorsFragment = new SponsorsFragment();
-                    setFragment(sponsorsFragment);
-
+//                    ChatFragment sponsorsFragment = new SponsorsFragment();
+//                    setFragment(sponsorsFragment);
+                    sharedPrefs = new SharedPrefs(context);
+                    sharedPrefs.setAccessToken("");
+                    sharedPrefs.setMobile("");
+                    sharedPrefs.setUsername("");
 
                 } else if (tabId == R.id.tab_aboutus) {
                     TeamsFragment teamsFragment = new TeamsFragment();

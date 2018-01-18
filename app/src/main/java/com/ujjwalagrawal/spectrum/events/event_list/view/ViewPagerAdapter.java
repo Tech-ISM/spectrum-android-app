@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.events.view;
+package com.ujjwalagrawal.spectrum.events.event_list.view;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

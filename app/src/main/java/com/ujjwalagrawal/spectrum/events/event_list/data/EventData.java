@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.events.data;
+package com.ujjwalagrawal.spectrum.events.event_list.data;
 
 /**
  * Created by ujjwal on 25/10/17.

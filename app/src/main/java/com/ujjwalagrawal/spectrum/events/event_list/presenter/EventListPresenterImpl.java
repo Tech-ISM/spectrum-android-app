@@ -1,11 +1,11 @@
-package com.ujjwalagrawal.spectrum.events.presenter;
+package com.ujjwalagrawal.spectrum.events.event_list.presenter;
 
 import android.os.CountDownTimer;
 
-import com.ujjwalagrawal.spectrum.events.EventListCallback;
-import com.ujjwalagrawal.spectrum.events.data.EventList;
-import com.ujjwalagrawal.spectrum.events.provider.EventListProvider;
-import com.ujjwalagrawal.spectrum.events.view.EventListView;
+import com.ujjwalagrawal.spectrum.events.event_list.EventListCallback;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventList;
+import com.ujjwalagrawal.spectrum.events.event_list.provider.EventListProvider;
+import com.ujjwalagrawal.spectrum.events.event_list.view.EventListView;
 
 /**
  * Created by ujjwal on 25/10/17.

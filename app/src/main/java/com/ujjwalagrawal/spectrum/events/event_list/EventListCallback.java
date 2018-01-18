@@ -1,6 +1,6 @@
-package com.ujjwalagrawal.spectrum.events;
+package com.ujjwalagrawal.spectrum.events.event_list;
 
-import com.ujjwalagrawal.spectrum.events.data.EventList;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventList;
 
 /**
  * Created by ujjwal on 25/10/17.

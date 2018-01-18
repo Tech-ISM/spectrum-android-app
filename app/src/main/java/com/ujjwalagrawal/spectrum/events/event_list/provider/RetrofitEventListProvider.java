@@ -1,8 +1,8 @@
-package com.ujjwalagrawal.spectrum.events.provider;
+package com.ujjwalagrawal.spectrum.events.event_list.provider;
 
-import com.ujjwalagrawal.spectrum.events.EventListCallback;
-import com.ujjwalagrawal.spectrum.events.api.EventListApi;
-import com.ujjwalagrawal.spectrum.events.data.EventList;
+import com.ujjwalagrawal.spectrum.events.event_list.EventListCallback;
+import com.ujjwalagrawal.spectrum.events.event_list.api.EventListApi;
+import com.ujjwalagrawal.spectrum.events.event_list.data.EventList;
 import com.ujjwalagrawal.spectrum.helper.Urls;
 
 import okhttp3.OkHttpClient;
