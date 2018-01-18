@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutCompat;
+//import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -15,11 +15,12 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.daimajia.easing.linear.Linear;
+import com.mikepenz.itemanimators.SlideDownAlphaAnimator;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.profile.model.EventsList;
 import com.ujjwalagrawal.spectrum.profile.model.RegistrationList;
-import com.ujjwalagrawal.spectrum.profile.model.TrialData;
+//import com.ujjwalagrawal.spectrum.profile.model.TrialData;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenter;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenterImpl;
 import com.ujjwalagrawal.spectrum.profile.provider.RetrofitRegisterListProvider;
@@ -71,6 +72,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 
 //        registerAdapter.setData(trialData.getHello());
         recyclerView.setAdapter(registerAdapter);
+        recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
         registerListPresenter.requestRegistrationList(token);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -95,6 +97,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
     @Override
     public void SetData(List<EventsList> eventsListList){
         registerAdapter.setData(eventsListList);
+        Log.d("size",eventsListList.size()+"");
         registerAdapter.notifyDataSetChanged();
     }
 

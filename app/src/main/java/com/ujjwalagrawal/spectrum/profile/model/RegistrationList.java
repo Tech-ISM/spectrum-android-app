@@ -9,12 +9,12 @@ import java.util.List;
 public class RegistrationList {
     public boolean success;
     public String message;
-    public List<EventsList> events_list;
+    public List<EventsList> event_list;
 
-    public RegistrationList(boolean success, String message, List<EventsList> events_list) {
+    public RegistrationList(boolean success, String message, List<EventsList> event_list) {
         this.success = success;
         this.message = message;
-        this.events_list = events_list;
+        this.event_list = event_list;
     }
 
     public boolean isSuccess() {
@@ -25,7 +25,7 @@ public class RegistrationList {
         return message;
     }
 
-    public List<EventsList> getEvents_list() {
-        return events_list;
+    public List<EventsList> getEvent_list() {
+        return event_list;
     }
 }

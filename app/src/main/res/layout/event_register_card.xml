@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.7"
-            />
+            android:textColor="@color/circle_frame" />
 
         <Switch
             android:id="@+id/switch_register"

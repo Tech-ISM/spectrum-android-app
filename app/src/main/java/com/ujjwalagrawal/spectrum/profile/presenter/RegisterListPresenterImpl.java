@@ -1,6 +1,5 @@
 package com.ujjwalagrawal.spectrum.profile.presenter;
 
-import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.profile.RegisterListCallback;
 import com.ujjwalagrawal.spectrum.profile.model.RegistrationList;
 import com.ujjwalagrawal.spectrum.profile.provider.RegisterListProvider;
@@ -26,7 +25,7 @@ public class RegisterListPresenterImpl implements RegisterListPresenter{
             @Override
             public void onSuccess(RegistrationList registrationList) {
                 if(registrationList.isSuccess()){
-                    registerListView.SetData(registrationList.getEvents_list());
+                    registerListView.SetData(registrationList.getEvent_list());
                 } else {
                     registerListView.showMessage("Unable to connect to the server...");
                 }

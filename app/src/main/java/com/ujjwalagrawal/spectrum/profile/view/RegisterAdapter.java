@@ -5,11 +5,13 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 
 import android.transition.Slide;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.ujjwalagrawal.spectrum.R;
@@ -79,10 +81,18 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        EventsList eventsList = data.get(position);
-        holder.event_name.setText(eventsList.getName());
 
-//        TextView textView  =cardView.findViewById(R.id.event_name);
+        EventsList eventsList = data.get(position);
+        CardView cardView = holder.cardView;
+//        holder.event_name.setText(eventsList.getName());
+        Log.d("item","good");
+        Log.d("name",eventsList.getName());
+
+
+//        Toast.makeText(context,data.size(),Toast.LENGTH_SHORT);
+
+        TextView textView  =cardView.findViewById(R.id.event_name);
+        textView.setText("hello");
 //        Switch swi =cardView.findViewById(R.id.switch_register);
 //        textView.setText(eventsList.getName());
 
@@ -99,11 +109,13 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView event_name;
         public Switch checklist;
+        public CardView cardView;
 
         public MyViewHolder(View itemView){
             super(itemView);
             event_name= itemView.findViewById(R.id.event_name);
             checklist= itemView.findViewById(R.id.switch_register);
+            cardView =itemView.findViewById(R.id.event_details);
         }
     }
 
