@@ -24,7 +24,10 @@ import java.util.List;
  */
 
 public class TeamsFragment extends Fragment {
-    private List<team_members> data;
+    private List<team_members> developers;
+    private List<team_members> organizers;
+    private  RecyclerView            developers_Recyclerview ,   organizers_Recyclerview;
+    private  RecyclerView.Adapter    developerAdapter        ,   organizerAdapter;
 
     public TeamsFragment() {
     }
@@ -32,38 +35,50 @@ public class TeamsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        RecyclerView developers_Recyclerview, designers_Recyclerview;
-        RecyclerView.Adapter designerAdapter, developerAdapter;
-
-
         View view = inflater.inflate(R.layout.fragment_teams, container, false); // Inflate the layout for this fragment
 
-        data=new ArrayList<>();
-        fill_with_data();
+        developers=new ArrayList<>();
+        organizers=new ArrayList<>();
 
-        developers_Recyclerview = (RecyclerView) view.findViewById(R.id.developer_recycler_view);
-        developers_Recyclerview.setHasFixedSize(true);
-        developers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        developerAdapter = new TeamsAdapter(data, getContext());
-
-        designers_Recyclerview = (RecyclerView) view.findViewById(R.id.designer_recycler_view);
-        designers_Recyclerview.setHasFixedSize(true);
-        designers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        designerAdapter = new TeamsAdapter(data, getContext());
-
-        developers_Recyclerview.setAdapter(developerAdapter);
-        designers_Recyclerview.setAdapter(designerAdapter);
+        put_data();
+        set_adapters(view);
 
         return view;
     }
 
-    public void fill_with_data()//will be used to set data finally
+    public void set_adapters(View view)
     {
-        team_members asd=new team_members("XYZ ABC","Akhil Vishwas Vaidya",R.drawable.framelayout3,"12345678","https://www.youtube.com/","https://www.youtube.com/","https://www.youtube.com/");
-        team_members zxc=new team_members("Ravi Chandran Ashwin","ABC XYZ",R.drawable.framelayout1,"https://www.youtube.com/","https://www.youtube.com/","https://www.youtube.com/","https://www.youtube.com/");
+        developers_Recyclerview = (RecyclerView) view.findViewById(R.id.developer_recycler_view);
+        developers_Recyclerview.setHasFixedSize(true);
+        developers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        developerAdapter = new TeamsAdapter(developers, getContext(),true);
 
-        data.add(asd);
-        data.add(zxc);
+        organizers_Recyclerview = (RecyclerView) view.findViewById(R.id.organizers_recycler_view);
+        organizers_Recyclerview.setHasFixedSize(true);
+        organizers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        organizerAdapter = new TeamsAdapter(organizers, getContext(),false);
+
+        developers_Recyclerview.setAdapter(developerAdapter);
+        organizers_Recyclerview.setAdapter(organizerAdapter);
+    }
+
+    public void put_data()//will be used to set data finally
+    {
+
+        developers.add(new team_members("Akhil Vaidya","junior developer",R.drawable.framelayout3,"23456345346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Shubham Raj","junior developer",R.drawable.framelayout3,"2345634534346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+
+        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+        organizers.add(new team_members("sanskar Shrivastava","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
 
     }
 
