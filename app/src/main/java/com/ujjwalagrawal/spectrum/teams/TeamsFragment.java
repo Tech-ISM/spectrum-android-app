@@ -1,8 +1,6 @@
 package com.ujjwalagrawal.spectrum.teams;
 
-import android.graphics.drawable.AnimationDrawable;
-import android.media.MediaPlayer;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,8 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.VideoView;
 
 import com.ujjwalagrawal.spectrum.R;
 
@@ -26,8 +22,9 @@ import java.util.List;
 public class TeamsFragment extends Fragment {
     private List<team_members> developers;
     private List<team_members> organizers;
-    private  RecyclerView            developers_Recyclerview ,   organizers_Recyclerview;
-    private  RecyclerView.Adapter    developerAdapter        ,   organizerAdapter;
+    private List<team_members> head_members;
+    private  RecyclerView            developers_Recyclerview ,   organizers_Recyclerview, head_Recyclerview   ;
+    private  RecyclerView.Adapter    developerAdapter        ,   organizerAdapter       , headAdapter  ;
 
     public TeamsFragment() {
     }
@@ -39,6 +36,7 @@ public class TeamsFragment extends Fragment {
 
         developers=new ArrayList<>();
         organizers=new ArrayList<>();
+        head_members=new ArrayList<>();
 
         put_data();
         set_adapters(view);
@@ -48,6 +46,11 @@ public class TeamsFragment extends Fragment {
 
     public void set_adapters(View view)
     {
+        head_Recyclerview = (RecyclerView) view.findViewById(R.id.head_members_recyclerview);
+        head_Recyclerview.setHasFixedSize(true);
+        head_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        headAdapter = new TeamsAdapter(head_members, getContext(),false);
+
         developers_Recyclerview = (RecyclerView) view.findViewById(R.id.developer_recycler_view);
         developers_Recyclerview.setHasFixedSize(true);
         developers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
@@ -60,6 +63,8 @@ public class TeamsFragment extends Fragment {
 
         developers_Recyclerview.setAdapter(developerAdapter);
         organizers_Recyclerview.setAdapter(organizerAdapter);
+        head_Recyclerview.setAdapter(headAdapter);
+
     }
 
     public void put_data()//will be used to set data finally
@@ -79,6 +84,14 @@ public class TeamsFragment extends Fragment {
         organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
         organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
         organizers.add(new team_members("sanskar Shrivastava","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+
+        head_members.add(new team_members("Akhil Vaidya","junior developer",R.drawable.framelayout3,"23456345346","https://github.com/Tech-ISM/spectrum-android-app"));
+        head_members.add(new team_members("Shubham Raj","junior developer",R.drawable.framelayout3,"2345634534346","https://github.com/Tech-ISM/spectrum-android-app"));
+        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
 
     }
 

@@ -11,6 +11,7 @@
     <string name="online_quiz_dialog">Go to online quiz</string>
     <string name="notificationbase_url">https://xyz</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="head_members">Head Members</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="organizers">Organizers</string>
     <string name="developers">Developers</string>

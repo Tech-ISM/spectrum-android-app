@@ -18,6 +18,7 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.events.view.EventTitleListFragment;
+import com.ujjwalagrawal.spectrum.home.view.HomeFragment;
 import com.ujjwalagrawal.spectrum.sponsorship.view.SponsorsFragment;
 import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
 
