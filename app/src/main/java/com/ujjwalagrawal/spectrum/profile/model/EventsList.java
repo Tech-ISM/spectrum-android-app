@@ -5,10 +5,10 @@ package com.ujjwalagrawal.spectrum.profile.model;
  */
 
 public class EventsList {
-    public int type ;
-    public int id;
-    public String name;
-    public boolean participated;
+    private int type ;
+    private int id;
+    private String name;
+    private boolean participated;
 
     public EventsList(int type, int id, String name, boolean participated) {
         this.type = type;
