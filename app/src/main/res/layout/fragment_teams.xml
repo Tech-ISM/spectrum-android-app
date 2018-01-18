@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25sp"
-                android:text="@string/designers"
+                android:text="@string/organizers"
                 android:textColor="#ffffff"
                 android:textSize="24sp" />
 
@@ -68,7 +68,7 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/designer_recycler_view"
+                    android:id="@+id/organizers_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scrollbars="horizontal">

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.easing.linear.Linear;
@@ -58,12 +59,19 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
         swipeRefreshLayout = view.findViewById(R.id.swipe_layout_profile);
-        recyclerView = view.findViewById(R.id.register_event_recycler);
-        recyclerView.setHasFixedSize(true);
         context  = getContext();
         SharedPrefs sharedPrefs = new SharedPrefs(context);
+        TextView name=view.findViewById(R.id.user_name);
+        name.setText(sharedPrefs.getUsername());
+        TextView phone = view.findViewById(R.id.user_mobile);
+        phone.setText(sharedPrefs.getMobile());
+        TextView email = view.findViewById(R.id.user_email);
+        email.setText(sharedPrefs.getEmail());
+        recyclerView = view.findViewById(R.id.register_event_recycler);
+        recyclerView.setHasFixedSize(true);
+
         token = sharedPrefs.getAccessToken();
-        Log.d("Profile",token);
+//        Log.d("Profile",token);
 
         layoutManager = new LinearLayoutManager(getContext());
         registerAdapter = new RegisterAdapter(getContext());
