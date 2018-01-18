@@ -6,7 +6,7 @@
     android:layout_height="50dp"
     android:layout_margin="1dp"
     event_details:cardElevation="2dp"
-    event_details:cardCornerRadius="1dp">
+    event_details:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.7"
+            android:text="ABCD"
             android:textColor="@color/circle_frame" />
 
         <Switch

@@ -27,6 +27,7 @@ import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenterImpl;
 import com.ujjwalagrawal.spectrum.profile.provider.RetrofitRegisterListProvider;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -81,11 +82,11 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 //        registerAdapter.setData(trialData.getHello());
         recyclerView.setAdapter(registerAdapter);
         recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
-        registerListPresenter.requestRegistrationList(token);
+        registerListPresenter.requestRegistrationList(token,1);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                registerListPresenter.requestRegistrationList(token);
+                registerListPresenter.requestRegistrationList(token,1);
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
@@ -103,8 +104,14 @@ public class ProfileFragment extends Fragment implements RegisterListView{
     }
 
     @Override
-    public void SetData(List<EventsList> eventsListList){
-        registerAdapter.setData(eventsListList);
+    public void SetData(List<EventsList> eventsListList,int type){
+        List<EventsList> eventsLists = new ArrayList<>();
+        for (int i=0;i<eventsListList.size();i++){
+            if (eventsListList.get(i).getType()==type)
+            eventsLists.add(eventsListList.get(i));
+
+        }
+        registerAdapter.setData(eventsLists);
         Log.d("size",eventsListList.size()+"");
         registerAdapter.notifyDataSetChanged();
     }

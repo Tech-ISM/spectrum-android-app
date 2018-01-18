@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface RegisterListView {
 
-    void SetData(List<EventsList> eventsListList);
+    void SetData(List<EventsList> eventsListList,int type);
     void showMessage(String message);
 }

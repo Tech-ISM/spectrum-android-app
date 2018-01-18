@@ -20,12 +20,12 @@ public class RegisterListPresenterImpl implements RegisterListPresenter{
     }
 
     @Override
-    public void requestRegistrationList(String token) {
+    public void requestRegistrationList(String token, final int type) {
         registerListProvider.requestRegistrationList(token, new RegisterListCallback() {
             @Override
             public void onSuccess(RegistrationList registrationList) {
                 if(registrationList.isSuccess()){
-                    registerListView.SetData(registrationList.getEvent_list());
+                    registerListView.SetData(registrationList.getEvent_list(),type);
                 } else {
                     registerListView.showMessage("Unable to connect to the server...");
                 }
