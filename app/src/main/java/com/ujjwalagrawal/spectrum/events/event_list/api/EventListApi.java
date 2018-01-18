@@ -15,6 +15,6 @@ import retrofit2.http.Query;
  */
 
 public interface EventListApi {
-    @GET(Urls.REQUEST_EVENTS)
+    @GET(Urls.GET_EVENTS_LIST)
     Call<EventList> getEvents(@Query("day") int day);
 }
