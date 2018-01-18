@@ -24,7 +24,7 @@
                 app:titleTextColor="@color/md_white_1000" />
         </android.support.design.widget.AppBarLayout>
 
-        <com.ujjwalagrawal.spectrum.utils.AutoScrollViewPager
+        <com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="340dp"

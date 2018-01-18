@@ -24,8 +24,9 @@ import com.ujjwalagrawal.spectrum.home.view.HomeFragment;
 import com.ujjwalagrawal.spectrum.events.event_list.view.EventTitleListFragment;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.profile.view.ProfileFragment;
+import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
 
-import com.ujjwalagrawal.spectrum.team.view.TeamFragment;
+//import com.ujjwalagrawal.spectrum.team.view.TeamFragment;
 
 
 import io.fabric.sdk.android.Fabric;
@@ -92,8 +93,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 } else if (tabId == R.id.tab_aboutus) {
 
-                    TeamFragment teamFragment = new TeamFragment();
+                    TeamsFragment teamFragment = new TeamsFragment();
                     setFragment(teamFragment);
+//                    TeamFragment teamFragment = new TeamFragment();
+//                    setFragment(teamFragment);
                 }
 
             }

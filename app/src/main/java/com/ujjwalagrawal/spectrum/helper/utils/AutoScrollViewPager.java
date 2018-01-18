@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.utils;
+package com.ujjwalagrawal.spectrum.helper.utils;
 
 import android.content.Context;
 import android.os.Handler;
