@@ -23,9 +23,9 @@ public class  HomeFragment extends Fragment {
 	@BindView(R.id.about)
 	TextView about;
 	@BindView(R.id.b1)
-	TextView b1;
+	View b1;
 	@BindView(R.id.b2)
-	TextView b2;
+	View b2;
 
 	public HomeFragment() {
 		// Required empty public constructor

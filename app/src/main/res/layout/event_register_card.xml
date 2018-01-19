@@ -3,15 +3,17 @@
     xmlns:event_details="http://schemas.android.com/tools"
     android:id="@+id/event_details"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="60dp"
     android:layout_margin="1dp"
     event_details:cardElevation="2dp"
-    event_details:cardCornerRadius="4dp">
+    event_details:cardCornerRadius="20dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="10">
 
 
         <TextView
@@ -19,16 +21,22 @@
             android:layout_width="197dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="0.7"
-            android:text="ABCD"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+
+            android:fontFamily="serif-monospace"
+            android:textSize="20dp"
+            android:text="hello"
+            android:layout_weight="6"
             android:textColor="@color/circle_frame" />
 
         <Switch
             android:id="@+id/switch_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:layout_gravity="center"
             android:layout_marginEnd="23dp"
             />
 

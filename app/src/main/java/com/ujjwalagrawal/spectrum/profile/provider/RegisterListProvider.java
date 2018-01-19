@@ -9,5 +9,5 @@ import com.ujjwalagrawal.spectrum.profile.SendRegistrationCallback;
 
 public interface RegisterListProvider {
     void requestRegistrationList( String token, RegisterListCallback registerListCallback);
-    void sendRegistrationData(int id, int type, int participated, String token , SendRegistrationCallback sendRegistrationCallback);
+    void sendRegistrationData(int id, int participated, String token , SendRegistrationCallback sendRegistrationCallback);
 }

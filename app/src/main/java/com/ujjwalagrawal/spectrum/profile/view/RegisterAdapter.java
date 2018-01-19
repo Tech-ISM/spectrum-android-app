@@ -64,7 +64,10 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
 
         final EventsList eventsList = data.get(position);
+        holder.cardView.setRadius(17);
 
+        holder.checklist.setClickable(false);
+        holder.checklist.setEnabled(false);
         holder.event_name.setText(eventsList.getName());
         if(eventsList.getType()==1) {
             holder.checklist.setVisibility(View.VISIBLE);
@@ -72,8 +75,15 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
             if (eventsList.getParticipated() == 1) {
                 holder.checklist.setChecked(true);
+                holder.checklist.setText("Participated");
+                holder.checklist.setTextColor(context.getResources().getColor(R.color.md_green_800));
+
             } else {
                 holder.checklist.setChecked(false);
+                holder.checklist.setText("Register");
+                holder.checklist.setTextColor(context.getResources().getColor(R.color.md_red_300));
+
+
             }
         }else {
             holder.checklist.setVisibility(View.GONE);
