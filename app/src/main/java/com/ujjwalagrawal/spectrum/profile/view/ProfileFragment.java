@@ -134,7 +134,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 
     @Override
     public void showMessage(String message) {
-        Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
     }
 
     @Override

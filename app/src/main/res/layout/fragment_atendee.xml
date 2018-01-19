@@ -6,9 +6,12 @@
     android:padding="5dp"
     >
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:cardElevation="6dp"
         app:cardUseCompatPadding="true">
 
@@ -36,8 +39,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="5dp"
+                android:textSize="18sp"
                 android:textColor="@color/md_black_1000"
-                tools:text="Prizes"/>
+                android:text="Prizes"
+                />
 
             <TextView
                 android:id="@+id/prize_description_textview"
@@ -50,8 +55,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="5dp"
+                android:textSize="18sp"
                 android:textColor="@color/md_black_1000"
-                tools:text="Attendees"/>
+                android:text="Attendees"/>
 
             <TextView
                 android:id="@+id/atendee_textview"
@@ -66,5 +72,5 @@
 
     </android.support.v7.widget.CardView>
 
-
+    </ScrollView>
 </FrameLayout>

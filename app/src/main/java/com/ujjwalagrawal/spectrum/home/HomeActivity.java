@@ -12,14 +12,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.VideoView;
 
 import com.crashlytics.android.Crashlytics;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
+import com.ujjwalagrawal.spectrum.notifications.view.NotificationListFragment;
 import com.ujjwalagrawal.spectrum.R;
 
 import com.ujjwalagrawal.spectrum.home.view.HomeFragment;
@@ -37,18 +38,6 @@ import io.fabric.sdk.android.Fabric;
 
 public class HomeActivity extends AppCompatActivity {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     Context context;
     HomeActivity homeActivity;
     SharedPrefs sharedPrefs;
@@ -89,7 +78,12 @@ public class HomeActivity extends AppCompatActivity {
                     HomeFragment homeFragment = new HomeFragment();
                     setFragment(homeFragment);
 
-                } else if (tabId == R.id.tab_sponsors) {
+                } else if (tabId == R.id.tab_team) {
+
+                    TeamsFragment teamFragment = new TeamsFragment();
+                    setFragment(teamFragment);
+                }
+                else if (tabId == R.id.tab_logout) {
 //                    ChatFragment sponsorsFragment = new SponsorsFragment();
 //                    setFragment(sponsorsFragment);
                     final AlertDialog ad = new AlertDialog.Builder(context)
@@ -119,14 +113,54 @@ public class HomeActivity extends AppCompatActivity {
                     ad.show();
 
 
-                } else if (tabId == R.id.tab_aboutus) {
-
-                    TeamsFragment teamFragment = new TeamsFragment();
-                    setFragment(teamFragment);
                 }
-
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_rate_us) {
+            final AlertDialog ad = new AlertDialog.Builder(this)
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("Rate Us!");
+            ad.setMessage("We will redirect you to the Google Play store! Please give us a 5 star rating.");
+
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    final String appPackageName = getPackageName(); // getPackageName() from Context or SplashScheenActivity object
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                    }
+                    ad.cancel();
+
+                }
+            });
+            ad.show();
+            return true;
+        }else  if (id ==R.id.action_notifications){
+            setFragment(new NotificationListFragment());
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void setFragment(Fragment fragment) {

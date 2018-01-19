@@ -123,6 +123,5 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
         timeDateFragment.update(eventDetails);
         atendeeFragment.setAtendee(eventDetails.getAttendees()+"",eventDetails.getPrize_description());
 
-
     }
 }

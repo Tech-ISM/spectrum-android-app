@@ -80,15 +80,15 @@ public class EventListFragment extends Fragment implements EventListView{
 		swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
 			@Override
 			public void onRefresh() {
-				eventListPresenter.requestEventList(mday);
-				swipeRefreshLayout.setRefreshing(false);
+            eventListPresenter.requestEventList(mday);
+            swipeRefreshLayout.setRefreshing(false);
 			}
 		});
 
 		return view;
 	}
 
-	// TODO: Rename method, update argument and hook method into UI event
+
 	public void onButtonPressed(Uri uri) {
 		if (mListener != null) {
 			mListener.onFragmentInteraction(uri);

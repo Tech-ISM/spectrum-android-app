@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager;
+import com.ujjwalagrawal.spectrum.home.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,8 @@ public class HomeFragment extends Fragment {
 	TextView b1;
 	@BindView(R.id.b2)
 	TextView b2;
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
 	@BindView(R.id.viewPager)
 	AutoScrollViewPager viewPager;
 	CustomPagerAdapter adapter;
@@ -60,6 +64,8 @@ public class HomeFragment extends Fragment {
 		// Inflate the layout for this fragment
 		final View view =inflater.inflate(R.layout.fragment_home, container, false);
 		ButterKnife.bind(this,view);
+
+		((HomeActivity)getContext()).setSupportActionBar(toolbar);
 
 		assignViews(view);
 		set_images();
