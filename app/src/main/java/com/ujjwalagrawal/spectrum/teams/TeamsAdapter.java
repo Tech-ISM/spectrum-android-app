@@ -3,6 +3,8 @@ package com.ujjwalagrawal.spectrum.teams;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.customtabs.CustomTabsIntent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,9 +62,10 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
             holder.reference_url.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-                    browserIntent.setData(Uri.parse(current.getConcerned_url()));
-                    context.startActivity(browserIntent);
+                    CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                    CustomTabsIntent customTabsIntent = builder.build();
+                    customTabsIntent.launchUrl(context, Uri.parse(current.getConcerned_url()));
+                    builder.setToolbarColor(ContextCompat.getColor(context,R.color.cardview_dark_background));//NOT WORKING
                 }
             });
         } else holder.reference_url.setVisibility(View.GONE);
@@ -90,7 +93,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
             mobile_no = (ImageView) itemView.findViewById(R.id.moblile_no);
             reference_url=(ImageView)itemView.findViewById(R.id.reference);
             if (dev)
-                reference_url.setImageResource(R.drawable.github);
+                reference_url.setImageResource(R.drawable.ic_github_logo);
             else
                 reference_url.setImageResource(R.drawable.facebook_app_logo);
 // LinkedIn_url = (ImageView) itemView.findViewById(R.id.linkedIn);

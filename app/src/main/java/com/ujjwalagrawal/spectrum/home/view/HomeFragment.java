@@ -95,7 +95,7 @@ public class HomeFragment extends Fragment {
 		data_images = new ArrayList<>();
 		data_images.add(Fragment_homePager.newInstance(R.drawable.framelayout1));
 		data_images.add(Fragment_homePager.newInstance(R.drawable.framelayout3));
-		data_images.add(Fragment_homePager.newInstance(R.drawable.spectrum));
+		data_images.add(Fragment_homePager.newInstance(R.drawable.pitch_please));
 		data_images.add(Fragment_homePager.newInstance(R.drawable.circle));
 	}
 

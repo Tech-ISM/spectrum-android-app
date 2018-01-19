@@ -1,6 +1,7 @@
 package com.ujjwalagrawal.spectrum.home;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -8,6 +9,7 @@ import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v4.app.FragmentPagerAdapter;
@@ -90,12 +92,32 @@ public class HomeActivity extends AppCompatActivity {
                 } else if (tabId == R.id.tab_sponsors) {
 //                    ChatFragment sponsorsFragment = new SponsorsFragment();
 //                    setFragment(sponsorsFragment);
-                    sharedPrefs = new SharedPrefs(context);
-                    sharedPrefs.setAccessToken("");
-                    sharedPrefs.setMobile("");
-                    sharedPrefs.setUsername("");
-                    Intent intent = new Intent(homeActivity, LoginActivity.class);
-                    startActivity(intent);
+                    final AlertDialog ad = new AlertDialog.Builder(context)
+                            .create();
+                    ad.setCancelable(false);
+                    ad.setTitle("Logout");
+                    ad.setMessage("Do you really want to logout");
+                    ad.setButton(DialogInterface.BUTTON_POSITIVE, "Logout", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ad.cancel();
+                            sharedPrefs = new SharedPrefs(context);
+                            sharedPrefs.setAccessToken("");
+                            sharedPrefs.setMobile("");
+                            sharedPrefs.setUsername("");
+                            Intent intent = new Intent(homeActivity, LoginActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                    ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ad.cancel();
+
+                        }
+                    });
+                    ad.show();
+
 
                 } else if (tabId == R.id.tab_aboutus) {
 

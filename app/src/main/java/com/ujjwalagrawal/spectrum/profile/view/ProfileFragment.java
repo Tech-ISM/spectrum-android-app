@@ -12,15 +12,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.daimajia.easing.linear.Linear;
 import com.mikepenz.itemanimators.SlideDownAlphaAnimator;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.profile.model.EventsList;
-import com.ujjwalagrawal.spectrum.profile.model.RegistrationList;
 //import com.ujjwalagrawal.spectrum.profile.model.TrialData;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenter;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenterImpl;
@@ -46,6 +45,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 
 
     private String token ;
+    public boolean verified;
 //    private TrialData trialData;
 
     public ProfileFragment() {
@@ -75,13 +75,29 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 //        Log.d("Profile",token);
 
         layoutManager = new LinearLayoutManager(getContext());
-        registerAdapter = new RegisterAdapter(getContext());
+        registerAdapter = new RegisterAdapter(getContext(),this);
         registerListPresenter = new RegisterListPresenterImpl(this, new RetrofitRegisterListProvider());
         recyclerView.setLayoutManager(layoutManager);
 
 //        registerAdapter.setData(trialData.getHello());
         recyclerView.setAdapter(registerAdapter);
         recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
+        Button single = view.findViewById(R.id.profile_single);
+        single.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                registerListPresenter.requestRegistrationList(token,1);
+            }
+        });
+
+        Button multiple = view.findViewById(R.id.profile_multiple);
+        multiple.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                registerListPresenter.requestRegistrationList(token,2);
+            }
+        });
+
         registerListPresenter.requestRegistrationList(token,1);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -121,4 +137,12 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onParticipatedStatusUpdated() {
+        registerAdapter.notifyDataSetChanged();
+    }
+
+    public void changeParticipatedStatus(int participated, int id) {
+           registerListPresenter.sendRegistrationData(id,5,participated,token);
+    }
 }

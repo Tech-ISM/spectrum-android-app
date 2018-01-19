@@ -5,7 +5,9 @@ package com.ujjwalagrawal.spectrum.profile.provider;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.helper.Urls;
 import com.ujjwalagrawal.spectrum.profile.RegisterListCallback;
+import com.ujjwalagrawal.spectrum.profile.SendRegistrationCallback;
 import com.ujjwalagrawal.spectrum.profile.api.ProfileApi;
+import com.ujjwalagrawal.spectrum.profile.model.RegistrationDetail;
 import com.ujjwalagrawal.spectrum.profile.model.RegistrationList;
 
 import retrofit2.Call;
@@ -53,5 +55,23 @@ public class RetrofitRegisterListProvider implements RegisterListProvider {
                registerListCallback.onFailure();
            }
        });
+
+    }
+
+    @Override
+    public void sendRegistrationData(int id, int type, int participated, String token, final SendRegistrationCallback sendRegistrationCallback) {
+        Call<RegistrationDetail> call = profileApi.getInfo(id,participated,token);
+        call.enqueue(new Callback<RegistrationDetail>() {
+            @Override
+            public void onResponse(Call<RegistrationDetail> call, Response<RegistrationDetail> response) {
+                sendRegistrationCallback.onSuccess(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<RegistrationDetail> call, Throwable t) {
+                t.printStackTrace();
+                sendRegistrationCallback.onFailure();
+            }
+        });
     }
 }
