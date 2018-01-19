@@ -17,6 +17,7 @@ import com.ujjwalagrawal.spectrum.events.event_details.data.EventDetails;
 import com.ujjwalagrawal.spectrum.events.event_details.presenter.EventDetailsPresenter;
 import com.ujjwalagrawal.spectrum.events.event_details.presenter.EventDetailsPresenterImpl;
 import com.ujjwalagrawal.spectrum.events.event_details.provider.RetrofitEventDetailsProvider;
+import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.AtendeeFragment;
 import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.DescriptionFragment;
 import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.TimeDateFragment;
 import com.ujjwalagrawal.spectrum.events.event_list.view.EventListFragment;
@@ -51,7 +52,7 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
     private EventDetailsPresenter eventDetailsPresenter;
     TimeDateFragment timeDateFragment;
     DescriptionFragment descriptionFragment;
-    EventListFragment eventListFragment;
+    AtendeeFragment atendeeFragment;
     ProgressDialog progressDialog;
 
 
@@ -81,11 +82,11 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
 
         timeDateFragment = TimeDateFragment.newInstance();
         descriptionFragment = DescriptionFragment.newInstance();
-        eventListFragment = EventListFragment.newInstance(1);
+        atendeeFragment = AtendeeFragment.newInstance();
 
         fragmentList.add(timeDateFragment);
         fragmentList.add(descriptionFragment);
-        fragmentList.add(eventListFragment);
+        fragmentList.add(atendeeFragment);
 
         spaceTabLayout.initialize(viewPager, getSupportFragmentManager(),
                 fragmentList, savedInstanceState);
@@ -117,8 +118,11 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
 
         eventTitleTextView.setText(eventDetails.getName());
         imageLoader.loadImage(eventDetails.getImage(),eventImageViewSecond,progressBar);
+        imageLoader.loadImage(eventDetails.getImage_blur(),eventImageView,progressBar);
         descriptionFragment.setDescription(eventDetails.getDescription());
         timeDateFragment.update(eventDetails);
+        atendeeFragment.setAtendee(eventDetails.getAttendees()+"",eventDetails.getPrize_description());
+
 
     }
 }
