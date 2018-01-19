@@ -69,30 +69,9 @@ public class TeamsFragment extends Fragment {
 
     public void put_data()//will be used to set data finally
     {
-
-        developers.add(new team_members("Akhil Vaidya","junior developer",R.drawable.framelayout3,"23456345346","https://github.com/Tech-ISM/spectrum-android-app"));
-        developers.add(new team_members("Shubham Raj","junior developer",R.drawable.framelayout3,"2345634534346","https://github.com/Tech-ISM/spectrum-android-app"));
-        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        developers.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-
-        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
-        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
-        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
-        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
-        organizers.add(new team_members("Saurabh Goenka","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
+        developers.add(new team_members("Akhil Vaidya","Developer",R.drawable.mem_akhil,"8578955444","https://github.com/avstark"));
         organizers.add(new team_members("sanskar Shrivastava","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
-
-        head_members.add(new team_members("Akhil Vaidya","junior developer",R.drawable.framelayout3,"23456345346","https://github.com/Tech-ISM/spectrum-android-app"));
-        head_members.add(new team_members("Shubham Raj","junior developer",R.drawable.framelayout3,"2345634534346","https://github.com/Tech-ISM/spectrum-android-app"));
         head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
-
     }
 
 
