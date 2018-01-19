@@ -1,6 +1,7 @@
 package com.ujjwalagrawal.spectrum.profile.view;
 
 import android.content.Context;
+import android.net.sip.SipSession;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 
@@ -21,9 +22,13 @@ import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
 import com.ujjwalagrawal.spectrum.profile.model.EventsList;
+import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenter;
+import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenterImpl;
+import com.ujjwalagrawal.spectrum.profile.provider.RetrofitRegisterListProvider;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.view.View;
 
 /**
  * Created by Shubham on 17-01-2018.
@@ -35,37 +40,17 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
     Context context;
     private LayoutInflater layoutInflater;
     private ImageLoader imageLoader;
-//    private int i;
-//    for( i = 0;i < total ; i++){
-//        EventsList element =data.get(i);
-//        if(element.getType()==0){
-//            single++;
-//
-//        } else {
-//            multiple++;
-//        }
-//    }
+    private ProfileFragment profileFragment;
 
-
-    public RegisterAdapter(Context context) {
+    public RegisterAdapter(Context context, ProfileFragment profileFragment) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
         imageLoader = new GlideImageLoader(context);
+        this.profileFragment=profileFragment;
     }
     void setData(List<EventsList> data) {
         this.data = data;
     }
-
-
-//    public static class ViewHolder extends RecyclerView.ViewHolder{
-//        private CardView cardView;
-//
-//        public ViewHolder(CardView v){
-//            super(v);
-//            cardView =v;
-//        }
-//
-//    }
 
     @Override
     public RegisterAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -77,15 +62,31 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
+
         final EventsList eventsList = data.get(position);
 
         holder.event_name.setText(eventsList.getName());
+        if(eventsList.getType()==1) {
+            holder.checklist.setVisibility(View.VISIBLE);
 
-        if(eventsList.getParticipated()==1){
-            holder.checklist.setChecked(true);
-        } else {
-            holder.checklist.setChecked(false);
+
+            if (eventsList.getParticipated() == 1) {
+                holder.checklist.setChecked(true);
+            } else {
+                holder.checklist.setChecked(false);
+            }
+        }else {
+            holder.checklist.setVisibility(View.GONE);
         }
+        holder.checklist.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                profileFragment.changeParticipatedStatus(eventsList.getParticipated(),eventsList.getId());
+
+            }
+            }
+        );
 
 
 
@@ -97,9 +98,6 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 //        textView.setText(eventsList.getName());
 
     }
-
-
-
 
     @Override
     public int getItemCount() {
