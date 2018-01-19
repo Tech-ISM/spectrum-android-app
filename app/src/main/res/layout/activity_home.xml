@@ -25,7 +25,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
-        app:bb_inActiveTabColor="@color/custom_shade"
+        app:bb_inActiveTabColor="@color/md_black_1000"
         app:bb_activeTabColor="@color/md_white_1000"/>
 
 </RelativeLayout>

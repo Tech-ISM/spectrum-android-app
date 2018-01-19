@@ -8,6 +8,7 @@ package com.ujjwalagrawal.spectrum.helper;
 
 public class Urls {
 
+
     //    public static final String BASE_URL = "http://192.168.43.97:8880/";
     public static final String BASE_URL = "http://gimbooks.com:8880/";
     public static final String GET_EVENTS_LIST = "get_events_list/";

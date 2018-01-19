@@ -9,12 +9,12 @@
     <tab
         id="@+id/tab_events"
         icon="@drawable/ic_event_white_24dp"
-        barColorWhenSelected="@color/md_blue_400"
+        barColorWhenSelected="@color/custom_light_green"
         title="Events"
         />
     <tab
         id="@+id/tab_home"
-        barColorWhenSelected="@color/custom_light_green"
+        barColorWhenSelected="@color/md_blue_400"
         icon="@drawable/ic_home_white_24dp"
         title="Home"
         />
@@ -26,9 +26,8 @@
         />
     <tab
         id="@+id/tab_sponsors"
-        barColorWhenSelected="@color/md_cyan_300"
+        barColorWhenSelected="#c177ff"
         icon="@drawable/ic_people_white_24dp"
         title="Logout"
         />
-\
 </tabs>
