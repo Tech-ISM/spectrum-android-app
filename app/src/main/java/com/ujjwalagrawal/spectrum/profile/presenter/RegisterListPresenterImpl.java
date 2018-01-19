@@ -1,6 +1,8 @@
 package com.ujjwalagrawal.spectrum.profile.presenter;
 
 import com.ujjwalagrawal.spectrum.profile.RegisterListCallback;
+import com.ujjwalagrawal.spectrum.profile.SendRegistrationCallback;
+import com.ujjwalagrawal.spectrum.profile.model.RegistrationDetail;
 import com.ujjwalagrawal.spectrum.profile.model.RegistrationList;
 import com.ujjwalagrawal.spectrum.profile.provider.RegisterListProvider;
 import com.ujjwalagrawal.spectrum.profile.view.RegisterListView;
@@ -38,5 +40,24 @@ public class RegisterListPresenterImpl implements RegisterListPresenter{
             }
         });
 
+    }
+
+    @Override
+    public void sendRegistrationData(int id, int type, int participated, String token) {
+        registerListProvider.sendRegistrationData(id, type, participated, token, new SendRegistrationCallback() {
+            @Override
+            public void onSuccess(RegistrationDetail registrationDetail) {
+                if(registrationDetail.isSuccess()){
+                    registerListView.onParticipatedStatusUpdated();
+                } else {
+                    registerListView.showMessage(registrationDetail.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure() {
+                registerListView.showMessage("Unable to register you to this event...");
+            }
+        });
     }
 }

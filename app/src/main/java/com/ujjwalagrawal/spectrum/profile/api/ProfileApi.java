@@ -22,7 +22,7 @@ public interface  ProfileApi {
 
     @FormUrlEncoded
     @POST(Urls.REQUEST_REGISTER)
-    Call<RegistrationDetail> getInfo (@Field("id") String id , @Field("participated") boolean participated , @Field("access token") String token);
+    Call<RegistrationDetail> getInfo (@Field("event_id") int id , @Field("participated") int participated , @Field("access_token") String token);
 
 }
 
