@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_white_1000">
+    android:background="@drawable/lg">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,14 +10,6 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         >
-
-        <ImageView
-            android:id="@+id/login_background"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:visibility="gone" />
-
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -34,7 +26,7 @@
                 android:layout_marginBottom="20sp"
                 android:layout_marginTop="60dp"
                 android:layout_weight="2"
-                android:background="@drawable/spectrum" />
+                android:background="@drawable/spectrum_stand_alone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,13 +44,16 @@
 
                 <EditText
                     android:id="@+id/input_name"
+                    android:textColor="@color/md_white_1000"
                     android:layout_width="match_parent"
                     android:layout_height="40sp"
                     android:layout_marginRight="60sp"
+                    android:imeOptions="actionNext"
                     android:layout_marginTop="8sp"
                     android:layout_weight="0.5"
                     android:gravity="center"
-                    android:hint="@string/hint_login_name" />
+                    android:hint="@string/hint_login_name"
+                    android:textColorHint="@color/md_white_1000"/>
 
 
             </LinearLayout>
@@ -81,13 +76,17 @@
                     android:id="@+id/input_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="40sp"
+                    android:textColor="@color/md_white_1000"
+                    android:imeOptions="actionNext"
                     android:layout_marginRight="60sp"
                     android:layout_marginTop="8sp"
                     android:layout_weight="0.5"
                     android:gravity="center"
+                    android:textColorHint="@color/md_white_1000"
                     android:hint="@string/hint_login_mobile"
                     android:inputType="number"
-                    android:maxLength="10" />
+                    android:maxLength="10"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -106,12 +105,15 @@
                 <EditText
                     android:id="@+id/input_email"
                     style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
+                    android:textColor="@color/md_white_1000"
                     android:layout_width="match_parent"
                     android:layout_height="40sp"
+                    android:imeOptions="actionDone"
                     android:layout_marginRight="60sp"
                     android:layout_marginTop="8sp"
                     android:layout_weight="0.5"
                     android:gravity="center"
+                    android:textColorHint="@color/md_white_1000"
                     android:hint="@string/hint_login_email" />
 
             </LinearLayout>
@@ -125,7 +127,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
                 android:text="@string/otp_msg"
-                android:textColor="@color/md_black_1000"
+                android:textColor="@color/colorAccent"
                 android:textSize="18dp"
                 android:visibility="gone" />
 
@@ -148,11 +150,13 @@
                 <EditText
                     android:id="@+id/input_otp"
                     android:layout_width="match_parent"
+                    android:textColor="@color/md_white_1000"
                     android:layout_height="40sp"
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="60sp"
                     android:layout_weight="0.5"
                     android:gravity="center"
+                    android:textColorHint="@color/md_white_1000"
                     android:hint="@string/hint_login_otp"
                     android:inputType="number" />
             </LinearLayout>
@@ -190,6 +194,7 @@
                 android:layout_width="180sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="@color/md_white_1000"
                 android:layout_weight="1"
                 android:background="@drawable/button_rounded_corner2"
                 android:onClick="proceed_verify"
@@ -203,6 +208,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:onClick="resend"

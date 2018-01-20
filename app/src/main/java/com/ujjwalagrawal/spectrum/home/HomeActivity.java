@@ -3,7 +3,6 @@ package com.ujjwalagrawal.spectrum.home;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
@@ -61,16 +60,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         context = this;
         homeActivity = this;
-        video1 = (VideoView) findViewById(R.id.video);//ADDED AVIDEO BACKGROUND IN THE BASE ACTIVITY
-        Uri uri = Uri.parse("android.resource://" + "com.ujjwalagrawal.spectrum" + "/" + R.raw.test);
-        video1.setVideoURI(uri);
-        video1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                video1.start();
-                mediaPlayer.setLooping(true);
-            }
-        });
 
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {

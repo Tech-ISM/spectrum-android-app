@@ -13,6 +13,6 @@
         android:id="@+id/placeholder_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/spectrum"
+        android:src="@drawable/spectrum_circle"
         android:visibility="invisible"/>
 </RelativeLayout>

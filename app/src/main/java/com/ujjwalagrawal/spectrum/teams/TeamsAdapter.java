@@ -93,7 +93,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
             mobile_no = (ImageView) itemView.findViewById(R.id.moblile_no);
             reference_url=(ImageView)itemView.findViewById(R.id.reference);
             if (dev)
-                reference_url.setImageResource(R.drawable.ic_github_logo);
+                reference_url.setImageResource(R.drawable.github);
             else
                 reference_url.setImageResource(R.drawable.facebook_app_logo);
 // LinkedIn_url = (ImageView) itemView.findViewById(R.id.linkedIn);
