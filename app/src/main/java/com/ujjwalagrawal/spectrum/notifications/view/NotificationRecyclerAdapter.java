@@ -23,7 +23,7 @@ public class NotificationRecyclerAdapter extends RecyclerView.Adapter<Notificati
     List<NotificationsDetails> notificationsDetailsList = new ArrayList<>();
 
     public NotificationRecyclerAdapter(Context context) {
-        context = context;
+        this.context = context;
         layoutInflater = LayoutInflater.from(context);
     }
 
