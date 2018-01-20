@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:padding="10dp"
->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Spectrum"
+            app:titleTextColor="@color/md_white_1000" />
+    </android.support.design.widget.AppBarLayout>
 
     <TextView
+        android:layout_below="@id/appBarLayout"
+
         android:id="@+id/textView"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -34,6 +42,3 @@ android:padding="10dp"
         android:id="@+id/progressBar"
         />
 </RelativeLayout>
-
-
-</FrameLayout>

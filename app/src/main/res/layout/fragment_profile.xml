@@ -11,13 +11,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:title="profile" />
+            app:title="Profile" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -190,9 +191,9 @@
                     android:scrollbars="vertical">
 
 
+
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>
-
         </ScrollView>
 
     </LinearLayout>

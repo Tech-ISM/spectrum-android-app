@@ -65,7 +65,7 @@ public class GlideImageLoader implements ImageLoader {
                 progressBar.setVisibility(View.GONE);
                 return false;
             }
-        }).diskCacheStrategy(DiskCacheStrategy.SOURCE)
+        }).diskCacheStrategy(DiskCacheStrategy.ALL)
                 //.animate(R.anim.image_animation)
                 .fitCenter().crossFade().into(imageView);
 

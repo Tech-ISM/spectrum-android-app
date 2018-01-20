@@ -2,19 +2,23 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lg">
+    >
 
     <RelativeLayout
+        android:id="@+id/relative_layout_parent"
+        android:background="@drawable/login_background"
+        android:scaleType="fitCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
+
         >
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"
+            android:padding="8dp"
             android:orientation="vertical"
             android:weightSum="10">
 
@@ -31,6 +35,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/layout_name"
                 android:layout_weight="0.3"
                 android:weightSum="1">
 
@@ -46,10 +51,11 @@
                     android:id="@+id/input_name"
                     android:textColor="@color/md_white_1000"
                     android:layout_width="match_parent"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="60sp"
                     android:imeOptions="actionNext"
                     android:layout_marginTop="8sp"
+                    android:inputType="text"
                     android:layout_weight="0.5"
                     android:gravity="center"
                     android:hint="@string/hint_login_name"
@@ -62,6 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
+                android:id="@+id/layout_mobile"
                 android:weightSum="1">
 
                 <ImageView
@@ -73,9 +80,10 @@
                     android:layout_weight="0.5" />
 
                 <EditText
+
                     android:id="@+id/input_mobile"
                     android:layout_width="match_parent"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:textColor="@color/md_white_1000"
                     android:imeOptions="actionNext"
                     android:layout_marginRight="60sp"
@@ -92,6 +100,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/layout_email"
                 android:layout_weight="0.3"
                 android:weightSum="1">
 
@@ -107,11 +116,12 @@
                     style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
                     android:textColor="@color/md_white_1000"
                     android:layout_width="match_parent"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:imeOptions="actionDone"
                     android:layout_marginRight="60sp"
                     android:layout_marginTop="8sp"
                     android:layout_weight="0.5"
+                    android:inputType="textEmailAddress"
                     android:gravity="center"
                     android:textColorHint="@color/md_white_1000"
                     android:hint="@string/hint_login_email" />
@@ -151,7 +161,7 @@
                     android:id="@+id/input_otp"
                     android:layout_width="match_parent"
                     android:textColor="@color/md_white_1000"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="60sp"
                     android:layout_weight="0.5"
@@ -163,11 +173,11 @@
 
             <Button
                 android:id="@+id/logIn"
-                style="@android:style/Widget.Material.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
+                android:textColor="@color/white_transparent"
                 android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_rounded_corner2"

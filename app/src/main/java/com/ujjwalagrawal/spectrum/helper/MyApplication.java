@@ -5,8 +5,12 @@ import android.content.Context;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import io.fabric.sdk.android.Fabric;
+
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
 
 /**
@@ -24,8 +28,18 @@ public class MyApplication extends Application{
         super.onCreate();
         context=this;
         Fabric.with(this, new Crashlytics());
-//        FacebookSdk.sdkInitialize(getApplicationContext());
+        FirebaseApp.initializeApp(this);
+
+        //        FacebookSdk.sdkInitialize(getApplicationContext());
 //            fcm_token = FirebaseInstanceId.getInstance().getToken();
+        try {
+            fcm_token = FirebaseInstanceId.getInstance().getToken();
+            Log.d(TAG, "Fcmis " + fcm_token);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fcm_token = "fcm";
+        }
+
         Log.d("myapplication",""+fcm_token);
     }
     public static Context getContext() {

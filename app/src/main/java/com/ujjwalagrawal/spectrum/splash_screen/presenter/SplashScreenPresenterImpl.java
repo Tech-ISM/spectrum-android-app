@@ -38,7 +38,8 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter {
             @Override
             public void onError(Throwable throwable) {
                 throwable.printStackTrace();
-                splashScreenView.showMessage("Error");
+//                splashScreenView.showMessage("Error");
+                splashScreenView.showDialog("No Internet Connection");
             }
 
             @Override

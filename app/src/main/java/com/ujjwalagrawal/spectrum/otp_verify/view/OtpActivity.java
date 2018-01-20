@@ -43,6 +43,8 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
     private OtpVerifyPresenter otpVerifyPresenter;
     private SharedPrefs sharedPrefs;
     private LinearLayout otp_verify_layout;
+    private LinearLayout layout_name,layout_mobile,layout_email;
+
     Dialog dialog;
 
 
@@ -71,10 +73,13 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         otp_message = (TextView) findViewById(R.id.otp_msg);
         otp_verify_layout =(LinearLayout) findViewById(R.id.otp_verifyLayout);
+        layout_name = (LinearLayout) findViewById(R.id.layout_name);
+        layout_email = (LinearLayout) findViewById(R.id.layout_email);
+        layout_mobile = (LinearLayout) findViewById(R.id.layout_mobile);
 
-        editTextName.setVisibility(View.GONE);
-        editTextMobile.setVisibility(View.GONE);
-        editTextEmail.setVisibility(View.GONE);
+        layout_name.setVisibility(View.GONE);
+        layout_email.setVisibility(View.GONE);
+        layout_mobile.setVisibility(View.GONE);
         btn_login.setVisibility(View.GONE);
         otp_verify_layout.setVisibility(View.VISIBLE);
         otpImage.setVisibility(View.VISIBLE);
@@ -184,6 +189,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
 
     @Override
     public void verifyBtnClickable() {
+        editTextOtp.setText("");
         btn_verify_otp.setClickable(true);
     }
 

@@ -14,5 +14,6 @@ public class Urls {
     public static final String REQUEST_LOGIN ="create_user/";
     public static final String REQUEST_VERIFY="verify_otp/";
     public static final String REQUEST_SPLASH_SCREEN="is_update_available";
+    public static final String SUB_URL_UPDATE_FCM = "update_fcm/";
 
 }

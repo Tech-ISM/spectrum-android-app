@@ -21,8 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/appBarLayout"
+        android:nestedScrollingEnabled="true"
         android:background="@color/md_white_1000">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

@@ -19,6 +19,7 @@ import android.widget.VideoView;
 import com.crashlytics.android.Crashlytics;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
+import com.ujjwalagrawal.spectrum.helper.fcm.FcmUtils;
 import com.ujjwalagrawal.spectrum.notifications.view.NotificationListFragment;
 import com.ujjwalagrawal.spectrum.R;
 
@@ -89,8 +90,10 @@ public class HomeActivity extends AppCompatActivity {
                             sharedPrefs.setAccessToken("");
                             sharedPrefs.setMobile("");
                             sharedPrefs.setUsername("");
+                            sharedPrefs.setLogin(false);
                             Intent intent = new Intent(homeActivity, LoginActivity.class);
                             startActivity(intent);
+                            finish();
                         }
                     });
                     ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
@@ -106,6 +109,14 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+
+        try{
+            FcmUtils fcmUtils=new FcmUtils(context);
+
+            fcmUtils.sendFcmToServer();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -126,11 +137,10 @@ public class HomeActivity extends AppCompatActivity {
         if (id == R.id.action_rate_us) {
             final AlertDialog ad = new AlertDialog.Builder(this)
                     .create();
-            ad.setCancelable(false);
+            ad.setCancelable(true);
             ad.setTitle("Rate Us!");
             ad.setMessage("We will redirect you to the Google Play store! Please give us a 5 star rating.");
-
-            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     final String appPackageName = getPackageName(); // getPackageName() from Context or SplashScheenActivity object
@@ -141,6 +151,13 @@ public class HomeActivity extends AppCompatActivity {
                     }
                     ad.cancel();
 
+                }
+            });
+
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                   ad.cancel();
                 }
             });
             ad.show();

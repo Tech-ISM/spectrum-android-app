@@ -14,5 +14,5 @@ import rx.Observable;
 
 public interface SplashScreenRequestApi {
     @GET(Urls.REQUEST_SPLASH_SCREEN)
-    Observable<SplashScreenData> insertFcm(@Query("fcm") String fcm, @Query("token") String access_token);
+    Observable<SplashScreenData> insertFcm(@Query("fcm") String fcm, @Query("access_token") String access_token);
 }

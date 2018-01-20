@@ -2,9 +2,11 @@ package com.ujjwalagrawal.spectrum.splash_screen.view;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +30,7 @@ public class SplashScreen extends Activity implements  SplashScreenView{
 
     SharedPrefs sharedPrefs;
     ProgressBar progressBar,splashProgressBar;
-
+    SplashScreenPresenter splashScreenPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +38,7 @@ public class SplashScreen extends Activity implements  SplashScreenView{
         sharedPrefs = new SharedPrefs(this);
         splashProgressBar=(ProgressBar)findViewById(R.id.splash_progress_bar);
         Log.d("Splash sceen",""+MyApplication.fcm_token);
-        SplashScreenPresenter splashScreenPresenter = new SplashScreenPresenterImpl(this, new RetrofitSplashScreenProvider());
+        splashScreenPresenter = new SplashScreenPresenterImpl(this, new RetrofitSplashScreenProvider());
         splashScreenPresenter.insertFcm(MyApplication.fcm_token,sharedPrefs.getAccessToken());
     //    splashScreenPresenter.insertFcm(MyApplication.fcm_token,sharedPrefs.getAccessToken());
 
@@ -101,8 +103,29 @@ public class SplashScreen extends Activity implements  SplashScreenView{
         if (show) {
             splashProgressBar.setVisibility(View.VISIBLE);
         } else {
-            splashProgressBar.setVisibility(View.GONE);
+            splashProgressBar.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void showDialog(String s) {
+        try {
+            final AlertDialog ad = new AlertDialog.Builder(this)
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("No Internet Connection");
+            ad.setMessage("Please connect to internet to use our app");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Retry", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    splashScreenPresenter.insertFcm("fcm", sharedPrefs.getAccessToken());
+                }
+            });
+            ad.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
 

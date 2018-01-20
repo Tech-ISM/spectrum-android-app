@@ -3,6 +3,10 @@ package com.ujjwalagrawal.spectrum.login.view;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -12,11 +16,15 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.Keys;
 import com.ujjwalagrawal.spectrum.helper.NetworkUtils;
@@ -39,7 +47,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private LoginPresenter loginPresenter;
     private ImageView spectrum_logo;
     private SharedPrefs sharedPrefs;
+    private LinearLayout layout_name,layout_mobile,layout_email;
     Dialog dialog;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +61,28 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     public void initialise() {
+        context=this;
         editTextMobile = (EditText) findViewById(R.id.input_mobile);
         editTextName = (EditText) findViewById(R.id.input_name);
+        final RelativeLayout relative_layout_parent = findViewById(R.id.relative_layout_parent);
         editTextEmail = (EditText) findViewById(R.id.input_email);
+        layout_name = (LinearLayout) findViewById(R.id.layout_name);
+        layout_email = (LinearLayout) findViewById(R.id.layout_email);
+        layout_mobile = (LinearLayout) findViewById(R.id.layout_mobile);
         msgOtp = (TextView) findViewById(R.id.otp_msg);
         spectrum_logo = (ImageView) findViewById(R.id.spectrum_logo);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+//        Glide.with(this).load(R.drawable.login_background).asBitmap().into(new SimpleTarget<Bitmap>(relLayoutWidth, relLayoutHeight) {
+//            @Override
+//            public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+//                Drawable drawable = new BitmapDrawable(context.getResources(), resource);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                    relative_layout_parent.setBackground(drawable);
+//                }
+//            }
+//        });
+
         Glide.with(this).load(R.drawable.spectrum_circle).into(spectrum_logo);
         editTextMobile.addTextChangedListener(new TextWatcher() {
             @Override
@@ -109,7 +135,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
         } else {
-            progressBar.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.GONE);
         }
     }
 
@@ -118,10 +144,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     public void showLoginStatus(LoginResponse loginDataResponse) {
             msgOtp.setVisibility(View.VISIBLE);
 
-
-            editTextName.setVisibility(View.GONE);
-            editTextMobile.setVisibility(View.GONE);
-            editTextEmail.setVisibility(View.GONE);
+            layout_name.setVisibility(View.GONE);
+            layout_email.setVisibility(View.GONE);
+            layout_mobile.setVisibility(View.GONE);
             Intent i = new Intent(LoginActivity.this, OtpActivity.class);
             i.putExtra(Keys.KEY_MOBILE, mobile);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

@@ -55,6 +55,7 @@ public class Fragment_homePager extends Fragment{
 
         highlightsView.setImageResource(image_resid);
 
+
         return v;
     }
 
