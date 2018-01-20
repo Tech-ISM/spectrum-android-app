@@ -3,6 +3,10 @@ package com.ujjwalagrawal.spectrum.login.view;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -14,10 +18,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.Keys;
 import com.ujjwalagrawal.spectrum.helper.NetworkUtils;
@@ -42,6 +49,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private SharedPrefs sharedPrefs;
     private LinearLayout layout_name,layout_mobile,layout_email;
     Dialog dialog;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +61,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     public void initialise() {
+        context=this;
         editTextMobile = (EditText) findViewById(R.id.input_mobile);
         editTextName = (EditText) findViewById(R.id.input_name);
+        final RelativeLayout relative_layout_parent = findViewById(R.id.relative_layout_parent);
         editTextEmail = (EditText) findViewById(R.id.input_email);
         layout_name = (LinearLayout) findViewById(R.id.layout_name);
         layout_email = (LinearLayout) findViewById(R.id.layout_email);
@@ -62,6 +72,17 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         msgOtp = (TextView) findViewById(R.id.otp_msg);
         spectrum_logo = (ImageView) findViewById(R.id.spectrum_logo);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+//        Glide.with(this).load(R.drawable.login_background).asBitmap().into(new SimpleTarget<Bitmap>(relLayoutWidth, relLayoutHeight) {
+//            @Override
+//            public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+//                Drawable drawable = new BitmapDrawable(context.getResources(), resource);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                    relative_layout_parent.setBackground(drawable);
+//                }
+//            }
+//        });
+
         Glide.with(this).load(R.drawable.spectrum_circle).into(spectrum_logo);
         editTextMobile.addTextChangedListener(new TextWatcher() {
             @Override

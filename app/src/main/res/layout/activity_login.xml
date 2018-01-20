@@ -5,6 +5,7 @@
     >
 
     <RelativeLayout
+        android:id="@+id/relative_layout_parent"
         android:background="@drawable/login_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -170,11 +171,11 @@
 
             <Button
                 android:id="@+id/logIn"
-                style="@android:style/Widget.Material.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
+                android:textColor="@color/white_transparent"
                 android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_rounded_corner2"

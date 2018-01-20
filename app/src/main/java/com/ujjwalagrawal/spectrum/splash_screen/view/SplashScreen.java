@@ -103,7 +103,7 @@ public class SplashScreen extends Activity implements  SplashScreenView{
         if (show) {
             splashProgressBar.setVisibility(View.VISIBLE);
         } else {
-            splashProgressBar.setVisibility(View.GONE);
+            splashProgressBar.setVisibility(View.INVISIBLE);
         }
     }
 
