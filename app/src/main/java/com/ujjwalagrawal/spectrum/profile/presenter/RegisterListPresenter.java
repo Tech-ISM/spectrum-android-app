@@ -6,5 +6,5 @@ package com.ujjwalagrawal.spectrum.profile.presenter;
 
 public interface RegisterListPresenter {
     void requestRegistrationList(String token,int type);
-    void sendRegistrationData(int id, int type, int participated, String token);
+    void sendRegistrationData(int id, int participated, String token);
 }

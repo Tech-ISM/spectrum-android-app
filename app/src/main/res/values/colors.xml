@@ -288,7 +288,7 @@
     <color name="md_black_1000">#000000</color>
     <color name="md_white_1000">#ffffff</color>
     <color name="custom_shade">#3a55cd</color>
-    <color name="custom_background">#262626</color>
+    <color name="custom_background">#b2d8ef</color>
 
     <!--blue grey-->
     <color name="md_blue_grey_50">#ECEFF1</color>

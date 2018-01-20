@@ -43,8 +43,8 @@ public class RegisterListPresenterImpl implements RegisterListPresenter{
     }
 
     @Override
-    public void sendRegistrationData(int id, int type, int participated, String token) {
-        registerListProvider.sendRegistrationData(id, type, participated, token, new SendRegistrationCallback() {
+    public void sendRegistrationData(int id, int participated, String token) {
+        registerListProvider.sendRegistrationData(id, participated, token, new SendRegistrationCallback() {
             @Override
             public void onSuccess(RegistrationDetail registrationDetail) {
                 if(registrationDetail.isSuccess()){
