@@ -1,117 +1,121 @@
-<android.support.v4.widget.SwipeRefreshLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ujjwalagrawal.spectrum.profile.view.ProfileFragment"
-    android:id="@+id/swipe_layout_profile"
-
-    >
-
-
+    tools:context="com.ujjwalagrawal.spectrum.profile.view.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:title="profile" />
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="profile" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:nestedScrollingEnabled="true">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/profile_cardView"
-        app:cardCornerRadius="8dp"
-
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum="12">
-
-            <!--<ImageView-->
-                <!--android:id="@+id/user_image"-->
-                <!--android:layout_width="172dp"-->
-                <!--android:layout_height="172dp"-->
-                <!--android:layout_margin="10dp"-->
-                <!--android:layout_weight="4"-->
-                <!--android:src="@drawable/ic_person_pin_black_48dp" />-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="8"
-                android:background="@drawable/circle"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:textSize="85sp"
-                android:paddingBottom="15dp"
-                android:id="@+id/profile_letter"
-                />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10sp"
-                android:layout_weight="8"
-                android:orientation="vertical"
-                android:weightSum="3">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/user_name"
+                <android.support.v7.widget.CardView
+                    android:id="@+id/profile_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@color/md_black_1000"
-                    />
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginVertical="8dp"
+                    app:cardBackgroundColor="@color/md_indigo_50"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="12">
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/user_image"-->
+                        <!--android:layout_width="172dp"-->
+                        <!--android:layout_height="172dp"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:layout_weight="4"-->
+                        <!--android:src="@drawable/ic_person_pin_black_48dp" />-->
+                        <TextView
+                            android:id="@+id/profile_letter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="8"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:paddingBottom="15dp"
+                            android:textSize="85sp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8"
+                            android:orientation="vertical"
+                            android:paddingTop="10sp"
+                            android:layout_marginLeft="20dp"
+                            android:weightSum="3"
+                            >
+
+                            <TextView
+                                android:id="@+id/user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/md_black_1000"
+                                android:textAllCaps="true"
+                                android:textColorHighlight="@color/md_black_1000"
+                                android:textSize="16sp"
+                                />
 
 
-
-                <TextView
-                    android:id="@+id/user_mobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@color/md_black_1000"
-                    />
-
-
+                            <TextView
+                                android:id="@+id/user_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/md_black_1000"
+                                android:textSize="16sp"
+                                />
 
 
-                <TextView
-                    android:id="@+id/user_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@color/md_black_1000"
-                    />
+                            <TextView
+                                android:id="@+id/user_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/md_black_1000"
+                                android:textSize="16sp"
+                                />
 
-            </LinearLayout>
+                        </LinearLayout>
 
-        </LinearLayout>
-
-
-
+                    </LinearLayout>
 
 
-    </android.support.v7.widget.CardView>
-        <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="40dp">-->
+                </android.support.v7.widget.CardView>
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp">-->
 
-            <!--<Button-->
+                <!--<Button-->
                 <!--android:id="@+id/button1"-->
                 <!--style="@style/Widget.AppCompat.Button"-->
                 <!--android:layout_width="191dp"-->
@@ -120,7 +124,7 @@
                 <!--android:layout_alignParentTop="true"-->
                 <!--android:text="Single" />-->
 
-            <!--<Button-->
+                <!--<Button-->
                 <!--android:id="@+id/button2"-->
                 <!--style="@style/Widget.AppCompat.Button"-->
                 <!--android:layout_width="191dp"-->
@@ -129,70 +133,71 @@
                 <!--android:layout_alignParentTop="true"-->
 
                 <!--android:text="Multiple" />-->
-        <!--</RelativeLayout>-->
+                <!--</RelativeLayout>-->
 
 
-        <LinearLayout
-            android:id="@+id/buttons"
-            android:layout_below="@+id/profile_cardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:weightSum="3">
+                <LinearLayout
+                    android:id="@+id/buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_centerHorizontal="true"
+                    >
 
-            <Button
-                android:id="@+id/profile_single"
-                android:layout_width="184dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/color_tabs"
-                android:text="INDIVIDUAL"
-                android:textSize="20dp"/>
-            />
+                    <Button
+                        android:id="@+id/profile_single"
+                        android:layout_width="184dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/color_tabs"
+                        android:text="INDIVIDUAL"
+                        android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/profile_multiple"
-                android:layout_width="184dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="@color/color_tabs"
-                android:text=" TEAM"
-                android:textSize="20dp"/>
-        </LinearLayout>
+                    <Button
+                        android:id="@+id/profile_multiple"
+                        android:layout_width="184dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@color/color_tabs"
+                        android:text=" TEAM"
+                        android:textSize="20sp" />
+                </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLay1"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:weightSum="2"
-            android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/linearLay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-            <View
-                android:id="@+id/b1"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/md_black_1000"
-                android:layout_weight="1" />
+                    <View
+                        android:id="@+id/b1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/md_black_1000" />
 
-            <View
-                android:id="@+id/b2"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/md_black_1000"
-                android:layout_weight="1" />
-        </LinearLayout>
-
+                    <View
+                        android:id="@+id/b2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/md_black_1000" />
+                </LinearLayout>
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/register_event_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/register_event_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:layout_marginVertical="4dp"
+                    >
 
 
-        </android.support.v7.widget.RecyclerView>
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
 
         </ScrollView>
 

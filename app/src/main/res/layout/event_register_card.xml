@@ -4,10 +4,10 @@
     android:id="@+id/event_details"
     android:layout_width="match_parent"
     android:layout_height="60dp"
-    android:layout_margin="1dp"
+    android:layout_margin="5dp"
     event_details:cardElevation="2dp"
     event_details:cardCornerRadius="20dp"
-    android:background="@color/md_indigo_50"
+    card_view:cardBackgroundColor="@color/md_indigo_100"
     >
 
     <LinearLayout
