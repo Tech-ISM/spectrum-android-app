@@ -68,6 +68,7 @@ public class HomeActivity extends AppCompatActivity {
                     HomeFragment homeFragment = new HomeFragment();
                     setFragment(homeFragment);
 
+
                 } else if (tabId == R.id.tab_team) {
 
                     TeamsFragment teamFragment = new TeamsFragment();

@@ -3,7 +3,7 @@
     <tab
         id="@+id/tab_profile"
         icon="@drawable/ic_account_circle_white_24dp"
-        barColorWhenSelected="@color/md_deep_orange_500"
+        barColorWhenSelected="@color/md_purple_300"
         title="Profile"
         />
     <tab
@@ -19,14 +19,18 @@
         title="Home"
         />
     <tab
+
         id="@+id/tab_team"
         barColorWhenSelected="@color/md_amber_A400"
+
         icon="@drawable/ic_people_white_24dp"
         title="Team"
         />
     <tab
         id="@+id/tab_logout"
+
         barColorWhenSelected="#c177ff"
+
         icon="@drawable/ic_people_white_24dp"
         title="Logout"
         />

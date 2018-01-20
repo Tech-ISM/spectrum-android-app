@@ -7,6 +7,7 @@
     android:layout_margin="1dp"
     event_details:cardElevation="2dp"
     event_details:cardCornerRadius="20dp"
+    android:background="@color/md_indigo_50"
     >
 
     <LinearLayout

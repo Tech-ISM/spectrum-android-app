@@ -89,7 +89,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
         public TextView member_name;
         public TextView designation;
         public  ImageView reference_url;
-//        public ImageView LinkedIn_url;
         public ImageView mobile_no;
 
         public MyViewHolder(View itemView) {
@@ -103,8 +102,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
                 reference_url.setImageResource(R.drawable.github);
             else
                 reference_url.setImageResource(R.drawable.facebook_app_logo);
-// LinkedIn_url = (ImageView) itemView.findViewById(R.id.linkedIn);
-
         }
     }
 

@@ -65,9 +65,11 @@ public class HomeFragment extends Fragment {
 		final View view =inflater.inflate(R.layout.fragment_home, container, false);
 		ButterKnife.bind(this,view);
 
+
+		viewPager=(AutoScrollViewPager) view.findViewById(R.id.viewPager);
+
 		((HomeActivity)getContext()).setSupportActionBar(toolbar);
 
-		assignViews(view);
 		set_images();
 		init(data_images);
 //		time_pager(viewPager);
@@ -103,14 +105,7 @@ public class HomeFragment extends Fragment {
 		data_images.add(Fragment_homePager.newInstance(R.drawable.circuit_debugging));
 		data_images.add(Fragment_homePager.newInstance(R.drawable.triathlon));
 		data_images.add(Fragment_homePager.newInstance(R.drawable.robosoccer));
-
 		data_images.add(Fragment_homePager.newInstance(R.drawable.cs_go));
-	}
-
-	public void assignViews(View view)
-	{
-		data=new int[]{R.drawable.framelayout1,R.drawable.framelayout3};
-		viewPager=(AutoScrollViewPager) view.findViewById(R.id.viewPager);
 	}
 
 	public void set_about_tabs(View view)

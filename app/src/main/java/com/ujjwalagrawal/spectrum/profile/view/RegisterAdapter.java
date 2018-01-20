@@ -1,7 +1,10 @@
 package com.ujjwalagrawal.spectrum.profile.view;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.net.sip.SipSession;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 
@@ -19,8 +22,10 @@ import android.widget.Toast;
 
 import com.ujjwalagrawal.spectrum.R;
 
+import com.ujjwalagrawal.spectrum.events.event_details.view.EventDetailActivity;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
+import com.ujjwalagrawal.spectrum.home.HomeActivity;
 import com.ujjwalagrawal.spectrum.profile.model.EventsList;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenter;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenterImpl;
@@ -75,7 +80,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
             if (eventsList.getParticipated() == 1) {
                 holder.checklist.setChecked(true);
-                holder.checklist.setText("Participated");
+                holder.checklist.setText("Registered");
                 holder.checklist.setTextColor(context.getResources().getColor(R.color.md_green_800));
 
             } else {
@@ -93,6 +98,38 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
             public void onClick(View view) {
                 Log.d("CHANGE","afsasdf");
                 profileFragment.changeParticipatedStatus(eventsList.getParticipated(),eventsList.getId());
+                if(eventsList.getParticipated()==1){
+                    Snackbar snackbar = Snackbar
+                            .make(view, "Unregistered from "+eventsList.getName()+" ", Snackbar.LENGTH_SHORT)
+                            .setAction("INFO", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(context, EventDetailActivity.class);
+                                    intent.putExtra("event_id",eventsList.getId());
+                                    ((HomeActivity)context).startActivity(intent);
+                                }
+                            });
+                    View sbView = snackbar.getView();
+                    TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.RED);
+                    snackbar.show();
+                }else {
+                    Snackbar snackbar = Snackbar
+                            .make(view, "Registered to "+eventsList.getName()+" ", Snackbar.LENGTH_SHORT)
+                            .setAction("INFO", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(context, EventDetailActivity.class);
+                                    intent.putExtra("event_id",eventsList.getId());
+                                    ((HomeActivity)context).startActivity(intent);
+                                }
+                            });
+                    View sbView = snackbar.getView();
+                    TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.GREEN);
+
+                    snackbar.show();
+                }
 
             }
             }

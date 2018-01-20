@@ -26,7 +26,7 @@
                 android:layout_marginBottom="20sp"
                 android:layout_marginTop="60dp"
                 android:layout_weight="2"
-                android:background="@drawable/spectrum_stand_alone"/>
+                android:background="@drawable/spectrum_circle"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

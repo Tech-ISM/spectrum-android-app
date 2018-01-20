@@ -23,8 +23,8 @@ public class TeamsFragment extends Fragment {
     private List<team_members> developers;
     private List<team_members> organizers;
     private List<team_members> head_members;
-    private  RecyclerView            developers_Recyclerview ,   organizers_Recyclerview, head_Recyclerview   ;
-    private  RecyclerView.Adapter    developerAdapter        ,   organizerAdapter       , headAdapter  ;
+    private  RecyclerView            developers_Recyclerview ,   head_Recyclerview   ;
+    private  RecyclerView.Adapter    developerAdapter        ,   headAdapter  ;
 
     public TeamsFragment() {
     }
@@ -56,22 +56,26 @@ public class TeamsFragment extends Fragment {
         developers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
         developerAdapter = new TeamsAdapter(developers, getContext(),true);
 
-        organizers_Recyclerview = (RecyclerView) view.findViewById(R.id.organizers_recycler_view);
-        organizers_Recyclerview.setHasFixedSize(true);
-        organizers_Recyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        organizerAdapter = new TeamsAdapter(organizers, getContext(),false);
-
         developers_Recyclerview.setAdapter(developerAdapter);
-        organizers_Recyclerview.setAdapter(organizerAdapter);
         head_Recyclerview.setAdapter(headAdapter);
 
     }
 
     public void put_data()//will be used to set data finally
     {
-        developers.add(new team_members("Akhil Vaidya","Developer",R.drawable.mem_akhil,"8578955444","https://github.com/avstark"));
-        organizers.add(new team_members("sanskar Shrivastava","organizers",R.drawable.framelayout1,"23456s343","https://www.facebook.com/profile.php?id=100000383742195&ref=br_rs"));
-        head_members.add(new team_members("Aman Gupta","junior developer",R.drawable.framelayout3,"234563434553346","https://github.com/Tech-ISM/spectrum-android-app"));
+        developers.add(new team_members("Ujjwal Agrawal","App Developer",R.drawable.ujjwal_agrawal,"8770776846","https://github.com/ujjwalagrawal17"));
+        developers.add(new team_members("Shubham Raj","App Developer",R.drawable.shubham_raj,"7277774644","https://github.com/hacker5210"));
+        developers.add(new team_members("Akhil Vaidya","App Developer",R.drawable.akhil_vaidya,"8578955444","https://github.com/avstark"));
+        developers.add(new team_members("Aman Gupta","App Developer",R.drawable.aman_gupta,"7737476484","https://github.com/ag597482"));
+        developers.add(new team_members("Shalini Verma","App Developer",R.drawable.shalini,"9709371588","https://github.com/shaliniv16"));
+        developers.add(new team_members("Anand","Designer",R.drawable.anand,"8797288013","https://github.com/Tech-ISM/spectrum-android-app  "));
+
+
+        head_members.add(new team_members("Chayan Goyal","Vice President(SEE)",R.drawable.chayan_goyal,"9425066546","https://www.facebook.com/chayan.goyal.1"));
+        head_members.add(new team_members("Sumanth","Secratary(SEE)",R.drawable.sumanth,"7680925866","https://m.facebook.com/sai.sumanth.7798"));
+        head_members.add(new team_members("Shashank Sharma","Joint-Secratary(SEE)",R.drawable.shashank_sharma,"8909788706","https://www.facebook.com/shashank442sharma"));
+
+
     }
 
 
