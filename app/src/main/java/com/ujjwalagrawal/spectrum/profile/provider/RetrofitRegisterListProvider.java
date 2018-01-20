@@ -59,7 +59,7 @@ public class RetrofitRegisterListProvider implements RegisterListProvider {
     }
 
     @Override
-    public void sendRegistrationData(int id, int type, int participated, String token, final SendRegistrationCallback sendRegistrationCallback) {
+    public void sendRegistrationData(int id, int participated, String token, final SendRegistrationCallback sendRegistrationCallback) {
         Call<RegistrationDetail> call = profileApi.getInfo(id,participated,token);
         call.enqueue(new Callback<RegistrationDetail>() {
             @Override

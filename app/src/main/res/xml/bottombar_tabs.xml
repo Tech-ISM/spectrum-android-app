@@ -19,14 +19,18 @@
         title="Home"
         />
     <tab
-        id="@+id/tab_aboutus"
-        barColorWhenSelected="@color/md_red_500"
+
+        id="@+id/tab_team"
+        barColorWhenSelected="@color/md_amber_A400"
+
         icon="@drawable/ic_people_white_24dp"
         title="Team"
         />
     <tab
         id="@+id/tab_logout"
-        barColorWhenSelected="@color/md_deep_orange_500"
+
+        barColorWhenSelected="#c177ff"
+
         icon="@drawable/ic_people_white_24dp"
         title="Logout"
         />

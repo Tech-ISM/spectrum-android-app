@@ -3,6 +3,7 @@ package com.ujjwalagrawal.spectrum.profile.view;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 //import android.support.v7.widget.LinearLayoutCompat;
@@ -29,10 +30,13 @@ import com.ujjwalagrawal.spectrum.profile.provider.RetrofitRegisterListProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment implements RegisterListView{
+
 
     private Context context;
     RecyclerView recyclerView;
@@ -45,6 +49,8 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 
 
     private String token ;
+    private View b1;
+    private View b2;
     public boolean verified;
 //    private TrialData trialData;
 
@@ -59,6 +65,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         // Inflate the layout for this fragmen
 
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
+
         swipeRefreshLayout = view.findViewById(R.id.swipe_layout_profile);
         context  = getContext();
         SharedPrefs sharedPrefs = new SharedPrefs(context);
@@ -68,6 +75,9 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         phone.setText(sharedPrefs.getMobile());
         TextView email = view.findViewById(R.id.user_email);
         email.setText(sharedPrefs.getEmail());
+        b1 = view.findViewById(R.id.b1);
+        b2 = view.findViewById(R.id.b2);
+        final TextView instruction = view.findViewById(R.id.profile_text_before_button);
         recyclerView = view.findViewById(R.id.register_event_recycler);
         recyclerView.setHasFixedSize(true);
 
@@ -83,10 +93,18 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         recyclerView.setAdapter(registerAdapter);
         recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
         Button single = view.findViewById(R.id.profile_single);
+        instruction.setText("Registration Time !!!");
+        instruction.setTextColor(context.getResources().getColor(R.color.md_green_800));
+
         single.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 registerListPresenter.requestRegistrationList(token,1);
+                b1.setBackgroundColor(getResources().getColor(R.color.md_red_900));
+                b2.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
+//                instruction.setText("Click on the Card for registration");
+
+
             }
         });
 
@@ -95,6 +113,16 @@ public class ProfileFragment extends Fragment implements RegisterListView{
             @Override
             public void onClick(View view) {
                 registerListPresenter.requestRegistrationList(token,2);
+                b2.setBackgroundColor(getResources().getColor(R.color.md_red_900));
+                b1.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
+                instruction.setVisibility(View.GONE);
+//                instruction.setText("Multiple Events can only be registered from google form");
+                Snackbar snackbar = Snackbar
+                        .make(view, "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+
+
             }
         });
 
@@ -125,7 +153,6 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         for (int i=0;i<eventsListList.size();i++){
             if (eventsListList.get(i).getType()==type)
             eventsLists.add(eventsListList.get(i));
-
         }
         registerAdapter.setData(eventsLists);
         Log.d("size",eventsListList.size()+"");
@@ -134,15 +161,18 @@ public class ProfileFragment extends Fragment implements RegisterListView{
 
     @Override
     public void showMessage(String message) {
-        Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onParticipatedStatusUpdated() {
+        registerListPresenter.requestRegistrationList(token,1);
         registerAdapter.notifyDataSetChanged();
     }
 
     public void changeParticipatedStatus(int participated, int id) {
-           registerListPresenter.sendRegistrationData(id,5,participated,token);
+           registerListPresenter.sendRegistrationData(id, participated,token);
     }
+
+
 }

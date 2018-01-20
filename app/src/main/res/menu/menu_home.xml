@@ -2,8 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.ujjwalagrawal.spectrum.home.HomeActivity" >
-    <item android:id="@+id/action_settings"
+    <item android:id="@+id/action_rate_us"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_star_black_24dp"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_notifications"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        app:showAsAction="always" />
 </menu>

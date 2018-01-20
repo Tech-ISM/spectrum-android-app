@@ -44,6 +44,8 @@ public class AtendeeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_atendee, container, false);
         ButterKnife.bind(this, view);
+        atendee_textview.setText(atendee);
+        prize_description_textview.setText(prize_description);
         return view;
     }
 

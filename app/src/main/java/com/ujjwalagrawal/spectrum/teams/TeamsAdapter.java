@@ -62,10 +62,17 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
             holder.reference_url.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+//                    builder.setToolbarColor(ContextCompat.getColor(context,R.color.cardview_dark_background));//NOT WORKING
+                    builder.setToolbarColor(ContextCompat.getColor(context, R.color.colorPrimary));
+                    builder.setSecondaryToolbarColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
+                    builder.setExitAnimations(context, android.R.anim.slide_in_left,
+                            android.R.anim.slide_out_right);
                     CustomTabsIntent customTabsIntent = builder.build();
                     customTabsIntent.launchUrl(context, Uri.parse(current.getConcerned_url()));
-                    builder.setToolbarColor(ContextCompat.getColor(context,R.color.cardview_dark_background));//NOT WORKING
+
+
                 }
             });
         } else holder.reference_url.setVisibility(View.GONE);
