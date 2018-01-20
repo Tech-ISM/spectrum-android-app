@@ -2,11 +2,13 @@ package com.ujjwalagrawal.spectrum.profile.view;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 //import android.support.v7.widget.LinearLayoutCompat;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -29,6 +31,7 @@ import com.ujjwalagrawal.spectrum.profile.provider.RetrofitRegisterListProvider;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import butterknife.BindView;
 
@@ -45,12 +48,14 @@ public class ProfileFragment extends Fragment implements RegisterListView{
     private SwipeRefreshLayout swipeRefreshLayout;
     private RegisterListPresenter registerListPresenter;
     private RegisterAdapter registerAdapter;
+    private CardView cardView;
 
 
 
     private String token ;
     private View b1;
     private View b2;
+    Random rnd = new Random();
     public boolean verified;
 //    private TrialData trialData;
 
@@ -75,11 +80,16 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         phone.setText(sharedPrefs.getMobile());
         TextView email = view.findViewById(R.id.user_email);
         email.setText(sharedPrefs.getEmail());
+        final TextView letter = view.findViewById(R.id.profile_letter);
+        String first = sharedPrefs.getUsername().substring(0,1).toUpperCase();
+        letter.setText(first);
+        letter.setTextColor(context.getResources().getColor(R.color.md_blue_500));
         b1 = view.findViewById(R.id.b1);
         b2 = view.findViewById(R.id.b2);
-        final TextView instruction = view.findViewById(R.id.profile_text_before_button);
+        cardView = view.findViewById(R.id.profile_cardView);
         recyclerView = view.findViewById(R.id.register_event_recycler);
         recyclerView.setHasFixedSize(true);
+
 
         token = sharedPrefs.getAccessToken();
 //        Log.d("Profile",token);
@@ -93,8 +103,6 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         recyclerView.setAdapter(registerAdapter);
         recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
         Button single = view.findViewById(R.id.profile_single);
-        instruction.setText("Registration Time !!!");
-        instruction.setTextColor(context.getResources().getColor(R.color.md_green_800));
 
         single.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -102,7 +110,10 @@ public class ProfileFragment extends Fragment implements RegisterListView{
                 registerListPresenter.requestRegistrationList(token,1);
                 b1.setBackgroundColor(getResources().getColor(R.color.md_red_900));
                 b2.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
-//                instruction.setText("Click on the Card for registration");
+                Snackbar snackbar = Snackbar
+                        .make(view, "REGISTER ON THE EVENTS BY CLICKING ON THE CARD", Snackbar.LENGTH_SHORT);
+
+                snackbar.show();
 
 
             }
@@ -115,14 +126,20 @@ public class ProfileFragment extends Fragment implements RegisterListView{
                 registerListPresenter.requestRegistrationList(token,2);
                 b2.setBackgroundColor(getResources().getColor(R.color.md_red_900));
                 b1.setBackgroundColor(getResources().getColor(R.color.md_black_1000));
-                instruction.setVisibility(View.GONE);
-//                instruction.setText("Multiple Events can only be registered from google form");
                 Snackbar snackbar = Snackbar
-                        .make(view, "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+                        .make(view, "MULTIPLE EVENTS CAN ONLY BE REGISTERED BY GOOGLE FORM", Snackbar.LENGTH_LONG);
 
                 snackbar.show();
 
 
+            }
+        });
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                letter.setTextColor( Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+);
             }
         });
 
