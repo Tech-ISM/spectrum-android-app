@@ -2,9 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lg">
+    >
 
     <RelativeLayout
+        android:background="@drawable/login_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -47,10 +48,11 @@
                     android:id="@+id/input_name"
                     android:textColor="@color/md_white_1000"
                     android:layout_width="match_parent"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="60sp"
                     android:imeOptions="actionNext"
                     android:layout_marginTop="8sp"
+                    android:inputType="text"
                     android:layout_weight="0.5"
                     android:gravity="center"
                     android:hint="@string/hint_login_name"
@@ -78,7 +80,7 @@
 
                     android:id="@+id/input_mobile"
                     android:layout_width="match_parent"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:textColor="@color/md_white_1000"
                     android:imeOptions="actionNext"
                     android:layout_marginRight="60sp"
@@ -111,11 +113,12 @@
                     style="@android:style/Widget.DeviceDefault.AutoCompleteTextView"
                     android:textColor="@color/md_white_1000"
                     android:layout_width="match_parent"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:imeOptions="actionDone"
                     android:layout_marginRight="60sp"
                     android:layout_marginTop="8sp"
                     android:layout_weight="0.5"
+                    android:inputType="textEmailAddress"
                     android:gravity="center"
                     android:textColorHint="@color/md_white_1000"
                     android:hint="@string/hint_login_email" />
@@ -155,7 +158,7 @@
                     android:id="@+id/input_otp"
                     android:layout_width="match_parent"
                     android:textColor="@color/md_white_1000"
-                    android:layout_height="40sp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="60sp"
                     android:layout_weight="0.5"

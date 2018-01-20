@@ -137,11 +137,10 @@ public class HomeActivity extends AppCompatActivity {
         if (id == R.id.action_rate_us) {
             final AlertDialog ad = new AlertDialog.Builder(this)
                     .create();
-            ad.setCancelable(false);
+            ad.setCancelable(true);
             ad.setTitle("Rate Us!");
             ad.setMessage("We will redirect you to the Google Play store! Please give us a 5 star rating.");
-
-            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Ok", new DialogInterface.OnClickListener() {
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     final String appPackageName = getPackageName(); // getPackageName() from Context or SplashScheenActivity object
@@ -152,6 +151,13 @@ public class HomeActivity extends AppCompatActivity {
                     }
                     ad.cancel();
 
+                }
+            });
+
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                   ad.cancel();
                 }
             });
             ad.show();

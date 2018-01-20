@@ -189,6 +189,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
 
     @Override
     public void verifyBtnClickable() {
+        editTextOtp.setText("");
         btn_verify_otp.setClickable(true);
     }
 
