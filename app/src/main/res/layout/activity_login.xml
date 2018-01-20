@@ -7,16 +7,18 @@
     <RelativeLayout
         android:id="@+id/relative_layout_parent"
         android:background="@drawable/login_background"
+        android:scaleType="fitCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
+
         >
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"
+            android:padding="8dp"
             android:orientation="vertical"
             android:weightSum="10">
 

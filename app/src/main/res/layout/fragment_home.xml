@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,77 +23,77 @@
         android:layout_below="@id/appBarLayout"
         android:nestedScrollingEnabled="true"
         android:background="@color/md_white_1000">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-        <com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager
-            android:id="@+id/viewPager"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="340dp"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/viewpager_background"
-            />
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/viewPager"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:weightSum="3">
+            <com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/viewpager_background" />
 
-            <Button
-                android:id="@+id/abt_spectrum"
-                android:layout_width="188dp"
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/color_tabs"
-                android:text="About Spectrum" />
+                android:layout_below="@+id/viewPager"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
-            <Button
-                android:id="@+id/abt_see"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="@color/color_tabs"
-                android:text="About SEE" />
-        </LinearLayout>
+                <Button
+                    android:id="@+id/abt_spectrum"
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/color_tabs"
+                    android:text="About Spectrum" />
 
-        <LinearLayout
-            android:id="@+id/linearLay1"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_below="@id/buttons"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginTop="0dp"
-            android:orientation="horizontal">
+                <Button
+                    android:id="@+id/abt_see"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/color_tabs"
+                    android:text="About SEE" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLay1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/buttons"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/b2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/b1"
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/b2"
-                android:layout_width="wrap_content"
-                android:layout_height="2dp"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/about"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@+id/linearLay1"
-            android:background="@drawable/about_background"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:textColor="@color/md_white_1000"
-            android:textSize="18sp" />
-</RelativeLayout>
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/linearLay1"
+                android:background="@drawable/about_background"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/md_white_1000"
+                android:textSize="18sp" />
+        </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
