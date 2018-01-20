@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3E50B4</color>
+    <color name="colorPrimary">#5C6BC0</color>
     <color name="colorPrimaryDark">#08215a</color>
     <color name="colorAccent">#FF3F80</color>
-    <color name="team_card">#ccf7dfc0</color>
+    <color name="team_card">#e6f7dfc0</color>
     <color name="circle_frame">#548ce5</color>
+    <color name="color_tabs">#c9eeff</color>
 
     <color name="md_red_50">#FFEBEE</color>
     <color name="md_red_100">#FFCDD2</color>

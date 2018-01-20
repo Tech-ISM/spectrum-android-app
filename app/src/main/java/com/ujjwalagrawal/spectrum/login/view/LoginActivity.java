@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         msgOtp = (TextView) findViewById(R.id.otp_msg);
         spectrum_logo = (ImageView) findViewById(R.id.spectrum_logo);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        Glide.with(this).load(R.drawable.spectrum).into(spectrum_logo);
+        Glide.with(this).load(R.drawable.spectrum_circle).into(spectrum_logo);
         editTextMobile.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

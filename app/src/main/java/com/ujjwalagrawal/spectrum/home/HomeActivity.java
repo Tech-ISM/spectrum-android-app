@@ -78,7 +78,7 @@ public class HomeActivity extends AppCompatActivity {
                     HomeFragment homeFragment = new HomeFragment();
                     setFragment(homeFragment);
 
-                } else if (tabId == R.id.tab_sponsors) {
+                } else if (tabId == R.id.tab_logout) {
 //                    ChatFragment sponsorsFragment = new SponsorsFragment();
 //                    setFragment(sponsorsFragment);
                     final AlertDialog ad = new AlertDialog.Builder(context)

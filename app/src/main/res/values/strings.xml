@@ -12,15 +12,13 @@
     <string name="notificationbase_url">https://xyz</string>
     <string name="head_members">Head Members</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="organizers">Organizers</string>
     <string name="your_data">You</string>
     <string name="single_events">Single participant</string>
     <string name="multiple_events">Multiple Participant</string>
     <string name="designers">Designers</string>
     <string name="developers">Developers</string>
     <string name="atendee">atendee</string>
-    <string name="about_spectrum">\nSpectrum is the annual fest of Department of Electronics Engineering, IIT(ISM) Dhanbad organised by Society of Electronics Engineers.\n\n"A Spectrum (plural spectra or spectrums) is a condition that is not limited to a specific set of values but can vary, without steps, across a continuum." It is a 2 day fest wherein students from different colleges and departments undergo an intense experience of testing their knowledge, creativity and challenging their aptitude and reasoning abilities.\n\nThe event also gives the students an opportunity to interact with the people in the field of electronics to understand the bigger picture between the academic courses and industrial requirements.\n\nThe events are designed to provide an opportunity to explore teamwork, perseverance, ingenuity, observation skills and technical acumen. </string>
-    <string name="about_SEE">\nSociety of Electronics Engineers is a society under Department of Electronics Engineering, Indian Institute of Technology (Indian School of Mines) Dhanbad.
-        SEE believes that the students of 21st century are not bound by any limitations to their intellectual capabilities and creativity.\n\nWhat SEE intends to do, is to redefine the potential limits of students in Jharkhand by providing a platform through Spectrum.\n\nTo produce quality electronics engineers with excellent technical skills, leadership, creativity and innovation is the key mission of the society</string>
+    <string name="about_spectrum">\nSpectrum is the annual fest of Department of Electronics Engineering, IIT(ISM) Dhanbad organised by Society of Electronics Engineers.\n\nIt is a 2 day fest wherein students from different colleges and departments undergo an intense experience of testing their knowledge, creativity and challenging their aptitude and reasoning abilities.\n\nThe event also gives the students an opportunity to interact with the people in the field of electronics to understand the bigger picture between the academic courses and industrial requirements.</string>
+    <string name="about_SEE">\nSociety of Electronics Engineers is a society under Department of Electronics Engineering, Indian Institute of Technology (Indian School of Mines) Dhanbad. SEE believes that the students of 21st century are not bound by any limitations to their intellectual capabilities and creativity.\n\nWhat SEE intends to do, is to redefine the potential limits of students in Jharkhand by providing a platform through Spectrum.\n\nTo produce quality electronics engineers with excellent technical skills, leadership, creativity and innovation is the key mission of the society</string>
     <string name="description">Description</string>
 </resources>
