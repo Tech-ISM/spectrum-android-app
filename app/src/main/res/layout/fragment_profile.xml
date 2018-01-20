@@ -33,9 +33,9 @@
                     android:id="@+id/profile_cardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp"
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/profile_card"
+                    app:cardCornerRadius="8dp"
 
                     >
 
@@ -57,33 +57,31 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
                             android:layout_weight="8"
                             android:background="@drawable/circle"
                             android:gravity="center"
                             android:paddingBottom="15dp"
-                            android:textSize="85sp"
-                            android:layout_marginLeft="10dp"/>
+                            android:textSize="85sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
                             android:layout_weight="4"
                             android:orientation="vertical"
                             android:paddingTop="10sp"
-                            android:layout_marginLeft="20dp"
-                            android:weightSum="3"
-                            >
+                            android:weightSum="3">
 
                             <TextView
                                 android:id="@+id/user_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textColor="@color/md_black_1000"
                                 android:textAllCaps="true"
+                                android:textColor="@color/md_black_1000"
                                 android:textColorHighlight="@color/md_black_1000"
-                                android:textSize="14sp"
-                                />
+                                android:textSize="14sp" />
 
 
                             <TextView
@@ -92,8 +90,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textColor="@color/md_black_1000"
-                                android:textSize="14sp"
-                                />
+                                android:textSize="14sp" />
 
 
                             <TextView
@@ -102,8 +99,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textColor="@color/md_black_1000"
-                                android:textSize="14.sp"
-                                />
+                                android:textSize="14.sp" />
 
                         </LinearLayout>
 
@@ -140,10 +136,9 @@
                     android:id="@+id/buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3"
                     android:layout_centerHorizontal="true"
-                    >
+                    android:orientation="horizontal"
+                    android:weightSum="3">
 
                     <Button
                         android:id="@+id/profile_single"
@@ -191,9 +186,8 @@
                     android:id="@+id/register_event_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="vertical"
                     android:layout_marginVertical="4dp"
-                    >
+                    android:scrollbars="vertical">
 
 
                 </android.support.v7.widget.RecyclerView>
