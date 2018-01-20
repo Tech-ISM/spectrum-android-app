@@ -99,10 +99,12 @@ public class HomeFragment extends Fragment {
 
 	public void set_images(){
 		data_images = new ArrayList<>();
-		data_images.add(Fragment_homePager.newInstance(R.drawable.framelayout1));
-		data_images.add(Fragment_homePager.newInstance(R.drawable.framelayout3));
-		data_images.add(Fragment_homePager.newInstance(R.drawable.pitch_please));
-		data_images.add(Fragment_homePager.newInstance(R.drawable.circle));
+		data_images.add(Fragment_homePager.newInstance(R.drawable.all_events));
+		data_images.add(Fragment_homePager.newInstance(R.drawable.circuit_debugging));
+		data_images.add(Fragment_homePager.newInstance(R.drawable.triathlon));
+		data_images.add(Fragment_homePager.newInstance(R.drawable.robosoccer));
+
+		data_images.add(Fragment_homePager.newInstance(R.drawable.cs_go));
 	}
 
 	public void assignViews(View view)
@@ -135,15 +137,15 @@ public class HomeFragment extends Fragment {
 	{
 		if (tab)
 		{
-			about.setText(R.string.about_spectrum);
+			about.setText(R.string.about_SEE);
 			b1.setBackgroundColor(getResources().getColor(R.color.md_white_1000));
-			b2.setBackgroundColor(getResources().getColor(R.color.md_light_green_900));
+			b2.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 		}
 		else
 		{
-			about.setText(R.string.about_SEE);
+			about.setText(R.string.about_spectrum);
 			b2.setBackgroundColor(getResources().getColor(R.color.md_white_1000));
-			b1.setBackgroundColor(getResources().getColor(R.color.md_light_green_900));
+			b1.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 		}
 
 	}

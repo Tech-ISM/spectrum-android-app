@@ -64,7 +64,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
         editTextMobile = (EditText) findViewById(R.id.input_mobile);
         editTextName = (EditText) findViewById(R.id.input_name);
         editTextEmail = (EditText) findViewById(R.id.input_email);
-        login_bg = (ImageView) findViewById(R.id.login_background);
+        //login_bg = (ImageView) findViewById(R.id.login_background);
         editTextOtp = (EditText) findViewById(R.id.input_otp);
         btn_resend_otp = (Button) findViewById(R.id.resend_otp);
         otpImage = (ImageView) findViewById(R.id.otp_img);

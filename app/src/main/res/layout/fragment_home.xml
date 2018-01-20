@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/md_white_1000">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <android.support.design.widget.AppBarLayout
-            android:id="@+id/appBarLayout"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:title="Spectrum"
+            app:titleTextColor="@color/md_white_1000" />
+    </android.support.design.widget.AppBarLayout>
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:title="Spectrum"
-                app:titleTextColor="@color/md_white_1000" />
-        </android.support.design.widget.AppBarLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:background="@color/md_white_1000">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
         <com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="340dp"
-            android:layout_below="@+id/appBarLayout"
-            android:background="@color/md_black_1000" />
+            android:layout_alignParentTop="true"
+            android:background="@drawable/viewpager_background" />
 
         <LinearLayout
             android:id="@+id/buttons"
-            android:layout_below="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPager"
             android:layout_centerHorizontal="true"
             android:orientation="horizontal"
             android:weightSum="3">
@@ -45,7 +47,7 @@
                 android:layout_width="188dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/md_lime_100"
+                android:background="#c9eeff"
                 android:text="About Spectrum" />
 
             <Button
@@ -53,7 +55,7 @@
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:background="@color/md_lime_100"
+                android:background="#c9eeff"
                 android:text="About SEE" />
         </LinearLayout>
 
@@ -62,8 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_below="@id/buttons"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
             android:layout_marginTop="0dp"
             android:orientation="horizontal">
 
@@ -85,10 +87,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_below="@+id/buttons"
+            android:layout_below="@+id/linearLay1"
+            android:background="@drawable/about_background"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            android:textSize="20sp" />
-
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
 </RelativeLayout>
     </ScrollView>
+</RelativeLayout>
