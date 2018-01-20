@@ -58,6 +58,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
         final EventData eventsData = data.get(position);
         imageLoader.loadImage(eventsData.getImage_url(),holder.event_image,holder.progressBar);
         holder.event_name.setText(eventsData.getName());
+        holder.time_textview.setText(eventsData.getTime());
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,12 +83,13 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
 
         public ImageView event_image;
         public RelativeLayout relativeLayout;
-        public TextView event_name;
+        public TextView event_name,time_textview;
         public ProgressBar progressBar;
         public MyViewHolder(View itemView){
             super(itemView);
             event_image = (ImageView) itemView.findViewById(R.id.eventImg);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.event_relativeLayout);
+            time_textview = (TextView) itemView.findViewById(R.id.time_textview);
             event_name = (TextView) itemView.findViewById(R.id.eventName);
             progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar_events);
 

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "99954326337",
+    "firebase_url": "https://brokerapp-8c966.firebaseio.com",
+    "project_id": "brokerapp-8c966",
+    "storage_bucket": "brokerapp-8c966.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99954326337:android:9c3dcb68f76e2e55",
+        "android_client_info": {
+          "package_name": "com.ujjwalagrawal.spectrum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99954326337-e4orqspepkustevp0eaa67a1mtlf74gc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ujjwalagrawal.spectrum",
+            "certificate_hash": "e283447a2609a29bbdc1295d820b8d3d703d8ca0"
+          }
+        },
+        {
+          "client_id": "99954326337-fd70tpapk09a409g0uo76ie9j0hejubj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE_-bl0bAJYp-HLuSNTNHykHi7ljP6Zeo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99954326337-fd70tpapk09a409g0uo76ie9j0hejubj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

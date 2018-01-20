@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +29,7 @@ public class EventListFragment extends Fragment implements EventListView{
 	private int mday;
 	private Context context;
 	RecyclerView event_recyclerView;
-	private LinearLayoutManager linearLayoutManager;
+	private GridLayoutManager gridLayoutManager;
 
 	private SwipeRefreshLayout swipeRefreshLayout;
 	private EventListPresenter eventListPresenter;
@@ -68,11 +68,11 @@ public class EventListFragment extends Fragment implements EventListView{
 		event_recyclerView = (RecyclerView) view.findViewById(R.id.event_recycler_view);
 		event_recyclerView.setHasFixedSize(true);
 		context = getContext();
-		linearLayoutManager = new LinearLayoutManager(getContext());
+		gridLayoutManager = new GridLayoutManager(getContext(),2);
 		eventsAdapter = new EventsAdapter(getContext());
 
 		eventListPresenter=new EventListPresenterImpl(this,new RetrofitEventListProvider());
-		event_recyclerView.setLayoutManager(linearLayoutManager);
+		event_recyclerView.setLayoutManager(gridLayoutManager);
 		event_recyclerView.setAdapter(eventsAdapter);
 		event_recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
 		eventListPresenter.requestEventList(mday);

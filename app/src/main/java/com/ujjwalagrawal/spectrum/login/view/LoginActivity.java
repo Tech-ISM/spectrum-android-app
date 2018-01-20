@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +40,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private LoginPresenter loginPresenter;
     private ImageView spectrum_logo;
     private SharedPrefs sharedPrefs;
+    private LinearLayout layout_name,layout_mobile,layout_email;
     Dialog dialog;
 
     @Override
@@ -54,10 +56,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         editTextMobile = (EditText) findViewById(R.id.input_mobile);
         editTextName = (EditText) findViewById(R.id.input_name);
         editTextEmail = (EditText) findViewById(R.id.input_email);
+        layout_name = (LinearLayout) findViewById(R.id.layout_name);
+        layout_email = (LinearLayout) findViewById(R.id.layout_email);
+        layout_mobile = (LinearLayout) findViewById(R.id.layout_mobile);
         msgOtp = (TextView) findViewById(R.id.otp_msg);
         spectrum_logo = (ImageView) findViewById(R.id.spectrum_logo);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        Glide.with(this).load(R.drawable.spectrum).into(spectrum_logo);
+        Glide.with(this).load(R.drawable.spectrum_circle).into(spectrum_logo);
         editTextMobile.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -109,7 +114,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
         } else {
-            progressBar.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.GONE);
         }
     }
 
@@ -118,10 +123,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     public void showLoginStatus(LoginResponse loginDataResponse) {
             msgOtp.setVisibility(View.VISIBLE);
 
-
-            editTextName.setVisibility(View.GONE);
-            editTextMobile.setVisibility(View.GONE);
-            editTextEmail.setVisibility(View.GONE);
+            layout_name.setVisibility(View.GONE);
+            layout_email.setVisibility(View.GONE);
+            layout_mobile.setVisibility(View.GONE);
             Intent i = new Intent(LoginActivity.this, OtpActivity.class);
             i.putExtra(Keys.KEY_MOBILE, mobile);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

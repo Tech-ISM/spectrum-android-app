@@ -19,6 +19,7 @@ import android.widget.VideoView;
 import com.crashlytics.android.Crashlytics;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
+import com.ujjwalagrawal.spectrum.helper.fcm.FcmUtils;
 import com.ujjwalagrawal.spectrum.notifications.view.NotificationListFragment;
 import com.ujjwalagrawal.spectrum.R;
 
@@ -88,8 +89,10 @@ public class HomeActivity extends AppCompatActivity {
                             sharedPrefs.setAccessToken("");
                             sharedPrefs.setMobile("");
                             sharedPrefs.setUsername("");
+                            sharedPrefs.setLogin(false);
                             Intent intent = new Intent(homeActivity, LoginActivity.class);
                             startActivity(intent);
+                            finish();
                         }
                     });
                     ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
@@ -105,6 +108,14 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+
+        try{
+            FcmUtils fcmUtils=new FcmUtils(context);
+
+            fcmUtils.sendFcmToServer();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
