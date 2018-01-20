@@ -148,8 +148,8 @@
             android:textSize="25dp"
             android:id="@+id/profile_text_before_button"
             android:textAlignment="center"
-            android:gravity="center"
             android:layout_gravity="center_horizontal"
+            android:gravity="center"
 
             android:textStyle="bold"
 

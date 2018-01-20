@@ -68,6 +68,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
 
         holder.checklist.setClickable(false);
         holder.checklist.setEnabled(false);
+
         holder.event_name.setText(eventsList.getName());
         if(eventsList.getType()==1) {
             holder.checklist.setVisibility(View.VISIBLE);
@@ -88,7 +89,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
         }else {
             holder.checklist.setVisibility(View.GONE);
         }
-        holder.checklist.setOnClickListener(new View.OnClickListener(){
+        holder.cardView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 

@@ -118,7 +118,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
                 instruction.setVisibility(View.GONE);
 //                instruction.setText("Multiple Events can only be registered from google form");
                 Snackbar snackbar = Snackbar
-                        .make(view, "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+                        .make(view, "Multiple Events can only be registered from google form", Snackbar.LENGTH_LONG);
 
                 snackbar.show();
 
