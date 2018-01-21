@@ -23,7 +23,6 @@
                 android:layout_gravity="left"
                 android:src="@drawable/spectrum_length" />
 
-
             <ImageView
                 android:id="@+id/imageView_notification"
                 android:layout_width="wrap_content"

@@ -35,6 +35,8 @@ import java.util.Timer;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager.LEFT;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -104,6 +106,7 @@ public class HomeFragment extends Fragment {
 		viewPager.setPageTransformer(true, transformer);;
 		viewPager.startAutoScroll(1000);
 		viewPager.setAutoScrollDurationFactor(15);
+		//viewPager.setCycle();
 
 
 

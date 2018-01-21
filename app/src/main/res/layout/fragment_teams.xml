@@ -34,18 +34,21 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
                 android:orientation="vertical"
+
                 android:padding="10dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3sp"
+                    android:visibility="gone"
                     android:text="@string/head_members"
                     android:textColor="#ffffff"
                     android:textSize="24sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
@@ -86,7 +89,7 @@
                 <TextView
                     android:layout_marginTop="25sp"
                     android:layout_width="match_parent"
-                    android:text="Meet the Organisers  !!"
+                    android:text="Meet the Organisers  "
                     android:layout_height="wrap_content"
                     android:textColor="#ffffff"
                     android:textSize="24sp"

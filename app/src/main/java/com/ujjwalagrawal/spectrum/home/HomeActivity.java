@@ -53,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         final BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setDefaultTab(R.id.tab_home);
         ImageView imageViewNotifications = (ImageView) findViewById(R.id.imageView_notification);
         ImageView imageView_rateus = (ImageView) findViewById(R.id.imageView_rateus);
 
@@ -95,6 +96,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         bottomBar.setDefaultTab(R.id.tab_home);
+
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {

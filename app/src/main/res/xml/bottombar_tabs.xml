@@ -4,7 +4,7 @@
         id="@+id/tab_profile"
         icon="@drawable/ic_account_circle_white_24dp"
         barColorWhenSelected="@color/md_deep_orange_500"
-        title="Profile"
+        title="Register"
         />
     <tab
         id="@+id/tab_events"
@@ -24,7 +24,7 @@
         barColorWhenSelected="@color/md_orange_700"
 
         icon="@drawable/ic_people_white_24dp"
-        title="Team"
+        title="Developers"
         />
     <tab
         id="@+id/tab_logout"
