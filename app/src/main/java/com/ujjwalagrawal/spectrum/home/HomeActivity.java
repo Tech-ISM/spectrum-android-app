@@ -90,7 +90,7 @@ public class HomeActivity extends AppCompatActivity {
         imageViewNotifications.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setFragment(new NotificationListFragment());
+                addFragment(new NotificationListFragment());
             }
         });
 
@@ -177,10 +177,52 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+
+            super.onBackPressed();
+
+        } else {
+
+            final android.support.v7.app.AlertDialog ad = new android.support.v7.app.AlertDialog.Builder(this)
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("Exit ?");
+            ad.setMessage("Do you really want to exit ? ");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+                    finish();
+                }
+            });
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+
+                }
+            });
+            ad.show();
+        }
+    }
+
     public void setFragment(Fragment fragment) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.contentContainer, fragment);
+            fragmentTransaction.commit();
+        }
+    }
+
+    public void addFragment(Fragment fragment) {
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.replace(R.id.contentContainer, fragment);
             fragmentTransaction.commit();
         }

@@ -99,8 +99,6 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         recyclerView.setAdapter(registerAdapter);
         recyclerView.setItemAnimator(new SlideDownAlphaAnimator());
 
-     registerListPresenter.requestRegistrationList(token,1);
-
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

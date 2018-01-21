@@ -54,6 +54,7 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
         imageLoader = new GlideImageLoader(context);
         this.profileFragment=profileFragment;
     }
+
     void setData(List<EventsList> data) {
         this.data = data;
     }

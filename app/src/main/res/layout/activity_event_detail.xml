@@ -72,8 +72,10 @@
         app:icon_one="@drawable/ic_timer_black_24dp"
         app:icon_two="@drawable/ic_info_black_24dp"
         app:icon_three="@drawable/ic_extra_info_black_24dp"
-        app:number_of_tabs="three"
-        app:starting_position="two"/>
+        app:icon_four="@drawable/ic_extra_info_black_24dp"
+        app:icon_five="@drawable/ic_extra_info_black_24dp"
+        app:number_of_tabs="five"
+        app:starting_position="three"/>
 
     <ImageView
         android:id="@+id/eventImageView"
@@ -150,7 +152,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:text="HumbleFool Cup"
+        android:text=""
         android:textColor="@color/md_white_1000"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="@+id/eventImageView"

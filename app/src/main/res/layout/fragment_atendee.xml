@@ -67,10 +67,7 @@
                 android:paddingRight="5dp"
                 tools:text=""/>
 
-        </LinearLayout>
-
-
-    </android.support.v7.widget.CardView>
-
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </ScrollView>
 </FrameLayout>

@@ -59,6 +59,14 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
         final EventData eventsData = data.get(position);
         imageLoader.loadImage(eventsData.getImage_url(),holder.event_image,holder.progressBar);
         holder.event_name.setText(eventsData.getName());
+
+        if (!eventsData.getRound_name().equals("") || eventsData.getRound_name().equals(null)){
+            holder.eventRoundName.setText(eventsData.getRound_name());
+            holder.eventRoundName.setVisibility(View.VISIBLE);
+        }else {
+            holder.eventRoundName.setVisibility(View.INVISIBLE);
+        }
+
         holder.time_textview.setText(eventsData.getTime());
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +92,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
 
         public ImageView event_image;
         public RelativeLayout relativeLayout;
-        public TextView event_name,time_textview;
+        public TextView event_name,time_textview,eventRoundName;
         public AVLoadingIndicatorView progressBar;
         public MyViewHolder(View itemView){
             super(itemView);
@@ -92,6 +100,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.event_relativeLayout);
             time_textview = (TextView) itemView.findViewById(R.id.time_textview);
             event_name = (TextView) itemView.findViewById(R.id.eventName);
+            eventRoundName = (TextView) itemView.findViewById(R.id.eventRoundName);
             progressBar = (AVLoadingIndicatorView) itemView.findViewById(R.id.progressBar_events);
 
         }

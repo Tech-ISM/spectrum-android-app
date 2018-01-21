@@ -43,7 +43,12 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         final team_members current_member = data.get(position);
-        holder.image.setImageResource(current_member.getImage());
+        try {
+            holder.image.setImageResource(current_member.getImage());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         holder.member_name.setText(current_member.getName());
         holder.designation.setText(current_member.getDesignation());
         checks(holder,current_member);

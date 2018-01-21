@@ -9,7 +9,7 @@
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 android:layout_width="match_parent"
-android:layout_height="220dp"
+android:layout_height="250dp"
 android:layout_margin="10dp"
 app:cardBackgroundColor="#c0000000"
 app:cardCornerRadius="5dp">
@@ -51,7 +51,26 @@ app:cardCornerRadius="5dp">
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textColor="@color/md_white_1000"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/eventRoundName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:text="Sample Event Round"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
+        android:textSize="18sp"
         />
 
     <TextView

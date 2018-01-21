@@ -2,10 +2,6 @@ package com.ujjwalagrawal.spectrum.events.event_list.data;
 
 import java.util.List;
 
-/**
- * Created by ujjwal on 25/10/17.
- */
-
 public class EventList {
 	public boolean success;
 	public String message;

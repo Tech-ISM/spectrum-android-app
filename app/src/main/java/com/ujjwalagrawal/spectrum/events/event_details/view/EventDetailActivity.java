@@ -20,6 +20,8 @@ import com.ujjwalagrawal.spectrum.events.event_details.presenter.EventDetailsPre
 import com.ujjwalagrawal.spectrum.events.event_details.provider.RetrofitEventDetailsProvider;
 import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.AtendeeFragment;
 import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.DescriptionFragment;
+import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.OrganiserFragment;
+import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.RulesFragment;
 import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.TimeDateFragment;
 import com.ujjwalagrawal.spectrum.events.event_list.view.EventListFragment;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
@@ -57,6 +59,9 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
     TimeDateFragment timeDateFragment;
     DescriptionFragment descriptionFragment;
     AtendeeFragment atendeeFragment;
+    OrganiserFragment organiserFragment;
+    RulesFragment rulesFragment;
+
     ProgressDialog progressDialog;
 
 
@@ -92,10 +97,13 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
         timeDateFragment = TimeDateFragment.newInstance();
         descriptionFragment = DescriptionFragment.newInstance();
         atendeeFragment = AtendeeFragment.newInstance();
-
+        organiserFragment = OrganiserFragment.newInstance();
+        rulesFragment = RulesFragment.newInstance();
         fragmentList.add(timeDateFragment);
+        fragmentList.add(rulesFragment);
         fragmentList.add(descriptionFragment);
         fragmentList.add(atendeeFragment);
+        fragmentList.add(organiserFragment);
 
         spaceTabLayout.initialize(viewPager, getSupportFragmentManager(),
                 fragmentList, savedInstanceState);
@@ -131,6 +139,8 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
         descriptionFragment.setDescription(eventDetails.getDescription());
         timeDateFragment.update(eventDetails);
         atendeeFragment.setAtendee(eventDetails.getAttendees()+"",eventDetails.getPrize_description());
+        organiserFragment.setData(eventDetails.getOragniser_list());
+        rulesFragment.setRules(eventDetails.getRules());
 
     }
 }
