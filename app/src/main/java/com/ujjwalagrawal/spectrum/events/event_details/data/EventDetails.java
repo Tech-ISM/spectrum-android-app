@@ -1,5 +1,7 @@
 package com.ujjwalagrawal.spectrum.events.event_details.data;
 
+import java.util.List;
+
 public class EventDetails {
     private boolean success;
     private String message;
@@ -11,11 +13,12 @@ public class EventDetails {
     private String location;
     private String description;
     private String prize_description;
+    private List<OrganiserDetails> oragniser_list;
     private int type;
     private int attendees;
     private int day;
 
-    public EventDetails(boolean success, String message, String name, String image, String image_blur, String time, String date, String location, String description, String prize_description, int type, int attendees, int day) {
+    public EventDetails(boolean success, String message, String name, String image, String image_blur, String time, String date, String location, String description, String prize_description, List<OrganiserDetails> oragniser_list, int type, int attendees, int day) {
         this.success = success;
         this.message = message;
         this.name = name;
@@ -26,9 +29,14 @@ public class EventDetails {
         this.location = location;
         this.description = description;
         this.prize_description = prize_description;
+        this.oragniser_list = oragniser_list;
         this.type = type;
         this.attendees = attendees;
         this.day = day;
+    }
+
+    public List<OrganiserDetails> getOragniser_list() {
+        return oragniser_list ;
     }
 
     public boolean isSuccess() {

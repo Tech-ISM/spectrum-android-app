@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.teams;
+package com.ujjwalagrawal.spectrum.teams.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ujjwalagrawal.spectrum.R;
+import com.ujjwalagrawal.spectrum.teams.data.team_members;
 
 import java.util.List;
 

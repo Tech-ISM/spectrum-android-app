@@ -19,6 +19,7 @@ import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
 import com.ujjwalagrawal.spectrum.events.event_list.presenter.EventListPresenter;
 import com.ujjwalagrawal.spectrum.events.event_list.presenter.EventListPresenterImpl;
 import com.ujjwalagrawal.spectrum.events.event_list.provider.RetrofitEventListProvider;
+import com.ujjwalagrawal.spectrum.helper.fcm.FcmUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.List;
@@ -85,7 +86,13 @@ public class EventListFragment extends Fragment implements EventListView{
             swipeRefreshLayout.setRefreshing(false);
 			}
 		});
+		try{
+			FcmUtils fcmUtils=new FcmUtils(context);
 
+			fcmUtils.sendFcmToServer();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		return view;
 	}
 

@@ -82,8 +82,10 @@ public class SplashScreen extends Activity implements  SplashScreenView{
                     }
                 }
             });
+
         }
         else if (splashScreenData.isSuccess()) {
+
             sharedPrefs.setFCM(MyApplication.fcm_token);
 
             if (sharedPrefs.isLoggedIn()) {

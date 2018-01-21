@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.teams;
+package com.ujjwalagrawal.spectrum.teams.data;
 
 /**
  * Created by hp-p on 28-Oct-17.

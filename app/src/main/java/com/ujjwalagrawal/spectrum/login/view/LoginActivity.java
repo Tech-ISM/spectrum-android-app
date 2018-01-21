@@ -73,17 +73,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         msgOtp = (TextView) findViewById(R.id.otp_msg);
         spectrum_logo = (ImageView) findViewById(R.id.spectrum_logo);
         progressBar = (AVLoadingIndicatorView) findViewById(R.id.progressBar);
-
-//        Glide.with(this).load(R.drawable.login_background).asBitmap().into(new SimpleTarget<Bitmap>(relLayoutWidth, relLayoutHeight) {
-//            @Override
-//            public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
-//                Drawable drawable = new BitmapDrawable(context.getResources(), resource);
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-//                    relative_layout_parent.setBackground(drawable);
-//                }
-//            }
-//        });
-
         Glide.with(this).load(R.drawable.spectrum_circle).into(spectrum_logo);
         editTextMobile.addTextChangedListener(new TextWatcher() {
             @Override

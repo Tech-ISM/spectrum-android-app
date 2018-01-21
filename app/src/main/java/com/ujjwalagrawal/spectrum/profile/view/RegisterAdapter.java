@@ -75,70 +75,58 @@ public class RegisterAdapter extends RecyclerView.Adapter<RegisterAdapter.MyView
         holder.checklist.setClickable(false);
         holder.checklist.setEnabled(false);
         holder.event_name.setText(eventsList.getName());
-        if(eventsList.getType()==1) {
-            holder.checklist.setVisibility(View.VISIBLE);
+
+        if (eventsList.getParticipated() == 1) {
+            holder.checklist.setChecked(true);
+            holder.checklist.setText("Registered");
+            holder.checklist.setTextColor(context.getResources().getColor(R.color.md_green_800));
+
+        } else {
+            holder.checklist.setChecked(false);
+            holder.checklist.setText("Register");
+            holder.checklist.setTextColor(context.getResources().getColor(R.color.md_red_300));
 
 
-            if (eventsList.getParticipated() == 1) {
-                holder.checklist.setChecked(true);
-                holder.checklist.setText("Registered");
-                holder.checklist.setTextColor(context.getResources().getColor(R.color.md_green_800));
-
-            } else {
-                holder.checklist.setChecked(false);
-                holder.checklist.setText("Register");
-                holder.checklist.setTextColor(context.getResources().getColor(R.color.md_red_300));
-
-
-            }
-        }else {
-            holder.checklist.setVisibility(View.GONE);
         }
+
         holder.cardView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Log.d("CHANGE","afsasdf");
                 profileFragment.changeParticipatedStatus(eventsList.getParticipated(),eventsList.getId());
-                if(eventsList.getType()==1){
-                    if(eventsList.getParticipated()==1){
-                        Snackbar snackbar = Snackbar
-                                .make(view, "Unregistered from "+eventsList.getName()+" ", Snackbar.LENGTH_SHORT)
-                                .setAction("INFO", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Intent intent = new Intent(context, EventDetailActivity.class);
-                                        intent.putExtra("event_id",eventsList.getId());
-                                        ((HomeActivity)context).startActivity(intent);
-                                    }
-                                });
-                        View sbView = snackbar.getView();
-                        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-                        textView.setTextColor(Color.RED);
-                        snackbar.show();
-                    }else {
-                        Snackbar snackbar = Snackbar
-                                .make(view, "Registered to "+eventsList.getName()+" ", Snackbar.LENGTH_SHORT)
-                                .setAction("INFO", new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Intent intent = new Intent(context, EventDetailActivity.class);
-                                        intent.putExtra("event_id",eventsList.getId());
-                                        ((HomeActivity)context).startActivity(intent);
-                                    }
-                                });
-                        View sbView = snackbar.getView();
-                        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-                        textView.setTextColor(Color.GREEN);
 
-                        snackbar.show();
-                    }
+                if(eventsList.getParticipated()==1){
+                    Snackbar snackbar = Snackbar
+                            .make(view, "Unregistered from "+eventsList.getName()+" ", Snackbar.LENGTH_SHORT)
+                            .setAction("INFO", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(context, EventDetailActivity.class);
+                                    intent.putExtra("event_id",eventsList.getId());
+                                    ((HomeActivity)context).startActivity(intent);
+                                }
+                            });
+                    View sbView = snackbar.getView();
+                    TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.RED);
+                    snackbar.show();
                 }else {
-                    Intent intent = new Intent(context, EventDetailActivity.class);
-                    intent.putExtra("event_id",eventsList.getId());
-                    ((HomeActivity)context).startActivity(intent);
+                    Snackbar snackbar = Snackbar
+                            .make(view, "Registered to "+eventsList.getName()+" ", Snackbar.LENGTH_SHORT)
+                            .setAction("INFO", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(context, EventDetailActivity.class);
+                                    intent.putExtra("event_id",eventsList.getId());
+                                    ((HomeActivity)context).startActivity(intent);
+                                }
+                            });
+                    View sbView = snackbar.getView();
+                    TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.GREEN);
 
+                    snackbar.show();
                 }
-
 
             }
             }

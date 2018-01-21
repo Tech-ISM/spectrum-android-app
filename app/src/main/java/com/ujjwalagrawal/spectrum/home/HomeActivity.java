@@ -9,17 +9,13 @@ import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.VideoView;
 
 import com.crashlytics.android.Crashlytics;
 import com.roughike.bottombar.BottomBar;
@@ -34,7 +30,7 @@ import com.ujjwalagrawal.spectrum.events.event_list.view.EventTitleListFragment;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.login.view.LoginActivity;
 import com.ujjwalagrawal.spectrum.profile.view.ProfileFragment;
-import com.ujjwalagrawal.spectrum.teams.TeamsFragment;
+import com.ujjwalagrawal.spectrum.teams.view.TeamsFragment;
 
 //import com.ujjwalagrawal.spectrum_24.team.view.TeamFragment;
 
@@ -104,10 +100,10 @@ public class HomeActivity extends AppCompatActivity {
             public void onTabSelected(@IdRes int tabId) {
                 if (tabId == R.id.tab_profile) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        getWindow().setStatusBarColor(getResources().getColor(R.color.md_purple_500));
+                        getWindow().setStatusBarColor(getResources().getColor(R.color.md_deep_orange_700));
                     }
 
-                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_purple_300));
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_500));
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
                     ProfileFragment profile = new ProfileFragment();
@@ -116,7 +112,7 @@ public class HomeActivity extends AppCompatActivity {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         getWindow().setStatusBarColor(getResources().getColor(R.color.md_green_700));
                     }
-                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_green_700));
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_green_500));
                     EventTitleListFragment eventTitleListFragment = new EventTitleListFragment();
                     setFragment(eventTitleListFragment);
                 } else if (tabId == R.id.tab_home) {
@@ -178,13 +174,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        try{
-            FcmUtils fcmUtils=new FcmUtils(context);
 
-            fcmUtils.sendFcmToServer();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
     public void setFragment(Fragment fragment) {

@@ -3,7 +3,7 @@
     <tab
         id="@+id/tab_profile"
         icon="@drawable/ic_account_circle_white_24dp"
-        barColorWhenSelected="@color/md_purple_300"
+        barColorWhenSelected="@color/md_deep_orange_500"
         title="Profile"
         />
     <tab

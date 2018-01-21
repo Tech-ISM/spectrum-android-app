@@ -1,4 +1,4 @@
-package com.ujjwalagrawal.spectrum.teams;
+package com.ujjwalagrawal.spectrum.teams.view;
 
 
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ujjwalagrawal.spectrum.R;
+import com.ujjwalagrawal.spectrum.teams.data.team_members;
+import com.ujjwalagrawal.spectrum.teams.view.TeamsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
