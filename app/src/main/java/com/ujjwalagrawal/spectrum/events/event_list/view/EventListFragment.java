@@ -19,6 +19,7 @@ import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
 import com.ujjwalagrawal.spectrum.events.event_list.presenter.EventListPresenter;
 import com.ujjwalagrawal.spectrum.events.event_list.presenter.EventListPresenterImpl;
 import com.ujjwalagrawal.spectrum.events.event_list.provider.RetrofitEventListProvider;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class EventListFragment extends Fragment implements EventListView{
 	private SwipeRefreshLayout swipeRefreshLayout;
 	private EventListPresenter eventListPresenter;
 	private EventsAdapter eventsAdapter;
-	private ProgressBar progressBar;
+	private AVLoadingIndicatorView progressBar;
 
 	private OnFragmentInteractionListener mListener;
 
@@ -63,7 +64,7 @@ public class EventListFragment extends Fragment implements EventListView{
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
 		View view =inflater.inflate(R.layout.fragment_event_list, container, false);
-		progressBar=(ProgressBar)view.findViewById(R.id.events_progressbar);
+		progressBar=(AVLoadingIndicatorView)view.findViewById(R.id.events_progressbar);
 		swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_layout_events);
 		event_recyclerView = (RecyclerView) view.findViewById(R.id.event_recycler_view);
 		event_recyclerView.setHasFixedSize(true);

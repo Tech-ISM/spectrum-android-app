@@ -1,20 +1,30 @@
 package com.ujjwalagrawal.spectrum.home.view;
 
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager;
 import com.ujjwalagrawal.spectrum.home.HomeActivity;
+import com.ujjwalagrawal.spectrum.notifications.view.NotificationListFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +50,7 @@ public class HomeFragment extends Fragment {
 	AutoScrollViewPager viewPager;
 	CustomPagerAdapter adapter;
 	int[] data;
+	Context context;
 	Timer swipeTimer;
 	int currentPage=0;
 	SwishyTransformer transformer;
@@ -49,6 +60,7 @@ public class HomeFragment extends Fragment {
 	public HomeFragment() {
 		// Required empty public constructor
 	}
+
 	public static HomeFragment newInstance() {
 
 		Bundle args = new Bundle();
@@ -59,16 +71,23 @@ public class HomeFragment extends Fragment {
 	}
 
 	@Override
+	public void onCreate(@Nullable Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setHasOptionsMenu(true);
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
+		setHasOptionsMenu(true);
 		final View view =inflater.inflate(R.layout.fragment_home, container, false);
 		ButterKnife.bind(this,view);
 
-
+        context=getContext();
 		viewPager=(AutoScrollViewPager) view.findViewById(R.id.viewPager);
 
-		((HomeActivity)getContext()).setSupportActionBar(toolbar);
+//        ((HomeActivity)getContext()).setSupportActionBar(toolbar);
 
 		set_images();
 		init(data_images);
@@ -78,6 +97,47 @@ public class HomeFragment extends Fragment {
 		return view;
 	}
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        int id = item.getItemId();
+
+        if (id == R.id.action_rate_us) {
+            final AlertDialog ad = new AlertDialog.Builder(context)
+                    .create();
+            ad.setCancelable(true);
+            ad.setTitle("Rate Us!");
+            ad.setMessage("We will redirect you to the Google Play store! Please give us a 5 star rating.");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    final String appPackageName = ((HomeActivity)context).getPackageName(); // getPackageName() from Context or SplashScheenActivity object
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                    }
+                    ad.cancel();
+
+                }
+            });
+
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+                }
+            });
+            ad.show();
+            return true;
+        }else  if (id ==R.id.action_notifications){
+            ((HomeActivity)context).setFragment(new NotificationListFragment());
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
 	public void init(List<Fragment_homePager> data_images)
 	{
 		transformer = new SwishyTransformer();
@@ -92,12 +152,19 @@ public class HomeFragment extends Fragment {
 //				public void onClick(View v)
 //				{
 //					Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-//				    browserIntent.setData(Uri.parse("www.facebook.com/spectrum.iitism/"));
+//				    browserIntent.setData(Uri.parse("www.facebook.com/spectrum_24.iitism/"));
 //				    getContext().startActivity(browserIntent);
 //				}
 //			});
 
 	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.menu_home, menu);
+		super.onCreateOptionsMenu(menu, inflater);
+	}
+
 
 	public void set_images(){
 		data_images = new ArrayList<>();

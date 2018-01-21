@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
-//import com.ujjwalagrawal.spectrum.home.model.HomeImageDetails;
+//import com.ujjwalagrawal.spectrum_24.home.model.HomeImageDetails;
 
 import java.util.ArrayList;
 import java.util.List;

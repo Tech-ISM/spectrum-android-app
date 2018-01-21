@@ -16,7 +16,7 @@ public class EventDetailsPresenterImpl implements EventDetailsPresenter {
 
     @Override
     public void getEventDetails(int event_id) {
-        eventDetailsView.showProgressbar(false);
+        eventDetailsView.showProgressbar(true);
         eventDetailsProvider.getEventDetails(event_id, new EventDetailsCallback() {
             @Override
             public void onFailed() {

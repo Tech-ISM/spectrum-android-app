@@ -8,10 +8,10 @@
 
 
     <ImageView
+        android:id="@+id/splash_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/spectrum_circle"
-        android:layout_above="@id/splash_progress_bar"
         android:layout_centerInParent="true"
         />
 
@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/splash_progress_bar"
         android:layout_centerInParent="true"
+        android:layout_below="@+id/splash_image"
         />
 
 </RelativeLayout>

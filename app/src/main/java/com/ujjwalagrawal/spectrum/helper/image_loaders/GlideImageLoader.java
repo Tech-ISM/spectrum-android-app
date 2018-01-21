@@ -87,6 +87,33 @@ public class GlideImageLoader implements ImageLoader {
 */
 
     }
+
+    @Override
+    public void loadImage(String url, ImageView imageView, final AVLoadingIndicatorView progressBar) {
+
+        requestManager.load(url).crossFade().thumbnail(0.01f)
+                .into(imageView);
+
+        Log.d("Response",url);
+
+        requestManager.load(url).crossFade().thumbnail(1f).listener(new RequestListener<String, GlideDrawable>() {
+            @Override
+            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                return false;
+            }
+
+            @Override
+            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                progressBar.setVisibility(View.GONE);
+                return false;
+            }
+        }).diskCacheStrategy(DiskCacheStrategy.ALL)
+                //.animate(R.anim.image_animation)
+                .fitCenter().crossFade().into(imageView);
+
+
+    }
+
     public void load_circular_image(String url, final ImageView imageView, final AVLoadingIndicatorView progressBar){
 
         requestManager.load(url).crossFade().thumbnail(1f).listener(new RequestListener<String, GlideDrawable>() {

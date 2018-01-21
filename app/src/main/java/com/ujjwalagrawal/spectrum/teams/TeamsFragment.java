@@ -68,8 +68,8 @@ public class TeamsFragment extends Fragment {
         developers.add(new team_members("Akhil Vaidya","App Developer",R.drawable.akhil_vaidya,"8578955444","https://github.com/avstark"));
         developers.add(new team_members("Aman Gupta","App Developer",R.drawable.aman_gupta,"7737476484","https://github.com/ag597482"));
         developers.add(new team_members("Shalini Verma","App Developer",R.drawable.shalini,"9709371588","https://github.com/shaliniv16"));
-        developers.add(new team_members("Anand Kumar","Designer",R.drawable.anand,"8797288013","https://github.com/Tech-ISM/spectrum-android-app  "));
-        developers.add(new team_members("Pragdheesh R S","Designer",R.drawable.pragdhesh,"7358578982","https://github.com/Tech-ISM/spectrum-android-app  "));
+        developers.add(new team_members("Anand Kumar","Designer",R.drawable.anand,"8797288013","https://github.com/Tech-ISM/spectrum_24-android-app  "));
+        developers.add(new team_members("Pragdheesh R S","Designer",R.drawable.pragdhesh,"7358578982","https://github.com/Tech-ISM/spectrum_24-android-app  "));
 
 
         head_members.add(new team_members("Chayan Goyal","Vice President(SEE)",R.drawable.chayan_goyal,"9425066546","https://www.facebook.com/chayan.goyal.1"));

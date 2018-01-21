@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.mikepenz.itemanimators.SlideDownAlphaAnimator;
@@ -18,6 +17,7 @@ import com.ujjwalagrawal.spectrum.notifications.presenter.NotificationListPresen
 import com.ujjwalagrawal.spectrum.notifications.provider.RetrofitNotificationListProvider;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
+import com.wang.avi.AVLoadingIndicatorView;
 
 public class NotificationListFragment extends Fragment implements NotificationListView{
 	private Context context;
@@ -26,7 +26,7 @@ public class NotificationListFragment extends Fragment implements NotificationLi
 
 	private NotificationListPresenter notificationListPresenter;
 	private NotificationRecyclerAdapter notificationRecyclerAdapter;
-	private ProgressBar progressBar;
+	private AVLoadingIndicatorView progressBar;
 	private SharedPrefs sharedPrefs;
 	public NotificationListFragment() {
 		// Required empty public constructor
@@ -51,7 +51,7 @@ public class NotificationListFragment extends Fragment implements NotificationLi
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
 		View view =inflater.inflate(R.layout.fragment_notification_list, container, false);
-		progressBar=(ProgressBar)view.findViewById(R.id.progressBar);
+		progressBar=(AVLoadingIndicatorView)view.findViewById(R.id.progressBar);
 		notification_recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
 		notification_recyclerView.setHasFixedSize(true);
 		context = getContext();

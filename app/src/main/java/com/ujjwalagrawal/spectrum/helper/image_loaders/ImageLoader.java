@@ -12,6 +12,7 @@ import com.wang.avi.AVLoadingIndicatorView;
 public interface ImageLoader {
 
     void loadImage(String url, ImageView imageView, ProgressBar progressBar);
+    void loadImage(String url, ImageView imageView, AVLoadingIndicatorView progressBar);
     void load_circular_image(String url, ImageView imageView, AVLoadingIndicatorView progressBar);
 
 }

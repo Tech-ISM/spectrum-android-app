@@ -23,7 +23,7 @@ import com.mikepenz.itemanimators.SlideDownAlphaAnimator;
 import com.ujjwalagrawal.spectrum.R;
 import com.ujjwalagrawal.spectrum.helper.SharedPrefs;
 import com.ujjwalagrawal.spectrum.profile.model.EventsList;
-//import com.ujjwalagrawal.spectrum.profile.model.TrialData;
+//import com.ujjwalagrawal.spectrum_24.profile.model.TrialData;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenter;
 import com.ujjwalagrawal.spectrum.profile.presenter.RegisterListPresenterImpl;
 import com.ujjwalagrawal.spectrum.profile.provider.RetrofitRegisterListProvider;

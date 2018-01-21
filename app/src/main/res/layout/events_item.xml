@@ -97,7 +97,7 @@ app:cardCornerRadius="5dp">
     <!--android:layout_height="match_parent"-->
     <!--android:scaleType="fitXY"-->
     <!--android:adjustViewBounds="true" />-->
-    <ProgressBar
+    <com.wang.avi.AVLoadingIndicatorView
     android:id="@+id/progressBar_events"
     android:layout_width="50dp"
     android:layout_centerInParent="true"

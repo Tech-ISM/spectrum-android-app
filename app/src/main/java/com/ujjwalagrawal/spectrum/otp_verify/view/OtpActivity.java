@@ -28,6 +28,7 @@ import com.ujjwalagrawal.spectrum.otp_verify.model.OtpResponse;
 import com.ujjwalagrawal.spectrum.otp_verify.presenter.OtpVerifyPresenter;
 import com.ujjwalagrawal.spectrum.otp_verify.presenter.OtpVerifyPresenterImp;
 import com.ujjwalagrawal.spectrum.otp_verify.provider.RetrofitOtpVerifyHelper;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import butterknife.ButterKnife;
 
@@ -37,7 +38,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
     private Button btn_resend_otp,btn_verify_otp,btn_login;
     private TextView otp_message;
     private EditText editTextOtp,editTextMobile,editTextName,editTextEmail;
-    private ProgressBar progressBar;
+    private AVLoadingIndicatorView progressBar;
     private ImageView otpImage,login_bg;
     private String message, otp_number;
     private OtpVerifyPresenter otpVerifyPresenter;
@@ -70,7 +71,7 @@ public class OtpActivity extends AppCompatActivity implements OtpView{
         editTextOtp = (EditText) findViewById(R.id.input_otp);
         btn_resend_otp = (Button) findViewById(R.id.resend_otp);
         otpImage = (ImageView) findViewById(R.id.otp_img);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar = (AVLoadingIndicatorView) findViewById(R.id.progressBar);
         otp_message = (TextView) findViewById(R.id.otp_msg);
         otp_verify_layout =(LinearLayout) findViewById(R.id.otp_verifyLayout);
         layout_name = (LinearLayout) findViewById(R.id.layout_name);

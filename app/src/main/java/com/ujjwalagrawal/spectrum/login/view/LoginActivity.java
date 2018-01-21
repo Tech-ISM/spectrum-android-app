@@ -34,6 +34,7 @@ import com.ujjwalagrawal.spectrum.login.presenter.LoginPresenter;
 import com.ujjwalagrawal.spectrum.login.presenter.LoginPresenterImpl;
 import com.ujjwalagrawal.spectrum.login.provider.RetrofitLoginHelper;
 import com.ujjwalagrawal.spectrum.otp_verify.view.OtpActivity;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     private EditText editTextMobile,editTextName,editTextEmail;
     private TextView msgOtp;
-    private ProgressBar progressBar;
+    private AVLoadingIndicatorView progressBar;
     public String mobile,name,email;
     private LoginPresenter loginPresenter;
     private ImageView spectrum_logo;
@@ -71,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         layout_mobile = (LinearLayout) findViewById(R.id.layout_mobile);
         msgOtp = (TextView) findViewById(R.id.otp_msg);
         spectrum_logo = (ImageView) findViewById(R.id.spectrum_logo);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar = (AVLoadingIndicatorView) findViewById(R.id.progressBar);
 
 //        Glide.with(this).load(R.drawable.login_background).asBitmap().into(new SimpleTarget<Bitmap>(relLayoutWidth, relLayoutHeight) {
 //            @Override

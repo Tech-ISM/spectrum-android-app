@@ -6,14 +6,18 @@
 
     <RelativeLayout
         android:id="@+id/relative_layout_parent"
-        android:background="@drawable/login_background"
-        android:scaleType="fitCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
 
         >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/login_background"
+            android:scaleType="fitXY"/>
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -188,7 +192,7 @@
                 android:text="Log In"
                 android:textSize="24sp" />
 
-            <ProgressBar
+            <com.wang.avi.AVLoadingIndicatorView
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
