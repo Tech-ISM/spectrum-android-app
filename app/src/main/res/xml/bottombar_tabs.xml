@@ -28,9 +28,7 @@
         />
     <tab
         id="@+id/tab_logout"
-
         barColorWhenSelected="#c177ff"
-
         icon="@drawable/ic_people_white_24dp"
         title="Logout"
         />

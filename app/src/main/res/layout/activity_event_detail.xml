@@ -42,7 +42,7 @@
         app:text_three="Info"
         app:icon_one="@drawable/ic_timer_black_24dp"
         app:icon_two="@drawable/ic_info_black_24dp"
-        app:icon_three="@drawable/ic_more_info_white_24dp"
+        app:icon_three="@drawable/ic_extra_info_black_24dp"
         app:number_of_tabs="three"
         app:starting_position="two"/>
 
