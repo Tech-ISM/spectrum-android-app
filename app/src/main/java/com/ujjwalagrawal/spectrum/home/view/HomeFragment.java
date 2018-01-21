@@ -8,7 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -32,6 +34,8 @@ import java.util.Timer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.ujjwalagrawal.spectrum.helper.utils.AutoScrollViewPager.LEFT;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,14 +77,12 @@ public class HomeFragment extends Fragment {
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setHasOptionsMenu(true);
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		setHasOptionsMenu(true);
 		final View view =inflater.inflate(R.layout.fragment_home, container, false);
 		ButterKnife.bind(this,view);
 
@@ -93,51 +95,9 @@ public class HomeFragment extends Fragment {
 		init(data_images);
 //		time_pager(viewPager);
 		set_about_tabs(view);
-
 		return view;
 	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        int id = item.getItemId();
-
-        if (id == R.id.action_rate_us) {
-            final AlertDialog ad = new AlertDialog.Builder(context)
-                    .create();
-            ad.setCancelable(true);
-            ad.setTitle("Rate Us!");
-            ad.setMessage("We will redirect you to the Google Play store! Please give us a 5 star rating.");
-            ad.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    final String appPackageName = ((HomeActivity)context).getPackageName(); // getPackageName() from Context or SplashScheenActivity object
-                    try {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-                    } catch (android.content.ActivityNotFoundException anfe) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-                    }
-                    ad.cancel();
-
-                }
-            });
-
-            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    ad.cancel();
-                }
-            });
-            ad.show();
-            return true;
-        }else  if (id ==R.id.action_notifications){
-            ((HomeActivity)context).setFragment(new NotificationListFragment());
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-
-    }
 	public void init(List<Fragment_homePager> data_images)
 	{
 		transformer = new SwishyTransformer();
@@ -146,25 +106,11 @@ public class HomeFragment extends Fragment {
 		viewPager.setPageTransformer(true, transformer);;
 		viewPager.startAutoScroll(1000);
 		viewPager.setAutoScrollDurationFactor(15);
+		//viewPager.setCycle();
 
-//		viewPager.setOnClickListener(new View.OnClickListener() {
-//				@Override
-//				public void onClick(View v)
-//				{
-//					Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-//				    browserIntent.setData(Uri.parse("www.facebook.com/spectrum_24.iitism/"));
-//				    getContext().startActivity(browserIntent);
-//				}
-//			});
+
 
 	}
-
-	@Override
-	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		inflater.inflate(R.menu.menu_home, menu);
-		super.onCreateOptionsMenu(menu, inflater);
-	}
-
 
 	public void set_images(){
 		data_images = new ArrayList<>();

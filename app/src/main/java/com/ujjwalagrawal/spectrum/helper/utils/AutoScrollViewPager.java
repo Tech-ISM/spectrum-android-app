@@ -170,12 +170,17 @@ public class AutoScrollViewPager extends ViewPager {
         int nextItem = (direction == LEFT) ? --currentItem : ++currentItem;
         if (nextItem < 0) {
             if (isCycle) {
-                setCurrentItem(totalCount - 1, isBorderAnimation);
+                direction=RIGHT;
+                setCurrentItem(1, isBorderAnimation);
             }
-        } else if (nextItem == totalCount) {
+        }
+        else if (nextItem == totalCount) {
             if (isCycle) {
-                setCurrentItem(0, isBorderAnimation);
+                direction = LEFT;
+                setCurrentItem(totalCount-2, isBorderAnimation);
             }
+//        }else if(direction == LEFT && nextItem == -1){
+//            direction = RIGHT;
         } else {
             setCurrentItem(nextItem, true);
         }

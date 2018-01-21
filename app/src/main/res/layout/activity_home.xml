@@ -22,7 +22,6 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:src="@drawable/spectrum_length" />
->>>>>>> master
 
             <ImageView
                 android:id="@+id/imageView_notification"

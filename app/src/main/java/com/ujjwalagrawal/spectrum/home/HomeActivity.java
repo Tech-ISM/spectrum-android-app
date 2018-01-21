@@ -99,6 +99,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        bottomBar.setDefaultTab(R.id.tab_home);
+
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
@@ -114,9 +116,9 @@ public class HomeActivity extends AppCompatActivity {
                     setFragment(profile);
                 } else if (tabId == R.id.tab_events) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        getWindow().setStatusBarColor(getResources().getColor(R.color.md_light_green_700));
+                        getWindow().setStatusBarColor(getResources().getColor(R.color.md_green_700));
                     }
-                    toolbar.setBackgroundColor(getResources().getColor(R.color.custom_light_green));
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_green_700));
                     EventTitleListFragment eventTitleListFragment = new EventTitleListFragment();
                     setFragment(eventTitleListFragment);
                 } else if (tabId == R.id.tab_home) {
@@ -130,9 +132,9 @@ public class HomeActivity extends AppCompatActivity {
 
                 } else if (tabId == R.id.tab_team) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        getWindow().setStatusBarColor(getResources().getColor(R.color.md_amber_A700));
+                        getWindow().setStatusBarColor(getResources().getColor(R.color.md_orange_900));
                     }
-                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_amber_A400));
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.md_orange_700));
                     TeamsFragment teamFragment = new TeamsFragment();
                     setFragment(teamFragment);
                 }

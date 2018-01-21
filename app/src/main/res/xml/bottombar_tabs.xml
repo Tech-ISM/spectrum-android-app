@@ -9,7 +9,7 @@
     <tab
         id="@+id/tab_events"
         icon="@drawable/ic_event_white_24dp"
-        barColorWhenSelected="@color/custom_light_green"
+        barColorWhenSelected="@color/md_green_700"
         title="Events"
         />
     <tab
@@ -21,7 +21,7 @@
     <tab
 
         id="@+id/tab_team"
-        barColorWhenSelected="@color/md_amber_A400"
+        barColorWhenSelected="@color/md_orange_700"
 
         icon="@drawable/ic_people_white_24dp"
         title="Team"
