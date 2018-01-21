@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.ujjwalagrawal.spectrum.R;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +30,7 @@ public class EventTitleListFragment extends Fragment {
 	TabLayout tabLayout;
 
 	@BindView(R.id.progressBar)
-	ProgressBar progressBar;
+	AVLoadingIndicatorView progressBar;
 
 	public ViewPagerAdapter viewPagerAdapter;
 

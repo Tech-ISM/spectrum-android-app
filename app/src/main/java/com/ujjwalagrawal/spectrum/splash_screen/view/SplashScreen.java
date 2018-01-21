@@ -29,7 +29,8 @@ import com.ujjwalagrawal.spectrum.splash_screen.presenter.SplashScreenPresenterI
 public class SplashScreen extends Activity implements  SplashScreenView{
 
     SharedPrefs sharedPrefs;
-    ProgressBar progressBar,splashProgressBar;
+    ProgressBar progressBar,
+            splashProgressBar;
     SplashScreenPresenter splashScreenPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

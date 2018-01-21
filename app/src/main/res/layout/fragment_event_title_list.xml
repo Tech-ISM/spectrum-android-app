@@ -12,11 +12,20 @@
         android:layout_height="wrap_content"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:titleTextColor="@color/md_white_1000"
+            />
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="bottom"
+            android:background="@color/custom_light_green"
+            app:tabIndicatorColor="@color/md_light_green_A100"
             app:tabTextColor="@color/md_cyan_100"
             app:tabSelectedTextColor="@color/md_white_1000"
             app:tabMode="fixed"
@@ -36,7 +45,7 @@
             />
 
 
-        <ProgressBar
+        <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

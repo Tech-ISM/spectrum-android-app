@@ -23,6 +23,7 @@ import com.ujjwalagrawal.spectrum.events.event_details.view.fragments.TimeDateFr
 import com.ujjwalagrawal.spectrum.events.event_list.view.EventListFragment;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,7 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
     @BindView(R.id.eventTitleTextView)
     TextView eventTitleTextView;
     @BindView(R.id.progressBar)
-    ProgressBar progressBar;
+    AVLoadingIndicatorView progressBar;
 
     private int event_id;
     private Context context;

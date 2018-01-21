@@ -20,6 +20,7 @@ import com.ujjwalagrawal.spectrum.events.event_list.data.EventData;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.GlideImageLoader;
 import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
 import com.ujjwalagrawal.spectrum.home.HomeActivity;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,14 +85,14 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
         public ImageView event_image;
         public RelativeLayout relativeLayout;
         public TextView event_name,time_textview;
-        public ProgressBar progressBar;
+        public AVLoadingIndicatorView progressBar;
         public MyViewHolder(View itemView){
             super(itemView);
             event_image = (ImageView) itemView.findViewById(R.id.eventImg);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.event_relativeLayout);
             time_textview = (TextView) itemView.findViewById(R.id.time_textview);
             event_name = (TextView) itemView.findViewById(R.id.eventName);
-            progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar_events);
+            progressBar = (AVLoadingIndicatorView) itemView.findViewById(R.id.progressBar_events);
 
         }
     }

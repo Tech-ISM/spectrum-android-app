@@ -31,7 +31,7 @@
 
         barColorWhenSelected="#c177ff"
 
-        icon="@drawable/ic_people_white_24dp"
+        icon="@drawable/ic_power_settings_new_white_24dp"
         title="Logout"
         />
 </tabs>
