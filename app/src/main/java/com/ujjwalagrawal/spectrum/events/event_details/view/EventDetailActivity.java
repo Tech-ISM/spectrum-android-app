@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -46,6 +47,8 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
     TextView eventTitleTextView;
     @BindView(R.id.progressBar)
     AVLoadingIndicatorView progressBar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private int event_id;
     private Context context;
@@ -67,7 +70,12 @@ public class EventDetailActivity extends AppCompatActivity  implements EventDeta
         imageLoader = new GlideImageLoader(context);
         eventDetailsPresenter =new EventDetailsPresenterImpl(this,new RetrofitEventDetailsProvider());
         eventDetailsPresenter.getEventDetails(event_id);
-
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 //        progressDialog = new ProgressDialog(this);
 //        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 //        progressDialog.setMessage("Loading");

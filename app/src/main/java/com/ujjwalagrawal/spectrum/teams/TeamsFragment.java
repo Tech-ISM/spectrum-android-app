@@ -63,7 +63,7 @@ public class TeamsFragment extends Fragment {
 
     public void put_data()//will be used to set data finally
     {
-        developers.add(new team_members("Ujjwal Agrawal","App Developer",R.drawable.ujjwal_agrawal,"8770776846","https://github.com/ujjwalagrawal17"));
+        developers.add(new team_members("Ujjwal Agrawal","App Lead",R.drawable.ujjwal_agrawal,"8770776846","https://github.com/ujjwalagrawal17"));
         developers.add(new team_members("Shubham Raj","App Developer",R.drawable.shubham_raj,"7277774644","https://github.com/hacker5210"));
         developers.add(new team_members("Akhil Vaidya","App Developer",R.drawable.akhil_vaidya,"8578955444","https://github.com/avstark"));
         developers.add(new team_members("Aman Gupta","App Developer",R.drawable.aman_gupta,"7737476484","https://github.com/ag597482"));

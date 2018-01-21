@@ -99,6 +99,7 @@ public class ProfileFragment extends Fragment implements RegisterListView{
         registerListPresenter = new RegisterListPresenterImpl(this, new RetrofitRegisterListProvider());
         recyclerView.setLayoutManager(layoutManager);
 
+        b1.setBackgroundColor(getResources().getColor(R.color.md_red_900));//initial tab
 //        registerAdapter.setData(trialData.getHello());
         recyclerView.setAdapter(registerAdapter);
         recyclerView.setItemAnimator(new SlideDownAlphaAnimator());

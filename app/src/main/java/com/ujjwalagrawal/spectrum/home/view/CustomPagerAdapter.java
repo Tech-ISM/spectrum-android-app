@@ -24,10 +24,6 @@ import com.ujjwalagrawal.spectrum.helper.image_loaders.ImageLoader;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by hp-p on 17-Jan-18.
- */
-
 public class CustomPagerAdapter extends FragmentStatePagerAdapter {
     private List<Fragment_homePager> fragments;
 

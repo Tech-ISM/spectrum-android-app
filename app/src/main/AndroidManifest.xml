@@ -26,16 +26,21 @@
             android:name=".login.view.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode=""
+            android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".otp_verify.view.OtpActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".home.HomeActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity android:name=".events.event_details.view.EventDetailActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ffe1f92a26df2a3deaf85a2c51e2d49d00bc61db" />
