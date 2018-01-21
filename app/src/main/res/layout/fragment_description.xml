@@ -39,7 +39,7 @@
                 android:paddingRight="10dp"
                 android:layout_margin="10dp"
                 android:maxLines="6"
-                android:text="@string/message"
+                android:text="@string/description"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
 

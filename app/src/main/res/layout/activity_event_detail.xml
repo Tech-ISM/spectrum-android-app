@@ -1,4 +1,33 @@
-<RelativeLayout android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/md_white_1000"
+            >
+
+            <ImageView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:src="@drawable/spectrum_length" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     xmlns:android="http://schemas.android.com/apk/res/android" >
@@ -42,7 +71,7 @@
         app:text_three="Info"
         app:icon_one="@drawable/ic_timer_black_24dp"
         app:icon_two="@drawable/ic_info_black_24dp"
-        app:icon_three="@drawable/ic_more_info_white_24dp"
+        app:icon_three="@drawable/ic_extra_info_black_24dp"
         app:number_of_tabs="three"
         app:starting_position="two"/>
 
@@ -148,3 +177,4 @@
         android:layout_height="50dp"
         android:layout_centerInParent="true"/>
 </RelativeLayout>
+</LinearLayout>

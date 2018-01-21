@@ -52,7 +52,7 @@ android:layout_height="wrap_content">
             android:layout_width="match_parent"
             android:layout_below="@+id/title"
             android:textSize="14sp"
-            android:text="@string/message"
+            android:text="@string/description"
             android:padding="10dp"
             android:maxLines="3"/>
 

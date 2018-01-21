@@ -7,7 +7,7 @@
     android:layout_margin="5dp"
     event_details:cardElevation="2dp"
     event_details:cardCornerRadius="20dp"
-    card_view:cardBackgroundColor="@color/md_indigo_100"
+    card_view:cardBackgroundColor="@color/white_transparent"
     >
 
     <LinearLayout
@@ -27,7 +27,7 @@
             android:textStyle="bold"
 
             android:fontFamily="serif-monospace"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="hello"
             android:layout_weight="4"
             android:textColor="@color/circle_frame" />
