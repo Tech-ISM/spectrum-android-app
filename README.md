@@ -1,10 +1,10 @@
-![SPECTRUM](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum.jpeg)
+<img height="400px" width="400px" src="https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum.jpeg"/>
 
-<h1>**Spectrum'18 event App**</h1>
+<h1>Spectrum'18 Event App</h1>
 
 <h2>Event organizing app for Spectrum 2k18 IIT(ISM) Dhanbad</h2>
 
-![Spectrum Symbol](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum_stand_alone.png)
+<img height="400px" width="400px" src="https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum_stand_alone.png"/>
 
 <h2>The core features of this Android Application are</h2>
 
@@ -24,6 +24,50 @@ Currently, the application is released in alpha phase at Google Play Store [here
 * Overview of tracks and sessions
 * Quick session re-scheduling
 * Push notifications for certain triggers
+
+<h2>Screenshots </h2>
+
+<table>
+<tr>
+<td>
+
+![login page](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/login.png)
+
+</td>
+<td>
+
+
+![login page](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/home.png)
+
+</td>
+<td>
+
+![login page](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/register.png)
+
+</td>
+</tr>
+<tr>
+<td>
+
+![login page](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/about_event.png)
+
+</td>
+<td>
+
+
+![login page](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/event_list.png)
+
+</td>
+<td>
+
+![login page](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/notifications.png)
+
+</td>
+</tr>
+
+
+</table>
+
 
 
 
