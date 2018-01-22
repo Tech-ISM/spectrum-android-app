@@ -1,10 +1,18 @@
+<table>
+<tr>
+<td>
 <img height="400px" width="400px" src="https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum.jpeg"/>
+</td>
+<td>
 
+<img height="400px" width="400px" src="https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum_stand_alone.png"/>
+</td>
+</tr>
+</table>
 <h1>Spectrum'18 Event App</h1>
 
 <h2>Event organizing app for Spectrum 2k18 IIT(ISM) Dhanbad</h2>
 
-<img height="400px" width="400px" src="https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum_stand_alone.png"/>
 
 <h2>The core features of this Android Application are</h2>
 
