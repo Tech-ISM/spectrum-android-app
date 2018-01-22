@@ -1,31 +1,30 @@
-# spectrum-android-app
-The Android app for Spectrum '18.
+![SPECTRUM](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum.jpeg)
 
-**Guidelines to use git in this project** 
+<h1>**Spectrum'18 event App**</h1>
 
-1. Clone the project from https://github.com/Tech-ISM/spectrum-android-app#spectrum-android-app
-Use git bash or terminal in local computer and use these commands
-2. git checkout -b yourname_dev (This will make a new branch on your local copy)
-3. Code and add new modules 
-4. git add . (This will add all new files that you created to git)
-5. git commit -am “XYZ Module added or ABC bug fixed”
-6. git push origin yourname_dev
+<h2>Event organizing app for Spectrum 2k18 IIT(ISM) Dhanbad</h2>
 
-Follow the below steps if you want to merge with master branch 
+![Spectrum Symbol](https://github.com/Tech-ISM/spectrum-android-app/blob/master/screenshots/spectrum_stand_alone.png)
 
-7. git checkout master (Switch to local master)
-8. git pull origin master (Updates the local master branch from github master branch) 
-9. git checkout yourname_dev (Switch to local yourname_dev)
-10.  git merge master (Merge master code to your local branch)
-11. Resolve conflicts if any (few conflicts may be there in URLs file or any other file) 
-12. git push origin yourname_dev.
+<h2>The core features of this Android Application are</h2>
 
-Now your branch is fully updated.Update master now
+* Simple Event Registration
+* Event Details
+* Notification
+* OTP Verified Login
 
-13. git checkout master 
-14. git merge yourname_dev (Merge master code to your local branch)
+Currently, the application is released in alpha phase at Google Play Store [here](https://play.google.com/store/apps/details?id=com.ujjwalagrawal.spectrum&hl=en).
 
-No conflicts should be there now as we had already fixed conflicts in another branch.
+![play store logo](https://www.google.co.in/search?q=play+store+image&tbm=isch&source=iu&ictx=1&fir=Z6-CI0RGXiH-6M%253A%252C0UOXosGUVubQkM%252C_&usg=__tM-SlUW6zMmtPpkpInU-86hsQzI%3D&sa=X&ved=0ahUKEwj_u7Wi8evYAhWHvY8KHa-OB-4Q9QEILTAA#imgrc=Z6-CI0RGXiH-6M:)
 
-15. git push origin master (Update origin master in Github)
-16.  Relax if everything is done properly.
+
+<h2>Roadmap</h2>
+<h2>Planned features & enhancements are:</h2>
+
+* Overview of tracks and sessions
+* Quick session re-scheduling
+* Push notifications for certain triggers
+
+
+
+
